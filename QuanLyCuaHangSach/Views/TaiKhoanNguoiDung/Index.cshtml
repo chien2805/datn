@@ -1,0 +1,71 @@
+﻿@model IEnumerable<QuanLyCuaHangSach.Models.TaiKhoanNguoiDung>
+
+@{
+    ViewData["Title"] = "Danh sách tài khoản người dùng";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo tài khoản mới</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Mã Tài Khoản</th>
+            <th>Tên Đăng Nhập (Email)</th>
+            <th>Mật khẩu</th>
+            <th>Vai Trò</th>
+            <th>Thao Tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaTaiKhoan</td>
+                <td>@item.TenDangNhap</td>
+                <td>@item.MatKhau</td>
+                <td>@item.VaiTro</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.MaTaiKhoan" class="btn btn-info btn-sm">Chi tiết</a>
+                    <a asp-action="Edit" asp-route-id="@item.MaTaiKhoan" class="btn btn-warning btn-sm">Chỉnh sửa</a>
+                    <a href="#" class="btn btn-danger btn-sm" onclick="confirmDelete(@item.MaTaiKhoan)">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal Xác nhận Xoá -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xoá</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xoá tài khoản này không?
+            </div>
+            <div class="modal-footer">
+                <form id="deleteForm" method="post">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                    <button type="submit" class="btn btn-danger">Xoá</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function confirmDelete(id) {
+        const form = document.getElementById('deleteForm');
+        form.action = `/TaiKhoanNguoiDung/Delete/${id}`;
+        $('#confirmDeleteModal').modal('show');
+    }
+</script>
+

@@ -1,0 +1,89 @@
+﻿@model Sach
+
+<h2>Chỉnh sửa thông tin sách</h2>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="MaSach" />
+
+    <div class="form-group">
+        <label asp-for="TieuDe">Tiêu đề</label>
+        <input asp-for="TieuDe" class="form-control" />
+        <span asp-validation-for="TieuDe" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TacGia">Tác giả</label>
+        <input asp-for="TacGia" class="form-control" />
+        <span asp-validation-for="TacGia" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaTheLoai">Thể loại</label>
+        <select asp-for="MaTheLoai" class="form-control" asp-items="ViewBag.TheLoaiList"></select>
+        <span asp-validation-for="MaTheLoai" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MaNhaCungCap">Nhà cung cấp</label>
+        <select asp-for="MaNhaCungCap" class="form-control" asp-items="ViewBag.NhaCungCapList"></select>
+        <span asp-validation-for="MaNhaCungCap" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NhaXuatBan">Nhà xuất bản</label>
+        <input asp-for="NhaXuatBan" class="form-control" />
+        <span asp-validation-for="NhaXuatBan" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NamXuatBan">Năm xuất bản</label>
+        <input asp-for="NamXuatBan" type="number" class="form-control" />
+        <span asp-validation-for="NamXuatBan" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SoLuongBan">Số lượng bán</label>
+        <input asp-for="SoLuongBan" type="number" class="form-control" />
+        <span asp-validation-for="SoLuongBan" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SoLuongMuon">Số lượng mượn</label>
+        <input asp-for="SoLuongMuon" type="number" class="form-control" />
+        <span asp-validation-for="SoLuongMuon" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SoLuongTon">Số lượng tồn</label>
+        <input asp-for="SoLuongTon" type="number" class="form-control" />
+        <span asp-validation-for="SoLuongTon" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SoLuongHong">Số lượng hỏng</label>
+        <input asp-for="SoLuongHong" type="number" class="form-control" />
+        <span asp-validation-for="SoLuongHong" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SoLuongMat">Số lượng mất</label>
+        <input asp-for="SoLuongMat" type="number" class="form-control" />
+        <span asp-validation-for="SoLuongMat" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Gia">Giá</label>
+        <input asp-for="Gia" type="number" step="0.01" class="form-control" />
+        <span asp-validation-for="Gia" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TrangThai">Trạng thái</label>
+        <input asp-for="TrangThai" class="form-control" />
+        <span asp-validation-for="TrangThai" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

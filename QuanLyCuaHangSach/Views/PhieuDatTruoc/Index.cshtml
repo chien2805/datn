@@ -1,0 +1,76 @@
+﻿@model List<QuanLyCuaHangSach.Models.PhieuDatTruoc>
+
+@{
+    ViewData["Title"] = "Danh sách phiếu đặt trước";
+}
+
+<h2 class="mb-3">📌 Danh Sách Phiếu Đặt Trước</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Tên Khách Hàng</th>
+                <th>Ngày Đặt</th>
+                <th>Ngày Trả</th>
+                <th>Trạng Thái</th>
+                <th>Sách Đặt Trước</th>
+                <th>Thao Tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var phieu in Model)
+            {
+                <tr>
+                    <td>@phieu.MaPhieuDatTruoc</td>
+                    <td>@phieu.TaiKhoanNguoiDung?.ThongTinNguoiDung?.HoTen</td>
+                    <td>@phieu.NgayDat.ToString("dd/MM/yyyy")</td>
+                    <td>@phieu.NgayTra.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <span class="badge @(phieu.TrangThai == "Đã xử lý" ? "bg-success" : "bg-warning")">
+                            @phieu.TrangThai
+                        </span>
+                    </td>
+                    <td>
+                        <ul>
+                            @foreach (var chiTiet in phieu.ChiTietPhieuDatTruoc)
+                            {
+                                <li>@chiTiet.Sach.TieuDe (SL: @chiTiet.SoLuongMuon)</li>
+                            }
+                        </ul>
+                    </td>
+                    <td class="d-flex">
+                        @if(phieu.TrangThai == "Đang xử lý"){
+                            <form asp-action="DuyetPhieu" asp-controller="PhieuDatTruoc" method="post">
+                                <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
+                                <button class="btn btn-success btn-sm me-2">✅ Duyệt</button>
+                            </form>
+                            <form asp-action="Huy" asp-controller="PhieuDatTruoc" method="post">
+                                <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
+                                <button class="btn btn-danger btn-sm">❌ Hủy</button>
+                            </form>
+                           
+                        }
+                        else if (phieu.TrangThai == "Đã xử lý")
+                        {
+                            <form asp-action="DaTra" asp-controller="PhieuDatTruoc" method="post">
+                                <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
+                                <button class="btn btn-outline-success btn-sm me-2"> ✅ Đã trả</button>
+                            </form>
+                        }
+                        else{
+
+                        }
+                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">Chưa có phiếu đặt trước nào.</div>
+}

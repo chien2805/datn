@@ -1,0 +1,33 @@
+﻿<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận xoá</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xoá sách này không?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                <form id="deleteForm" method="post">
+                    <button type="submit" class="btn btn-danger">Xoá</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button to trigger the modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" onclick="setDeleteUrl('/Sach/DeleteConfirmed/@Model.MaSach')">
+    Xoá
+</button>
+
+<script>
+    function setDeleteUrl(url) {
+      document.getElementById('deleteForm').action = url;
+    }
+</script>

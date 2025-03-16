@@ -1,0 +1,15 @@
+﻿/* Create.cshtml - Thêm thể loại */
+@model TheLoai
+<h2>Thêm thể loại mới</h2>
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label asp-for="TenTheLoai">Tên thể loại</label>
+        <input asp-for="TenTheLoai" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MoTa">Mô tả</label>
+        <textarea asp-for="MoTa" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+</form>

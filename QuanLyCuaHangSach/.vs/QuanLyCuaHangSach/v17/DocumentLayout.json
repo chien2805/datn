@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\datn\\quanglycuahangsach\\quanlycuahangsach\\controllers\\hoadonbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:controllers\\hoadonbancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\datn\\quanglycuahangsach\\quanlycuahangsach\\views\\hoadonban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\hoadonban\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\datn\\quanglycuahangsach\\quanlycuahangsach\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\datn\\quanglycuahangsach\\quanlycuahangsach\\models\\chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:models\\chitiethoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HoaDonBanController.cs",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Controllers\\HoaDonBanController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HoaDonBanController.cs",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Controllers\\HoaDonBanController.cs",
+              "RelativeToolTip": "Controllers\\HoaDonBanController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAUwEYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T14:57:10.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChiTietHoaDon.cs",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Models\\ChiTietHoaDon.cs",
+              "RelativeDocumentMoniker": "Models\\ChiTietHoaDon.cs",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Models\\ChiTietHoaDon.cs",
+              "RelativeToolTip": "Models\\ChiTietHoaDon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T14:59:15.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Views\\HoaDonBan\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\HoaDonBan\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Views\\HoaDonBan\\Index.cshtml",
+              "RelativeToolTip": "Views\\HoaDonBan\\Index.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-16T14:34:02.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Views\\TrangChu\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\TrangChu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\Views\\TrangChu\\Index.cshtml",
+              "RelativeToolTip": "Views\\TrangChu\\Index.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAYwHEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-16T14:28:15.743Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

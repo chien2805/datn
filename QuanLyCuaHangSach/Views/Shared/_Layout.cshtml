@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - QuanLyCuaHangSach</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/QuanLyCuaHangSach.styles.css" asp-append-version="true" />
+    
+</head>
+<body>
+    @{
+        var userRole = Context.Session.GetString("UserRole"); // Vai trò: "Admin" hoặc "KhachHang"
+        var isLoggedIn = Context.Session.GetString("UserEmail") != null; // Kiểm tra đã đăng nhập chưa
+    }
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Sach" asp-action="Index">QuanLyCuaHangSach</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <!-- Trang chủ luôn hiển thị -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TrangChu" asp-action="Index">Trang chủ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="PhieuDatTruoc" asp-action="Index">Danh sách mượn</a>
+                        </li>
+
+                        @if (!isLoggedIn) // Chỉ hiển thị "Đăng ký" nếu chưa đăng nhập
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="DangKi" asp-action="DangKy">Đăng ký</a>
+                            </li>
+                        }
+
+                        @if (userRole == "Admin")
+                        {
+                            <!-- Menu chỉ hiển thị với Admin -->
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Sach" asp-action="Index">Sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="TheLoai" asp-action="Index">Thể loại</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="NhaCungCap" asp-action="Index">Nhà cung cấp</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="TaiKhoanNguoiDung" asp-action="Index">Tài khoản</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="HoaDonBan" asp-action="Index">Hóa đơn</a>
+                            </li>
+                        }
+
+                        <ul class="navbar-nav">
+                            @if (isLoggedIn)
+                            {
+                                <!-- Hiển thị thông tin người dùng và menu thả xuống khi đăng nhập -->
+                                <li class="nav-item d-flex align-items-center position-relative" onmouseover="showUserOptions()" onmouseout="hideUserOptions()">
+                                    <span class="nav-link text-dark" style="cursor: pointer;">
+                                        Xin chào, @(string.IsNullOrEmpty(Context.Session.GetString("HoTen")) ? Context.Session.GetString("UserEmail") : Context.Session.GetString("HoTen"))
+                                    </span>
+                                    <div id="userOptions" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; border-radius: 5px; z-index: 1000;">
+                                        <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal">Thông tin tài khoản</a>
+                                        <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post">
+                                            <button type="submit" class="btn btn-danger btn-sm w-100">Đăng xuất</button>
+                                        </form>
+                                    </div>
+                                </li>
+                            }
+                            else
+                            {
+                                <!-- Hiển thị link đăng nhập nếu chưa đăng nhập -->
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark" onclick="showLoginModal()">Đăng nhập</a>
+                                </li>
+                            }
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - QuanLyCuaHangSach - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Modal Đăng nhập -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeLoginModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm" method="post" action="/DangNhap/Login">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeLoginModal()">Huỷ</button>
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script mở modal -->
+    <script>
+        function showLoginModal() {
+            $('#loginModal').modal('show');
+        }
+    </script>
+    <!-- Script mở & đóng modal -->
+    <script>
+        function showLoginModal() {
+            $('#loginModal').modal('show');
+        }
+
+        function closeLoginModal() {
+            $('#loginModal').modal('hide');
+        }
+    </script>
+    <script>
+        // Hiển thị nút đăng xuất
+        function showLogoutButton() {
+            document.getElementById('logoutForm').style.display = 'block';
+        }
+
+        // Ẩn nút đăng xuất
+        function hideLogoutButton() {
+            document.getElementById('logoutForm').style.display = 'none';
+        }
+    </script>
+
+    <!-- Modal hiển thị thông tin tài khoản -->
+    <!-- Modal hiển thị thông tin tài khoản -->
+    <div class="modal fade" id="thongTinTaiKhoanModal" tabindex="-1" aria-labelledby="thongTinTaiKhoanModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thongTinTaiKhoanModalLabel">Thông tin tài khoản</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Họ tên:</strong> @Context.Session.GetString("HoTen")</p>
+                    <p><strong>Email:</strong> @Context.Session.GetString("UserEmail")</p>
+                    <p><strong>Số điện thoại:</strong> @Context.Session.GetString("SoDienThoai")</p>
+                    <p><strong>Địa chỉ:</strong> @Context.Session.GetString("DiaChi")</p>
+                    <div class="text-center">
+                        <img src="@Context.Session.GetString("AnhDaiDien")" alt="Ảnh đại diện" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="switchToEditModal()">Chỉnh sửa</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal chỉnh sửa thông tin tài khoản -->
+    <div class="modal fade" id="chinhSuaTaiKhoanModal" tabindex="-1" aria-labelledby="chinhSuaTaiKhoanModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chinhSuaTaiKhoanModalLabel">
+                        <button type="button" class="btn btn-light me-2" onclick="switchToInfoModal()">&lt;</button>
+                        Chỉnh sửa thông tin tài khoản
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="/ThongTinNguoiDung/Edit">
+                    <input type="hidden" name="MaTaiKhoan" value="@Context.Session.GetInt32("MaTaiKhoan")" /> <!-- Thêm dòng này -->
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Họ tên:</label>
+                            <input type="text" class="form-control" name="HoTen" value="@Context.Session.GetString("HoTen")">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email:</label>
+                            <input type="email" class="form-control" name="Email" value="@Context.Session.GetString("UserEmail")" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Số điện thoại:</label>
+                            <input type="text" class="form-control" name="SoDienThoai" value="@Context.Session.GetString("SoDienThoai")">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Địa chỉ:</label>
+                            <input type="text" class="form-control" name="DiaChi" value="@Context.Session.GetString("DiaChi")">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Ảnh đại diện (URL):</label>
+                            <input type="text" class="form-control" name="AnhDaiDien" value="@Context.Session.GetString("AnhDaiDien")">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Lưu thay đổi</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showUserOptions() {
+            document.getElementById('userOptions').style.display = 'block';
+        }
+
+        function hideUserOptions() {
+            document.getElementById('userOptions').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        function switchToInfoModal() {
+            var editModal = bootstrap.Modal.getInstance(document.getElementById('chinhSuaTaiKhoanModal'));
+            editModal.hide(); // Đóng modal chỉnh sửa
+            var infoModal = new bootstrap.Modal(document.getElementById('thongTinTaiKhoanModal'));
+            infoModal.show(); // Mở modal thông tin
+        }
+    </script>
+
+    <script>
+        function switchToEditModal() {
+            var infoModal = bootstrap.Modal.getInstance(document.getElementById('thongTinTaiKhoanModal'));
+            infoModal.hide(); // Đóng modal thông tin
+            var editModal = new bootstrap.Modal(document.getElementById('chinhSuaTaiKhoanModal'));
+            editModal.show(); // Mở modal chỉnh sửa
+        }
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+
+</body>
+
+</html>

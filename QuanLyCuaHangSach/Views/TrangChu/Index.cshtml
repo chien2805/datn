@@ -1,0 +1,116 @@
+﻿@model IEnumerable<QuanLyCuaHangSach.Models.Sach>
+
+<h2>Danh sách sách</h2>
+@if (Model.Any())
+{
+    <h3>Có @Model.Count() sách</h3>
+}
+else
+{
+    <h3>Không có sách nào</h3>
+}
+
+<div class="row">
+    <!-- Cột chọn thể loại bên trái -->
+    <div class="col-md-3">
+        <h4>Thể loại</h4>
+        <ul class="list-group">
+            <!-- Nút "Tất cả" để hiển thị tất cả sách -->
+            <li class="list-group-item">
+                <a asp-action="Index" asp-route-theLoaiId="" title="Hiển thị tất cả các sách" data-bs-toggle="tooltip">
+                    Tất cả
+                </a>
+            </li>
+
+            @foreach (var theLoai in ViewBag.DanhSachTheLoai)
+            {
+                <li class="list-group-item">
+                    <a asp-action="Index" asp-route-theLoaiId="@theLoai.MaTheLoai"
+                       title="@theLoai.MoTa"
+                       data-bs-toggle="tooltip">
+                        @theLoai.TenTheLoai
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <!-- Cột danh sách sách bên phải -->
+    <div class="col-md-9">
+        <div class="row">
+            @foreach (var sach in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center">
+                                <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/") ? sach.HinhAnh : "~/images/sach/default.jpg")"
+                                     class="img-fluid rounded-start"
+                                     alt="@sach.TieuDe"
+                                     style="height: 100%; object-fit: cover;" />
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">@sach.TieuDe</h5>
+                                    <p class="card-text"><strong>Giá:</strong> @sach.Gia.ToString("N0") ₫</p>
+                                    <p class="card-text"><strong>Thể loại:</strong> @sach.TheLoai?.TenTheLoai</p>
+                                    <p class="card-text"><strong>Số lượng đã mượn:</strong> @sach.SoLuongMuon cuốn</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 mt-3">
+                            <button class="btn btn-success px-4 py-2">🛒 Mua</button>
+                            <!-- Form đặt thuê -->
+                            <form id="datThueForm" asp-controller="PhieuDatTruoc" asp-action="TaoPhieu" method="post">
+                                <input type="hidden" value="@sach.MaSach" name="maSach" />
+                                <input type="hidden" value="@ViewBag.MaTaiKhoan" name="maTaiKhoan" />
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#xacNhanModal">
+                                    📚 Đặt thuê
+                                </button>
+                            </form>
+
+                            <!-- Modal xác nhận -->
+                            <div class="modal fade" id="xacNhanModal" tabindex="-1" aria-labelledby="xacNhanModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="xacNhanModalLabel">Xác nhận đặt thuê</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Bạn có chắc chắn muốn đặt thuê sách này không?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                            <button type="button" class="btn btn-primary" id="xacNhanDatThue">Xác nhận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Kích hoạt tooltip của Bootstrap -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl, {
+                delay: { show: 500, hide: 100 } // Hiện sau 1s, ẩn nhanh sau 100ms
+            });
+        });
+    });
+</script>
+<script>
+    document.getElementById("xacNhanDatThue").addEventListener("click", function () {
+        document.getElementById("datThueForm").submit();
+    });
+</script>
+
+<!-- Hỏi đặt trước -->

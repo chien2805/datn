@@ -1,0 +1,28 @@
+﻿<!-- Modal Thong Tin Nguoi Dung -->
+<div class="modal fade" id="thongTinNguoiDungModal" tabindex="-1" role="dialog" aria-labelledby="thongTinNguoiDungModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="thongTinNguoiDungModalLabel">Thông Tin Tài Khoản</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Họ tên:</strong> @ViewBag.HoTen</p>
+                <p><strong>Email:</strong> @ViewBag.Email</p>
+                <p><strong>Số điện thoại:</strong> @ViewBag.SoDienThoai</p>
+                <p><strong>Địa chỉ:</strong> @ViewBag.DiaChi</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showThongTinNguoiDungModal() {
+        $('#thongTinNguoiDungModal').modal('show');
+    }
+</script>

@@ -1,0 +1,271 @@
+﻿@model IEnumerable<dynamic>
+
+<h2>Danh sách hóa đơn bán</h2>
+<!-- Nút mở modal tạo hóa đơn mới -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taoHoaDonModal">
+    Tạo hóa đơn mới
+</button>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Mã Hóa Đơn</th>
+            <th>Tên Khách Hàng</th>
+            <th>Số Điện Thoại</th>
+            <th>Tên Nhân Viên</th>
+            <th>Ngày Lập</th>
+            <th>Tổng Tiền</th>
+            <th>Thao Tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hoaDon in Model)
+        {
+            <tr>
+                <td>@hoaDon.MaHoaDon</td>
+                <td>@hoaDon.TenKhachHang</td>
+                <td>@hoaDon.SoDienThoai</td>
+                <td>@hoaDon.TenNhanVien</td>
+                <td>@hoaDon.NgayLap.ToString("dd/MM/yyyy")</td>
+                <td>@hoaDon.TongTien.ToString("N0") VNĐ</td>
+                <td>
+                    <button class="btn btn-info" onclick="xemHoaDon(@hoaDon.MaHoaDon)">Xem</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal xem hóa đơn -->
+<div class="modal fade" id="xemHoaDonModal" tabindex="-1" aria-labelledby="xemHoaDonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="xemHoaDonModalLabel">Chi tiết hóa đơn</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="chiTietHoaDonBody">
+                <p>Thông tin hóa đơn sẽ hiển thị ở đây.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal tạo hóa đơn -->
+<div class="modal fade" id="taoHoaDonModal" tabindex="-1" aria-labelledby="taoHoaDonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taoHoaDonModalLabel">Tạo hóa đơn mới</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="taoHoaDonForm" method="post" action="@Url.Action("TaoHoaDon", "HoaDonBan")">
+                    @Html.AntiForgeryToken()
+                    <h5>Thông tin hóa đơn</h5>
+
+                    <div class="mb-3">
+                        <label for="TenKhachHang" class="form-label">Tên khách hàng</label>
+                        <input type="text" class="form-control" name="TenKhachHang" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="SoDienThoai" class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control" name="SoDienThoai" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TenNhanVien" class="form-label">Tên nhân viên</label>
+                        <input type="text" class="form-control" name="TenNhanVien">
+                    </div>
+                    <div class="mb-3">
+                        <label for="NgayLap" class="form-label">Ngày lập</label>
+                        <input type="date" class="form-control" name="NgayLap" value="@DateTime.Now.ToString("yyyy-MM-dd")" readonly>
+                    </div>
+                    <h5>Chi tiết hóa đơn</h5>
+                    <div id="chiTietHoaDonContainer">
+                        <!-- Chi tiết hóa đơn dòng đầu tiên -->
+                        <div class="row mb-3">
+                            <input type="hidden" name="ChiTietHoaDon[0].MaSach" id="maSach0" />
+                            <div class="col-8">
+                                <label for="tenSach0" class="form-label">Tên sách</label>
+                                <input type="text" class="form-control tenSach" id="tenSach0" name="ChiTietHoaDon[0].TieuDe" placeholder="Tên sách" required>
+                            </div>
+                            <div class="col-4">
+                                <label for="giaSach0" class="form-label">Giá</label>
+                                <input type="number" step="0.01" class="form-control giaSach" id="giaSach0" name="ChiTietHoaDon[0].Gia" placeholder="Giá" required readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <label for="soLuong0" class="form-label">Số lượng</label>
+                                <input type="number" class="form-control soLuong" id="soLuong0" name="ChiTietHoaDon[0].SoLuong" placeholder="Số lượng" value="1" min="1" required oninput="capNhatThanhTienIndex(0)">
+                            </div>
+                            <div class="col-4">
+                                <label for="thanhTien0" class="form-label">Thành tiền</label>
+                                <input type="number" step="0.01" class="form-control thanhTien" id="thanhTien0" name="ChiTietHoaDon[0].ThanhTien" placeholder="Thành tiền" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary" onclick="themChiTietHoaDon()">Thêm chi tiết</button>
+                    <button type="submit" class="btn btn-success">Lưu hóa đơn</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Hàm xem hóa đơn qua AJAX (giữ nguyên nếu đã hoạt động)
+        function xemHoaDon(maHoaDon) {
+            $.ajax({
+                url: '@Url.Action("XemHoaDon", "HoaDonBan")',
+                type: 'GET',
+                data: { id: maHoaDon },
+                success: function (response) {
+                    const hoaDonHtml = `
+                        <p><strong>Mã hóa đơn:</strong> ${response.maHoaDon}</p>
+                        <p><strong>Tên khách hàng:</strong> ${response.tenKhachHang}</p>
+                        <p><strong>Số điện thoại:</strong> ${response.soDienThoai}</p>
+                        <p><strong>Tên nhân viên:</strong> ${response.tenNhanVien}</p>
+                        <p><strong>Ngày lập:</strong> ${new Date(response.ngayLap).toLocaleDateString()}</p>
+                        <p><strong>Tổng tiền:</strong> ${response.tongTien?.toLocaleString() ?? '0'} VNĐ</p>
+                        <h5>Chi tiết hóa đơn</h5>
+                        <ul>
+                            ${response.chiTietHoaDon && response.chiTietHoaDon.length > 0
+                                ? response.chiTietHoaDon.map(ct => `
+                                    <li>${ct.tieuDe ?? 'N/A'} - SL: ${ct.soLuong ?? 0} - Giá: ${ct.gia?.toLocaleString() ?? '0'} VNĐ - Thành tiền: ${ct.thanhTien?.toLocaleString() ?? '0'} VNĐ</li>
+                                `).join('')
+                                : '<li>Không có chi tiết hóa đơn</li>'
+                            }
+                        </ul>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    `;
+                    $('#chiTietHoaDonBody').html(hoaDonHtml);
+                    $('#xemHoaDonModal').modal('show');
+                },
+                error: function () {
+                    alert('Không thể tải chi tiết hóa đơn');
+                }
+            });
+        }
+
+        // Autocomplete cho ô tên sách dòng đầu tiên
+        $(document).ready(function () {
+            $("#tenSach0").autocomplete({
+                appendTo: "#taoHoaDonModal",
+                source: function (request, response) {
+                    $.ajax({
+                        url: '@Url.Action("TimKiemSach", "Sach")',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { term: request.term },
+                        success: function (data) {
+                            response(data);
+                        }
+                    });
+                },
+                minLength: 1,
+                select: function (event, ui) {
+                    $("#tenSach0").val(ui.item.label);
+                    $.ajax({
+                        url: '@Url.Action("LayGiaSach", "Sach")',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { tenSach: ui.item.label },
+                        success: function (data) {
+                            if (data && data.gia !== undefined) {
+                                $("#giaSach0").val(data.gia);
+                                // Gán mã sách cho chi tiết hóa đơn dòng 0
+                                $("#maSach0").val(data.maSach);
+                                capNhatThanhTienIndex(0);
+                            } else {
+                                console.error("Không tìm thấy thông tin giá sách.");
+                            }
+                        },
+                        error: function () {
+                            console.error("Lỗi khi gọi API LayGiaSach");
+                        }
+                    });
+                }
+            });
+        });
+
+        // Hàm cập nhật thành tiền cho dòng đầu tiên (sử dụng index)
+        function capNhatThanhTienIndex(index) {
+            const gia = parseFloat(document.getElementById(`giaSach${index}`).value) || 0;
+            const soLuong = parseInt(document.getElementById(`soLuong${index}`).value) || 1;
+            const thanhTien = document.getElementById(`thanhTien${index}`);
+            thanhTien.value = (gia * soLuong).toFixed(2);
+        }
+
+        // Biến theo dõi chỉ số chi tiết hóa đơn mới (dòng tiếp theo)
+        let chiTietIndex = 1;
+
+        // Hàm thêm chi tiết hóa đơn mới
+        function themChiTietHoaDon() {
+            const container = document.getElementById('chiTietHoaDonContainer');
+            const index = chiTietIndex++; // Lưu chỉ số hiện tại
+            const html = `<div class="row mb-3">
+                <div class="col-8">
+                    <label class="form-label">Tên sách</label>
+                    <input type="text" class="form-control tenSach" id="tenSach${index}" name="ChiTietHoaDon[${index}].TieuDe" placeholder="Tên sách" required oninput="goiYSach(this, ${index})">
+                </div>
+                <div class="col-4">
+                    <label class="form-label">Giá</label>
+                    <input type="number" step="0.01" class="form-control giaSach" id="giaSach${index}" name="ChiTietHoaDon[${index}].Gia" placeholder="Giá" required readonly>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <label class="form-label">Số lượng</label>
+                    <input type="number" class="form-control soLuong" id="soLuong${index}" name="ChiTietHoaDon[${index}].SoLuong" placeholder="Số lượng" value="1" min="1" required oninput="capNhatThanhTienIndex(${index})">
+                </div>
+                <div class="col-4">
+                    <label class="form-label">Thành tiền</label>
+                    <input type="number" step="0.01" class="form-control thanhTien" id="thanhTien${index}" name="ChiTietHoaDon[${index}].ThanhTien" placeholder="Thành tiền" readonly>
+                </div>
+            </div>
+            <input type="hidden" id="maSach${index}" name="ChiTietHoaDon[${index}].MaSach" />`;
+            container.insertAdjacentHTML('beforeend', html);
+            // Gắn autocomplete cho ô tên sách dòng mới
+            goiYSach(`#tenSach${index}`, index);
+        }
+
+        // Hàm autocomplete cho ô tên sách dòng mới
+        function goiYSach(selector, index) {
+            $(selector).autocomplete({
+                appendTo: "#taoHoaDonModal",
+                source: function (request, response) {
+                    $.ajax({
+                        url: '@Url.Action("TimKiemSach", "Sach")',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { term: request.term },
+                        success: function (data) {
+                            response(data);
+                        }
+                    });
+                },
+                minLength: 1,
+                select: function (event, ui) {
+                    $(selector).val(ui.item.label);
+                    $.ajax({
+                        url: '@Url.Action("LayGiaSach", "Sach")',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { tenSach: ui.item.label },
+                        success: function (data) {
+                            $(`#giaSach${index}`).val(data.gia);
+                            // Gán mã sách cho dòng mới
+                            $(`#maSach${index}`).val(data.maSach);
+                            capNhatThanhTienIndex(index);
+                        },
+                        error: function () {
+                            console.error("Lỗi khi gọi API LayGiaSach");
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+}

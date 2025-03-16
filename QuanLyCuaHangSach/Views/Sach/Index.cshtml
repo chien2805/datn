@@ -1,0 +1,71 @@
+﻿/* Index.cshtml - Danh sách sách */
+@model IEnumerable<Sach>
+<h2>Danh sách sách</h2>
+<a asp-action="Create" class="btn btn-primary">Thêm sách</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tiêu đề</th>
+            <th>Tác giả</th>
+            <th>Thể loại</th>
+            <th>Nhà cung cấp</th>
+            <th>Giá</th>
+            <th>Số lượng tồn</th>
+            <th>Số lượng hỏng</th>
+            <th>Số lượng mất</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sach in Model)
+        {
+            <tr>
+                <td>@sach.TieuDe</td>
+                <td>@sach.TacGia</td>
+                <td>@sach.TheLoai.TenTheLoai</td>
+                <td>@sach.NhaCungCap.TenNhaCungCap</td>
+                <td>@sach.Gia</td>
+                <td>@sach.SoLuongTon</td>
+                <td>@sach.SoLuongHong</td>
+                <td>@sach.SoLuongMat</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-warning">Sửa</a>
+                    <a asp-action="Details" asp-route-id="@sach.MaSach" class="btn btn-info">Chi tiết</a>
+                    <button type="button" class="btn btn-danger" onclick="confirmDelete(@sach.MaSach)">Xóa</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal Xác nhận Xoá -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xoá</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xoá sách này không?
+            </div>
+            <div class="modal-footer">
+                <form id="deleteForm" method="post">
+                    @Html.AntiForgeryToken()
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                    <button type="submit" class="btn btn-danger">Xoá</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function confirmDelete(id) {
+        const form = document.getElementById('deleteForm');
+        form.action = `/Sach/DeleteConfirmed/${id}`;
+        $('#confirmDeleteModal').modal('show');
+    }
+</script>
