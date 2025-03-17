@@ -24,6 +24,10 @@ namespace QuanLyCuaHangSach.Context
         public DbSet<ChiTietHoaDon> ChiTietHoaDon { get; set; }
         public DbSet<ChiTietPhieuDatTruoc> ChiTietPhieuDatTruoc { get; set; }
 
+        public DbSet<GioHang> GioHang { get; set; } // Đảm bảo có dòng này
+        public DbSet<ChiTietGioHang> ChiTietGioHang { get; set; } // Đảm bảo có dòng này
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

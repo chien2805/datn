@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyCuaHangSach.Context;
 
@@ -11,9 +12,11 @@ using QuanLyCuaHangSach.Context;
 namespace QuanLyCuaHangSach.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250317140621_gioihang")]
+    partial class gioihang
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,32 +24,6 @@ namespace QuanLyCuaHangSach.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietGioHang", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MaGioHang")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaSach")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SoLuong")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MaGioHang");
-
-                    b.HasIndex("MaSach");
-
-                    b.ToTable("ChiTietGioHang");
-                });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietHoaDon", b =>
                 {
@@ -100,22 +77,6 @@ namespace QuanLyCuaHangSach.Migrations
                     b.HasIndex("MaSach");
 
                     b.ToTable("ChiTietPhieuDatTruoc");
-                });
-
-            modelBuilder.Entity("QuanLyCuaHangSach.Models.GioHang", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MaTaiKhoan")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("GioHang");
                 });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBan", b =>
@@ -432,25 +393,6 @@ namespace QuanLyCuaHangSach.Migrations
                     b.ToTable("ThongTinNguoiDung");
                 });
 
-            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietGioHang", b =>
-                {
-                    b.HasOne("QuanLyCuaHangSach.Models.GioHang", "GioHang")
-                        .WithMany("ChiTietGioHangs")
-                        .HasForeignKey("MaGioHang")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("QuanLyCuaHangSach.Models.Sach", "Sach")
-                        .WithMany()
-                        .HasForeignKey("MaSach")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("GioHang");
-
-                    b.Navigation("Sach");
-                });
-
             modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietHoaDon", b =>
                 {
                     b.HasOne("QuanLyCuaHangSach.Models.HoaDonBan", "HoaDon")
@@ -572,11 +514,6 @@ namespace QuanLyCuaHangSach.Migrations
                         .IsRequired();
 
                     b.Navigation("TaiKhoanNguoiDung");
-                });
-
-            modelBuilder.Entity("QuanLyCuaHangSach.Models.GioHang", b =>
-                {
-                    b.Navigation("ChiTietGioHangs");
                 });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBan", b =>

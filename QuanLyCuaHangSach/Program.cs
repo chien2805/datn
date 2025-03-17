@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using QuanLyCuaHangSach.Context;
 
@@ -5,30 +6,30 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAuthentication("Cookies")
-    .AddCookie("Cookies", options =>
+
+// Cấu hình xác thực với Cookie
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
     {
         options.LoginPath = "/DangNhap/Index"; // Trang đăng nhập
-        options.AccessDeniedPath = "/Home/AccessDenied"; // Trang khi bị chặn quyền
+        options.AccessDeniedPath = "/Home/AccessDenied"; // Trang bị chặn quyền
     });
 
 // Cấu hình DbContext với SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Thêm dòng này để cấu hình Session
+// Thêm Session
 builder.Services.AddSession();
 
 var app = builder.Build();
 
-app.UseSession(); // Thêm middleware này
-
+app.UseSession(); // Kích hoạt session
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -37,9 +38,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+// ✅ ĐÚNG THỨ TỰ: Authentication -> Authorization
 app.UseAuthentication();
-
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",

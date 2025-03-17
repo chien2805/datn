@@ -298,7 +298,10 @@ namespace QuanLyCuaHangSach.Controllers
         [HttpPost]
         public IActionResult Huy(int id)
         {
-            var phieu = _context.PhieuDatTruoc.FirstOrDefault(p => p.MaPhieuDatTruoc == id);
+            var phieu = _context.PhieuDatTruoc
+                .Include(p => p.ChiTietPhieuDatTruoc)
+                .ThenInclude(c => c.Sach)
+                .FirstOrDefault(p => p.MaPhieuDatTruoc == id);
 
             /*if (phieu == null)
             {
@@ -308,6 +311,15 @@ namespace QuanLyCuaHangSach.Controllers
             if (phieu.TrangThai != "Đang xử lý")
             {
                 return BadRequest("Chỉ có thể hủy phiếu khi đang chờ xác nhận.");
+            }
+
+            // Hoàn lại số lượng sách đã đặt trước vào tồn kho
+            foreach (var chiTiet in phieu.ChiTietPhieuDatTruoc)
+            {
+                if (chiTiet.Sach != null)
+                {
+                    chiTiet.Sach.SoLuongTon += chiTiet.SoLuongMuon; // Cộng lại vào tồn kho
+                }
             }
 
             // Cập nhật trạng thái thành "Huy"
