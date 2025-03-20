@@ -86,7 +86,7 @@ namespace QuanLyCuaHangSach.Controllers
             HttpContext.Session.SetString("SoDienThoai", userInfo.SoDienThoai);
             HttpContext.Session.SetString("DiaChi", userInfo.DiaChi);
 
-            return RedirectToAction("Index", "TaiKhoanNguoiDung");
+            return RedirectToAction("Index", "TrangChu");
         }
 
 
@@ -94,7 +94,7 @@ namespace QuanLyCuaHangSach.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Index", "Sach");
+            return RedirectToAction("Index", "TrangChu");
         }
     }
 }

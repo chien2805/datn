@@ -1,0 +1,85 @@
+﻿@model QuanLyCuaHangSach.Models.GioHang
+
+@{
+    ViewData["Title"] = "Xác nhận thanh toán";
+}
+
+<div class="container mt-4">
+    <h2>Xác nhận đơn hàng</h2>
+
+    <!-- Hiển thị giỏ hàng -->
+    <ul class="list-group">
+        @foreach (var item in Model.ChiTietGioHangs)
+        {
+            <li class="list-group-item d-flex align-items-center">
+                <img src="@item.Sach.HinhAnh" alt="@item.Sach.TieuDe" class="img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;" />
+                <div class="ms-3 flex-grow-1">
+                    <b>@item.Sach.TieuDe</b><br>
+                    Số lượng: @item.SoLuong<br>
+                    Giá: @item.Sach.Gia.ToString("N0")đ
+                </div>
+                <b>@(item.SoLuong * item.Sach.Gia)đ</b>
+            </li>
+        }
+    </ul>
+
+    <!-- Nhập thông tin giao hàng -->
+    <h4 class="mt-4">Thông tin giao hàng</h4>
+    <form id="thanhToanForm">
+        <div class="mb-3">
+            <label for="HoTen" class="form-label">Họ và tên</label>
+            <input type="text" id="HoTen" name="HoTen" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="SoDienThoai" class="form-label">Số điện thoại</label>
+            <input type="text" id="SoDienThoai" name="SoDienThoai" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="DiaChiGiaoHang" class="form-label">Địa chỉ giao hàng</label>
+            <input type="text" id="DiaChiGiaoHang" name="DiaChiGiaoHang" class="form-control" required>
+        </div>
+
+        <!-- Chọn phương thức thanh toán -->
+        <h4 class="mt-4">Chọn phương thức thanh toán</h4>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="phuongThucThanhToan" value="TienMat" checked>
+            <label class="form-check-label">Thanh toán khi nhận hàng</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="phuongThucThanhToan" value="ChuyenKhoan">
+            <label class="form-check-label">Chuyển khoản ngân hàng</label>
+        </div>
+
+        <!-- Nút xác nhận thanh toán -->
+        <button type="button" class="btn btn-success mt-3" onclick="thanhToan()">Xác nhận & Thanh toán</button>
+    </form>
+</div>
+
+<script>
+    function thanhToan() {
+        let HoTen = $("#HoTen").val().trim();
+        let SoDienThoai = $("#SoDienThoai").val().trim();
+        let DiaChiGiaoHang = $("#DiaChiGiaoHang").val().trim();
+        let phuongThucThanhToan = $("input[name='phuongThucThanhToan']:checked").val();
+
+        if (!HoTen || !SoDienThoai || !DiaChiGiaoHang) {
+            alert("Vui lòng nhập đầy đủ thông tin giao hàng.");
+            return;
+        }
+
+        $.post("/GioHang/ThanhToanOnline", {
+            HoTen: HoTen,
+            SoDienThoai: SoDienThoai,
+            DiaChiGiaoHang: DiaChiGiaoHang,
+            phuongThucThanhToan: phuongThucThanhToan
+        }, function (response) {
+            if (response.success) {
+                window.location.href = response.redirectUrl;
+            } else {
+                alert("Lỗi: " + response.message);
+            }
+        }).fail(function (xhr) {
+            alert("Lỗi: " + xhr.responseText);
+        });
+    }
+</script>

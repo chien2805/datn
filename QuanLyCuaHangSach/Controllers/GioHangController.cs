@@ -64,6 +64,24 @@ namespace QuanLyCuaHangSach.Controllers
             return Json(new { success = true });
         }
 
+        [HttpPost]
+        public IActionResult CapNhatSoLuongIndex(int maSach, int soLuongThayDoi)
+        {
+            var gioHang = GetGioHang();
+            var item = gioHang.ChiTietGioHangs.FirstOrDefault(c => c.MaSach == maSach);
+
+            if (item != null)
+            {
+                item.SoLuong += soLuongThayDoi;
+                if (item.SoLuong <= 0)
+                    gioHang.ChiTietGioHangs.Remove(item);
+
+                HttpContext.Session.SetObjectAsJson("GioHang", gioHang);
+            }
+
+            return Json(new { success = true });
+        }
+
         // Xóa một sách khỏi giỏ hàng
         [HttpPost]
         public IActionResult XoaKhoiGio(int maSach)

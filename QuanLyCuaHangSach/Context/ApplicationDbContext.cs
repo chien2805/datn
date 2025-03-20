@@ -27,6 +27,9 @@ namespace QuanLyCuaHangSach.Context
         public DbSet<GioHang> GioHang { get; set; } // Đảm bảo có dòng này
         public DbSet<ChiTietGioHang> ChiTietGioHang { get; set; } // Đảm bảo có dòng này
 
+        public DbSet<HoaDonBanOnline> HoaDonBanOnline { get; set; }
+        public DbSet<ChiTietHoaDonBanOnline> ChiTietHoaDonBanOnline { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -90,6 +93,11 @@ namespace QuanLyCuaHangSach.Context
         .WithMany(tk => tk.PhieuDatTruoc)
         .HasForeignKey(p => p.MaTaiKhoan)
         .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<ChiTietHoaDonBanOnline>()
+        .HasOne(c => c.HoaDonBanOnline)
+        .WithMany(h => h.ChiTietHoaDonBanOnline)
+        .HasForeignKey(c => c.MaHoaDonOnline);
 
         }
 

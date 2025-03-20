@@ -36,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ0tpXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/GioHang/ThanhToanThanhCong.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xUaGFuaFRvYW5UaGFuaENvbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/GioHang/XacNhanThanhToan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xYYWNOaGFuVGhhbmhUb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/HoaDonBan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uQmFuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -120,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5OZ3VvaUR1bmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/ThanhToan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/TheLoai/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlTG9haVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -134,10 +146,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/TrangChu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmdDaHVcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/ViewNguoiDung/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld05ndW9pRHVuZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CHIEN/Desktop/DATN/QuangLyCuaHangSach/QuanLyCuaHangSach/Views/_ViewImports.cshtml]

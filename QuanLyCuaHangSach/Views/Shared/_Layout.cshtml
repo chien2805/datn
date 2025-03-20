@@ -239,6 +239,36 @@
         </div>
     </div>
 
+    
+
+    <script>
+        function showUserOptions() {
+            document.getElementById('userOptions').style.display = 'block';
+        }
+
+        function hideUserOptions() {
+            document.getElementById('userOptions').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        function switchToInfoModal() {
+            var editModal = bootstrap.Modal.getInstance(document.getElementById('chinhSuaTaiKhoanModal'));
+            editModal.hide(); // Đóng modal chỉnh sửa
+            var infoModal = new bootstrap.Modal(document.getElementById('thongTinTaiKhoanModal'));
+            infoModal.show(); // Mở modal thông tin
+        }
+    </script>
+
+    <script>
+        function switchToEditModal() {
+            var infoModal = bootstrap.Modal.getInstance(document.getElementById('thongTinTaiKhoanModal'));
+            infoModal.hide(); // Đóng modal thông tin
+            var editModal = new bootstrap.Modal(document.getElementById('chinhSuaTaiKhoanModal'));
+            editModal.show(); // Mở modal chỉnh sửa
+        }
+    </script>
+
     <!-- Modal Giỏ Hàng -->
     <!-- Offcanvas giỏ hàng -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="gioHangModal" aria-labelledby="gioHangModalLabel">
@@ -270,39 +300,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    <script>
-        function showUserOptions() {
-            document.getElementById('userOptions').style.display = 'block';
-        }
-
-        function hideUserOptions() {
-            document.getElementById('userOptions').style.display = 'none';
-        }
-    </script>
-
-    <script>
-        function switchToInfoModal() {
-            var editModal = bootstrap.Modal.getInstance(document.getElementById('chinhSuaTaiKhoanModal'));
-            editModal.hide(); // Đóng modal chỉnh sửa
-            var infoModal = new bootstrap.Modal(document.getElementById('thongTinTaiKhoanModal'));
-            infoModal.show(); // Mở modal thông tin
-        }
-    </script>
-
-    <script>
-        function switchToEditModal() {
-            var infoModal = bootstrap.Modal.getInstance(document.getElementById('thongTinTaiKhoanModal'));
-            infoModal.hide(); // Đóng modal thông tin
-            var editModal = new bootstrap.Modal(document.getElementById('chinhSuaTaiKhoanModal'));
-            editModal.show(); // Mở modal chỉnh sửa
-        }
-    </script>
 
     <script>
         function themVaoGio(maSach) {
@@ -369,20 +366,8 @@
         }
 
         // Hàm thanh toán
-        function thanhToan() {
-            if ($("#cart-items li").length === 0) {
-                alert("Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.");
-                return;
-            }
-
-            $.post("/GioHang/ThanhToan", function (response) {
-                if (response.success) {
-                    alert("Thanh toán thành công!");
-                    xoaGioHang();
-                } else {
-                    alert("Có lỗi xảy ra khi thanh toán.");
-                }
-            });
+            function thanhToan() {
+            window.location.href = "/ThanhToan/Index";
         }
 
 
