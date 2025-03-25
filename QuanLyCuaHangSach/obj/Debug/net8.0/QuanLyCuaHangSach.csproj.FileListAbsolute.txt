@@ -178,4 +178,6 @@ C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\obj\Debug\net8.
 C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\obj\Debug\net8.0\QuanLyCu.C3400158.Up2Date
 C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\obj\Debug\net8.0\QuanLyCuaHangSach.sourcelink.json
 C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\bin\Debug\net8.0\VNPAY.NET.dll
+C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\bin\Debug\net8.0\RestSharp.dll
 C:\Users\CHIEN\Desktop\DATN\QuangLyCuaHangSach\QuanLyCuaHangSach\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

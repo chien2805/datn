@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\images\\sach\\default.jpg"
     },
     {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "PackagePath": "staticwebassets\\js\\custom.min.js"
+    },
+    {
       "Id": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

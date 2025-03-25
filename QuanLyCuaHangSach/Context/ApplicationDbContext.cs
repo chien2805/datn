@@ -30,6 +30,9 @@ namespace QuanLyCuaHangSach.Context
         public DbSet<HoaDonBanOnline> HoaDonBanOnline { get; set; }
         public DbSet<ChiTietHoaDonBanOnline> ChiTietHoaDonBanOnline { get; set; }
 
+  
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

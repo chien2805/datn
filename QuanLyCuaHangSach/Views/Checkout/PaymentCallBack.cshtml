@@ -1,0 +1,16 @@
+﻿@model QuanLyCuaHangSach.Models.MomoinfoModel
+@{
+    ViewData["Title"] = "Kết quả Thanh Toán";
+}
+
+<h2>Kết quả Thanh Toán</h2>
+
+<div>
+    <p><strong>Mã đơn hàng:</strong> @Model.OrderId</p>
+    <p><strong>Thông tin đơn hàng:</strong> @Model.OrderInfo</p>
+    <p><strong>Tên khách hàng:</strong> @Model.FullName</p>
+    <p><strong>Số tiền thanh toán:</strong> @Model.Amount VND</p>
+    <p><strong>Thời gian thanh toán:</strong> @Model.DatePaid.ToString("dd/MM/yyyy HH:mm:ss")</p>
+</div>
+
+<a href="/" class="btn btn-primary">Quay về trang chủ</a>

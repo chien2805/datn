@@ -1,0 +1,20 @@
+﻿@model dynamic
+@{
+    ViewData["Title"] = "Kết quả thanh toán";
+}
+
+<h2>Kết quả Thanh Toán</h2>
+
+@if (Model.ErrorCode == "0")
+{
+    <p style="color: green;">Thanh toán thành công!</p>
+    <p>Mã giao dịch: @Model.TransId</p>
+    <p>Số tiền: @Model.Amount VND</p>
+    <p>Thông tin đơn hàng: @Model.OrderInfo</p>
+}
+else
+{
+    <p style="color: red;">Thanh toán thất bại!</p>
+    <p>Thông báo: @Model.LocalMessage</p>
+}
+<a href="/">Quay về trang chủ</a>

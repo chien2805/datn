@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5paFg72wOjTsvA+qr39rq9wMJNeIxg526/2y4x4Nxmc=",
+  "Hash": "FCGXvYObkfV0TwPp+86/obMPDgD3Wg8tL/v6GEK73Sg=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -330,6 +330,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\sach\\default.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "js/custom.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pte4zdh5f7",
+      "Integrity": "8zQv1yzcDdiE8+ShZRqmLGApQSsXE7dIwJWsaJjUfkg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\custom.min.js"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
@@ -2614,6 +2635,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "244"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8zQv1yzcDdiE8+ShZRqmLGApQSsXE7dIwJWsaJjUfkg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 14:52:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8zQv1yzcDdiE8+ShZRqmLGApQSsXE7dIwJWsaJjUfkg="
+        }
+      ]
+    },
+    {
+      "Route": "js/custom.min.pte4zdh5f7.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "244"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8zQv1yzcDdiE8+ShZRqmLGApQSsXE7dIwJWsaJjUfkg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 14:52:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pte4zdh5f7"
+        },
+        {
+          "Name": "label",
+          "Value": "js/custom.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8zQv1yzcDdiE8+ShZRqmLGApQSsXE7dIwJWsaJjUfkg="
         }
       ]
     },

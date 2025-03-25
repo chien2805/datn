@@ -11,6 +11,7 @@ wwwroot\images\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg
 wwwroot\images\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg
 wwwroot\images\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg
 wwwroot\images\sach\default.jpg
+wwwroot\js\custom.min.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
