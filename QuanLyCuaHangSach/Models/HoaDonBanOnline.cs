@@ -7,22 +7,23 @@ namespace QuanLyCuaHangSach.Models
 {
     public class HoaDonBanOnline
     {
-        [Key]
-        public int MaHoaDonOnline { get; set; }
+        [Key] // 🔹 Đánh dấu khóa chính
+        public int MaHoaDon { get; set; }
 
-        [ForeignKey("TaiKhoanNguoiDung")]
-        public int MaTaiKhoan { get; set; }
-
-        public DateTime NgayLap { get; set; }
-        public decimal TongTien { get; set; }
         public string TenKhachHang { get; set; }
+
+        public string DiaChi { get; set; }
+
         public string SoDienThoai { get; set; }
-        public string DiaChiGiaoHang { get; set; }
-        public string PhuongThucThanhToan { get; set; }
-        public string TrangThai { get; set; }  // Ví dụ: "Chưa thanh toán", "Đã thanh toán",...
 
-        public virtual List<ChiTietHoaDonBanOnline> ChiTietHoaDonBanOnline { get; set; } = new List<ChiTietHoaDonBanOnline>();
+        public DateTime NgayTao { get; set; } = DateTime.Now;
 
-        public virtual TaiKhoanNguoiDung TaiKhoanNguoiDung { get; set; }
+        public decimal TongTien { get; set; }
+
+        public string TrangThai { get; set; } 
+
+        public string LoaiThanhToan { get; set; } = "Online"; // Xác định đây là đơn hàng online
+
+        public List<ChiTietHoaDonOnline> ChiTietHoaDon { get; set; }
     }
 }

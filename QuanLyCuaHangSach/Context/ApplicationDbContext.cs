@@ -28,11 +28,7 @@ namespace QuanLyCuaHangSach.Context
         public DbSet<ChiTietGioHang> ChiTietGioHang { get; set; } // Đảm bảo có dòng này
 
         public DbSet<HoaDonBanOnline> HoaDonBanOnline { get; set; }
-        public DbSet<ChiTietHoaDonBanOnline> ChiTietHoaDonBanOnline { get; set; }
-
-  
-
-
+        public DbSet<ChiTietHoaDonOnline> ChiTietHoaDonOnline { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -44,17 +40,15 @@ namespace QuanLyCuaHangSach.Context
             modelBuilder.Entity<KhachHang>().HasKey(kh => kh.MaKhachHang);
             modelBuilder.Entity<KhoSach>().HasKey(ks => new { ks.MaKho, ks.MaSach });
             modelBuilder.Entity<NhaCungCap>().HasKey(ncc => ncc.MaNhaCungCap);
-           
             modelBuilder.Entity<PhieuDatTruoc>().HasKey(pdt => pdt.MaPhieuDatTruoc);
             modelBuilder.Entity<PhieuMuon>().HasKey(pm => pm.MaPhieuMuon);
             modelBuilder.Entity<PhieuTra>().HasKey(pt => pt.MaPhieuTra);
             modelBuilder.Entity<Sach>().HasKey(s => s.MaSach);
             modelBuilder.Entity<TaiKhoanNguoiDung>().HasKey(tk => tk.MaTaiKhoan);
-            modelBuilder.Entity<TheLoai>().HasKey(tl => tl.MaTheLoai); // Sửa lại khai báo khóa chính
+            modelBuilder.Entity<TheLoai>().HasKey(tl => tl.MaTheLoai);
             modelBuilder.Entity<ThongTinNguoiDung>().HasKey(tt => tt.MaThongTinNguoiDung);
 
-
-            // Thiết lập quan hệ
+            // 🌟 **Thiết lập quan hệ**
             modelBuilder.Entity<Sach>()
                 .HasOne(s => s.TheLoai)
                 .WithMany(tl => tl.Sach)
@@ -89,20 +83,28 @@ namespace QuanLyCuaHangSach.Context
                 .HasOne(t => t.ThongTinNguoiDung)
                 .WithOne(tn => tn.TaiKhoanNguoiDung)
                 .HasForeignKey<ThongTinNguoiDung>(tn => tn.MaTaiKhoan);
-            // Thiết lập quan hệ giữa PhieuDatTruoc và TaiKhoanNguoiDung
 
             modelBuilder.Entity<PhieuDatTruoc>()
-        .HasOne(p => p.TaiKhoanNguoiDung)
-        .WithMany(tk => tk.PhieuDatTruoc)
-        .HasForeignKey(p => p.MaTaiKhoan)
-        .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(p => p.TaiKhoanNguoiDung)
+                .WithMany(tk => tk.PhieuDatTruoc)
+                .HasForeignKey(p => p.MaTaiKhoan)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<ChiTietHoaDonBanOnline>()
-        .HasOne(c => c.HoaDonBanOnline)
-        .WithMany(h => h.ChiTietHoaDonBanOnline)
-        .HasForeignKey(c => c.MaHoaDonOnline);
+            // ✅ **Thêm quan hệ cho HoaDonBanOnline & ChiTietHoaDonOnline**
+            modelBuilder.Entity<HoaDonBanOnline>().HasKey(hd => hd.MaHoaDon);
 
+            modelBuilder.Entity<ChiTietHoaDonOnline>()
+                .HasOne(ct => ct.HoaDon)
+                .WithMany(hd => hd.ChiTietHoaDon)
+                .HasForeignKey(ct => ct.MaHoaDon)
+                .OnDelete(DeleteBehavior.Cascade); // Xóa hóa đơn sẽ xóa luôn chi tiết
+
+            modelBuilder.Entity<ChiTietHoaDonOnline>()
+                .HasOne(ct => ct.Sach)
+                .WithMany()
+                .HasForeignKey(ct => ct.MaSach);
         }
+
 
 
 

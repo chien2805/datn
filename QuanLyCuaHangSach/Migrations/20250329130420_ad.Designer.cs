@@ -12,18 +12,44 @@ using QuanLyCuaHangSach.Context;
 namespace QuanLyCuaHangSach.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250303131351_hoadon")]
-    partial class hoadon
+    [Migration("20250329130420_ad")]
+    partial class ad
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.2")
+                .HasAnnotation("ProductVersion", "9.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietGioHang", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MaGioHang")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaSach")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaGioHang");
+
+                    b.HasIndex("MaSach");
+
+                    b.ToTable("ChiTietGioHang");
+                });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietHoaDon", b =>
                 {
@@ -42,11 +68,86 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Property<decimal>("ThanhTien")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("TieuDe")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("MaHoaDon", "MaSach");
 
                     b.HasIndex("MaSach");
 
                     b.ToTable("ChiTietHoaDon");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietHoaDonBanOnline", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("DonGia")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("MaHoaDonOnline")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaSach")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaHoaDonOnline");
+
+                    b.HasIndex("MaSach");
+
+                    b.ToTable("ChiTietHoaDonBanOnline");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietPhieuDatTruoc", b =>
+                {
+                    b.Property<int>("MaChiTiet")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaChiTiet"));
+
+                    b.Property<int>("MaPhieuDatTruoc")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaSach")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuongMuon")
+                        .HasColumnType("int");
+
+                    b.HasKey("MaChiTiet");
+
+                    b.HasIndex("MaPhieuDatTruoc");
+
+                    b.HasIndex("MaSach");
+
+                    b.ToTable("ChiTietPhieuDatTruoc");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.GioHang", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MaTaiKhoan")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GioHang");
                 });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBan", b =>
@@ -59,6 +160,10 @@ namespace QuanLyCuaHangSach.Migrations
 
                     b.Property<DateTime>("NgayLap")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("SoDienThoai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenKhachHang")
                         .IsRequired()
@@ -76,6 +181,50 @@ namespace QuanLyCuaHangSach.Migrations
                     b.ToTable("HoaDonBan");
                 });
 
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBanOnline", b =>
+                {
+                    b.Property<int>("MaHoaDonOnline")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaHoaDonOnline"));
+
+                    b.Property<string>("DiaChiGiaoHang")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaTaiKhoan")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("NgayLap")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PhuongThucThanhToan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SoDienThoai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TenKhachHang")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TongTien")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TrangThai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MaHoaDonOnline");
+
+                    b.HasIndex("MaTaiKhoan");
+
+                    b.ToTable("HoaDonBanOnline");
+                });
+
             modelBuilder.Entity("QuanLyCuaHangSach.Models.KhachHang", b =>
                 {
                     b.Property<int>("MaKhachHang")
@@ -87,7 +236,12 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Property<int>("MaThongTinNguoiDung")
                         .HasColumnType("int");
 
+                    b.Property<int>("ThongTinNguoiDungMaThongTinNguoiDung")
+                        .HasColumnType("int");
+
                     b.HasKey("MaKhachHang");
+
+                    b.HasIndex("ThongTinNguoiDungMaThongTinNguoiDung");
 
                     b.ToTable("KhachHang");
                 });
@@ -145,13 +299,13 @@ namespace QuanLyCuaHangSach.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaPhieuDatTruoc"));
 
-                    b.Property<int>("KhachHangMaKhachHang")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaKhachHang")
+                    b.Property<int>("MaTaiKhoan")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("NgayDat")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("NgayTra")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("TrangThai")
@@ -160,7 +314,7 @@ namespace QuanLyCuaHangSach.Migrations
 
                     b.HasKey("MaPhieuDatTruoc");
 
-                    b.HasIndex("KhachHangMaKhachHang");
+                    b.HasIndex("MaTaiKhoan");
 
                     b.ToTable("PhieuDatTruoc");
                 });
@@ -222,6 +376,9 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Property<decimal>("Gia")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("HinhAnh")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MaNhaCungCap")
                         .HasColumnType("int");
 
@@ -238,7 +395,16 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Property<int>("SoLuongBan")
                         .HasColumnType("int");
 
+                    b.Property<int>("SoLuongHong")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuongMat")
+                        .HasColumnType("int");
+
                     b.Property<int>("SoLuongMuon")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuongTon")
                         .HasColumnType("int");
 
                     b.Property<string>("TacGia")
@@ -342,6 +508,25 @@ namespace QuanLyCuaHangSach.Migrations
                     b.ToTable("ThongTinNguoiDung");
                 });
 
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietGioHang", b =>
+                {
+                    b.HasOne("QuanLyCuaHangSach.Models.GioHang", "GioHang")
+                        .WithMany("ChiTietGioHangs")
+                        .HasForeignKey("MaGioHang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QuanLyCuaHangSach.Models.Sach", "Sach")
+                        .WithMany()
+                        .HasForeignKey("MaSach")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GioHang");
+
+                    b.Navigation("Sach");
+                });
+
             modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietHoaDon", b =>
                 {
                     b.HasOne("QuanLyCuaHangSach.Models.HoaDonBan", "HoaDon")
@@ -361,6 +546,66 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Navigation("Sach");
                 });
 
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietHoaDonBanOnline", b =>
+                {
+                    b.HasOne("QuanLyCuaHangSach.Models.HoaDonBanOnline", "HoaDonBanOnline")
+                        .WithMany("ChiTietHoaDonBanOnline")
+                        .HasForeignKey("MaHoaDonOnline")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QuanLyCuaHangSach.Models.Sach", "Sach")
+                        .WithMany()
+                        .HasForeignKey("MaSach")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HoaDonBanOnline");
+
+                    b.Navigation("Sach");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.ChiTietPhieuDatTruoc", b =>
+                {
+                    b.HasOne("QuanLyCuaHangSach.Models.PhieuDatTruoc", "PhieuDatTruoc")
+                        .WithMany("ChiTietPhieuDatTruoc")
+                        .HasForeignKey("MaPhieuDatTruoc")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("QuanLyCuaHangSach.Models.Sach", "Sach")
+                        .WithMany()
+                        .HasForeignKey("MaSach")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PhieuDatTruoc");
+
+                    b.Navigation("Sach");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBanOnline", b =>
+                {
+                    b.HasOne("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", "TaiKhoanNguoiDung")
+                        .WithMany()
+                        .HasForeignKey("MaTaiKhoan")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TaiKhoanNguoiDung");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.KhachHang", b =>
+                {
+                    b.HasOne("QuanLyCuaHangSach.Models.ThongTinNguoiDung", "ThongTinNguoiDung")
+                        .WithMany()
+                        .HasForeignKey("ThongTinNguoiDungMaThongTinNguoiDung")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ThongTinNguoiDung");
+                });
+
             modelBuilder.Entity("QuanLyCuaHangSach.Models.KhoSach", b =>
                 {
                     b.HasOne("QuanLyCuaHangSach.Models.Sach", "Sach")
@@ -374,13 +619,13 @@ namespace QuanLyCuaHangSach.Migrations
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.PhieuDatTruoc", b =>
                 {
-                    b.HasOne("QuanLyCuaHangSach.Models.KhachHang", "KhachHang")
-                        .WithMany()
-                        .HasForeignKey("KhachHangMaKhachHang")
+                    b.HasOne("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", "TaiKhoanNguoiDung")
+                        .WithMany("PhieuDatTruoc")
+                        .HasForeignKey("MaTaiKhoan")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("KhachHang");
+                    b.Navigation("TaiKhoanNguoiDung");
                 });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.PhieuMuon", b =>
@@ -435,9 +680,19 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Navigation("TaiKhoanNguoiDung");
                 });
 
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.GioHang", b =>
+                {
+                    b.Navigation("ChiTietGioHangs");
+                });
+
             modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBan", b =>
                 {
                     b.Navigation("ChiTietHoaDon");
+                });
+
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBanOnline", b =>
+                {
+                    b.Navigation("ChiTietHoaDonBanOnline");
                 });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.KhachHang", b =>
@@ -450,8 +705,15 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Navigation("Sach");
                 });
 
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.PhieuDatTruoc", b =>
+                {
+                    b.Navigation("ChiTietPhieuDatTruoc");
+                });
+
             modelBuilder.Entity("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", b =>
                 {
+                    b.Navigation("PhieuDatTruoc");
+
                     b.Navigation("ThongTinNguoiDung")
                         .IsRequired();
                 });

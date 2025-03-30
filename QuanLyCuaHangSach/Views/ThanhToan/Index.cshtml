@@ -39,30 +39,38 @@
             </tr>
         </tbody>
     </table>
-            <tr>
-        <form action="/Payment/CreatePaymentUrl" id="frmCreateOrder" method="POST">
-            <input type="hidden" name="FullName" value="@User.Identity.Name" />
-            <input type="hidden" name="Amount" value="@ViewBag.TongTien.ToString("N0")" />
-            <input type="hidden" name="OrderInfo" value="Thanh toán đặt hàng qua Momo" />
-            <input type="hidden" name="OrderId" value="@Guid.NewGuid().ToString()" />
+    <!-- 🔹 Form nhập thông tin khách hàng -->
+    <h4>Thông tin khách hàng</h4>
+    <form action="/Payment/CreatePaymentUrl" id="frmCreateOrder" method="POST">
+        <div class="mb-3">
+            <label for="FullName" class="form-label">Tên khách hàng</label>
+            <input type="text" class="form-control" id="FullName" name="FullName" required>
+        </div>
+        <div class="mb-3">
+            <label for="DiaChi" class="form-label">Địa chỉ</label>
+            <input type="text" class="form-control" id="DiaChi" name="DiaChi" required>
+        </div>
+        <div class="mb-3">
+            <label for="SoDienThoai" class="form-label">Số điện thoại</label>
+            <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" required>
+        </div>
 
-            <button type="submit" class="btn btn-danger">Pay with MoMo</button>
-        </form>
-            </tr>
-    @* <form id="formThanhToan" method="post" action="/ThanhToan/ThucHienThanhToan"> *@
-    @*     <input type="hidden" name="tongTien" value="@ViewBag.TongTien" /> *@
-    @*     <div class="mb-3"> *@
-    @*         <label class="form-label"><b>Chọn phương thức thanh toán:</b></label> *@
-    @*         <form method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment"> *@
-    @*             <input type="hidden" name="Name" value="@User.Identity.Name" /> *@
-    @*             <input type="hidden" name="Amount" value="" /> *@
-    @*             <input type="hidden" name="OrderDescription" value="Thanh toán qua VNPAY" /> *@
-    @*             <input type="hidden" name="OrderType" value="order" /> *@
-    @*             <button class="btn btn-success" type="submit">Thanh toán VNPAY</button> *@
-    @*         </form> *@
-    @*     </div> *@
-    @*     <button type="submit" class="btn btn-success w-100">Xác nhận thanh toán</button> *@
-    @* </form> *@
+        <!-- 🔹 Dữ liệu đơn hàng -->
+        <input type="hidden" name="Amount" value="@ViewBag.TongTien" />
+        <input type="hidden" name="OrderInfo" value="Thanh toán đơn hàng qua Momo" />
+        <input type="hidden" name="OrderId" value="@Guid.NewGuid().ToString()" />
+
+        <!-- 🔹 Danh sách sách đặt mua -->
+        @for (var i = 0; i < Model.ChiTietGioHangs.Count; i++)
+        {
+            <input type="hidden" name="DanhSachSach[@i].MaSach" value="@Model.ChiTietGioHangs[i].Sach.MaSach" />
+            <input type="hidden" name="DanhSachSach[@i].TieuDe" value="@Model.ChiTietGioHangs[i].Sach.TieuDe" />
+            <input type="hidden" name="DanhSachSach[@i].SoLuong" value="@Model.ChiTietGioHangs[i].SoLuong" />
+            <input type="hidden" name="DanhSachSach[@i].DonGia" value="@Model.ChiTietGioHangs[i].Sach.Gia" />
+        }
+
+        <button type="submit" class="btn btn-danger">Thanh toán với MoMo</button>
+    </form>
 
 
 }

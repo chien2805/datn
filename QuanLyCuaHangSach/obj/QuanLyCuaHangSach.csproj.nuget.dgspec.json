@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj": {}
+    "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj": {
+    "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
+        "projectUniqueName": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
         "projectName": "QuanLyCuaHangSach",
-        "projectPath": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
+        "projectPath": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
         "packagesPath": "C:\\Users\\CHIEN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CHIEN\\Desktop\\DATN\\QuangLyCuaHangSach\\QuanLyCuaHangSach\\obj\\",
+        "outputPath": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
