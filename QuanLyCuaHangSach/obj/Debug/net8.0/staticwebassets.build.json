@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zCblKnlbMWeBU646Z5cQYRsVRfmLEaZEI6hrimVA9qc=",
+  "Hash": "LZJJGcoa55zHPfREuOTFnvS84Agx5BvvmxeezheDjco=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "QuanLyCuaHangSach\\wwwroot",
       "Source": "QuanLyCuaHangSach",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "QuanLyCuaHangSach#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "dKpV+0tQaOa/b5NFzQTVIn2kfGwKb1X9wSkGdBoBAwY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css"
+      "OriginalItemSpec": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "QuanLyCuaHangSach#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "dKpV+0tQaOa/b5NFzQTVIn2kfGwKb1X9wSkGdBoBAwY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/094dd204-19e1-4373-81e0-f19b6723bd13_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/17114bb7-7586-45d3-b27a-8252196e91ac_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/841f5ad1-5a62-45e4-b2a3-8374d5589d45_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/ab601d0e-1a06-4d8e-8e59-8526d8418bca_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/ed0fb006-dcb4-4a8b-8333-283afa18b45e_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/ee074bc8-1e33-4403-872c-d683d490d8f9_none#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "images/sach/default#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sach\\default.jpg"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "js/custom.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\js\\custom.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -794,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -836,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -878,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -920,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -962,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -983,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1004,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1025,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1046,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1067,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1109,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1130,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1151,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1172,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1193,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1235,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1256,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1277,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1298,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1319,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1340,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1361,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1382,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1403,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1424,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1466,10 +1466,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1487,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1508,10 +1508,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1529,10 +1529,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1550,10 +1550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
       "BasePath": "_content/QuanLyCuaHangSach",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1574,7 +1574,7 @@
   "Endpoints": [
     {
       "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1619,7 +1619,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1656,7 +1656,7 @@
     },
     {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1701,7 +1701,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1738,7 +1738,7 @@
     },
     {
       "Route": "images/094dd204-19e1-4373-81e0-f19b6723bd13_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1783,7 +1783,7 @@
     },
     {
       "Route": "images/094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1820,7 +1820,7 @@
     },
     {
       "Route": "images/17114bb7-7586-45d3-b27a-8252196e91ac_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1865,7 +1865,7 @@
     },
     {
       "Route": "images/17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1902,7 +1902,7 @@
     },
     {
       "Route": "images/39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1939,7 +1939,7 @@
     },
     {
       "Route": "images/39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.ofytai8upl.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1984,7 +1984,7 @@
     },
     {
       "Route": "images/5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2021,7 +2021,7 @@
     },
     {
       "Route": "images/5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.ofytai8upl.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2066,7 +2066,7 @@
     },
     {
       "Route": "images/841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2111,7 +2111,7 @@
     },
     {
       "Route": "images/841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2148,7 +2148,7 @@
     },
     {
       "Route": "images/8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2193,7 +2193,7 @@
     },
     {
       "Route": "images/8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2230,7 +2230,7 @@
     },
     {
       "Route": "images/a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2267,7 +2267,7 @@
     },
     {
       "Route": "images/a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.ofytai8upl.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2312,7 +2312,7 @@
     },
     {
       "Route": "images/ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2357,7 +2357,7 @@
     },
     {
       "Route": "images/ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2394,7 +2394,7 @@
     },
     {
       "Route": "images/ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2439,7 +2439,7 @@
     },
     {
       "Route": "images/ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2476,7 +2476,7 @@
     },
     {
       "Route": "images/ee074bc8-1e33-4403-872c-d683d490d8f9_none.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2521,7 +2521,7 @@
     },
     {
       "Route": "images/ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2558,7 +2558,7 @@
     },
     {
       "Route": "images/sach/default.gh670zlc5w.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2603,7 +2603,7 @@
     },
     {
       "Route": "images/sach/default.jpg",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2640,7 +2640,7 @@
     },
     {
       "Route": "js/custom.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2677,7 +2677,7 @@
     },
     {
       "Route": "js/custom.min.pte4zdh5f7.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2722,7 +2722,7 @@
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2759,7 +2759,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2804,7 +2804,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2841,7 +2841,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2886,7 +2886,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2923,7 +2923,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2968,7 +2968,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3005,7 +3005,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3050,7 +3050,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3087,7 +3087,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3132,7 +3132,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3169,7 +3169,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3214,7 +3214,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3251,7 +3251,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.9b9oa1qrmt.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3296,7 +3296,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3333,7 +3333,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3378,7 +3378,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3415,7 +3415,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ve6x09088i.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3460,7 +3460,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.agp80tu62r.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3505,7 +3505,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3542,7 +3542,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3579,7 +3579,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3624,7 +3624,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3661,7 +3661,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3706,7 +3706,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3743,7 +3743,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.unj9p35syc.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3788,7 +3788,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3825,7 +3825,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3870,7 +3870,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3907,7 +3907,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3944,7 +3944,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3981,7 +3981,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4026,7 +4026,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.n1oizzvkh6.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4071,7 +4071,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.q2ku51ktnl.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4116,7 +4116,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.7na4sro3qu.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4161,7 +4161,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4198,7 +4198,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4243,7 +4243,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4280,7 +4280,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4317,7 +4317,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4354,7 +4354,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4399,7 +4399,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.f8imaxxbri.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4444,7 +4444,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.0wve5yxp74.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4489,7 +4489,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4526,7 +4526,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4571,7 +4571,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4608,7 +4608,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4645,7 +4645,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4682,7 +4682,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4727,7 +4727,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.npxfuf8dg6.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4772,7 +4772,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4809,7 +4809,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4854,7 +4854,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4891,7 +4891,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.16095smhkz.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4936,7 +4936,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4973,7 +4973,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5010,7 +5010,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5055,7 +5055,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.b4skse8du6.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5100,7 +5100,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5137,7 +5137,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5182,7 +5182,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5219,7 +5219,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5256,7 +5256,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5301,7 +5301,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5338,7 +5338,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.u3xrusw2ol.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5383,7 +5383,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.tey0rigmnh.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5428,7 +5428,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5465,7 +5465,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5510,7 +5510,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5547,7 +5547,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.l2av4jpuoj.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5592,7 +5592,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.25iw1kog22.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5637,7 +5637,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5674,7 +5674,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5719,7 +5719,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5756,7 +5756,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5793,7 +5793,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5838,7 +5838,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5875,7 +5875,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.m39kt2b5c9.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5920,7 +5920,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5957,7 +5957,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5994,7 +5994,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6039,7 +6039,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.um2aeqy4ik.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6084,7 +6084,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6121,7 +6121,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6166,7 +6166,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6203,7 +6203,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6240,7 +6240,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6277,7 +6277,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6322,7 +6322,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.zwph15dxgs.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6367,7 +6367,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.o4kw7cc6tf.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6412,7 +6412,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6449,7 +6449,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6494,7 +6494,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.fwhahm2icz.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6539,7 +6539,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6576,7 +6576,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6621,7 +6621,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.dd6z7egasc.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6666,7 +6666,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6703,7 +6703,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6740,7 +6740,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6785,7 +6785,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6822,7 +6822,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6867,7 +6867,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6904,7 +6904,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6949,7 +6949,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6986,7 +6986,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7023,7 +7023,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.b7iojwaux1.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7068,7 +7068,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7105,7 +7105,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.pzqfkb6aqo.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7150,7 +7150,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7187,7 +7187,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7232,7 +7232,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.47otxtyo56.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7277,7 +7277,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7314,7 +7314,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.4v8eqarkd7.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7359,7 +7359,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7396,7 +7396,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7441,7 +7441,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7478,7 +7478,7 @@
     },
     {
       "Route": "QuanLyCuaHangSach.bundle.scp.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7515,7 +7515,7 @@
     },
     {
       "Route": "QuanLyCuaHangSach.gn4wilbgxb.bundle.scp.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7560,7 +7560,7 @@
     },
     {
       "Route": "QuanLyCuaHangSach.gn4wilbgxb.styles.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7605,7 +7605,7 @@
     },
     {
       "Route": "QuanLyCuaHangSach.styles.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\bundle\\QuanLyCuaHangSach.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {

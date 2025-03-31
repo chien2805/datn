@@ -4,6 +4,7 @@ using QuanLyCuaHangSach.Models;
 using QuanLyCuaHangSach.Models.Order;
 using QuanLyCuaHangSach.Services;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace QuanLyCuaHangSach.Controllers
 {
@@ -41,11 +42,20 @@ namespace QuanLyCuaHangSach.Controllers
             if (response != null)
             {
                 // 🔹 Lấy thông tin từ response
-                var orderInfoParts = response.OrderInfo.Split(", ");
-                var tenKhachHang = orderInfoParts[0].Replace("Khách hàng: ", "").Trim();
-                var diaChi = orderInfoParts[1].Replace("Địa chỉ: ", "").Trim();
-                var soDienThoai = orderInfoParts[2].Replace("SĐT: ", "").Trim();
+                var orderInfo = response.OrderInfo;
 
+                var tenKhachHangMatch = Regex.Match(orderInfo, @"Khách hàng: (.*?),");
+                var diaChiMatch = Regex.Match(orderInfo, @"Địa chỉ: (.*?),");
+                // 🔹 Tìm thông tin theo mẫu
+                var soDienThoaiMatch = Regex.Match(orderInfo, @"SĐT:\s*(\d+)");
+
+                var tenKhachHang = tenKhachHangMatch.Success ? tenKhachHangMatch.Groups[1].Value.Trim() : "";
+                var diaChi = diaChiMatch.Success ? diaChiMatch.Groups[1].Value.Trim() : "";
+                var soDienThoai = soDienThoaiMatch.Success ? soDienThoaiMatch.Groups[1].Value.Trim() : "";
+
+                Console.WriteLine(tenKhachHang);
+                Console.WriteLine(diaChi);
+                Console.WriteLine(soDienThoai);
                 // 🔹 Tạo hóa đơn mới
                 var hoaDon = new HoaDonBanOnline
                 {
@@ -55,9 +65,8 @@ namespace QuanLyCuaHangSach.Controllers
                     NgayTao = DateTime.Now,
                     TongTien = decimal.Parse(response.Amount),
                     TrangThai = "Đã thanh toán", // ✅ Thêm trạng thái đơn hàng
-                    LoaiThanhToan = "Online"
+                    LoaiThanhToan = "Momo"
                 };
-
                 _context.HoaDonBanOnline.Add(hoaDon);
                 _context.SaveChanges(); // Lưu hóa đơn để có MaHoaDon
                 Console.WriteLine("Hóa đơn được lưu với MaHoaDon = " + hoaDon.MaHoaDon);

@@ -4917,11 +4917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
+      "projectUniqueName": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
       "projectName": "QuanLyCuaHangSach",
-      "projectPath": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
+      "projectPath": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\QuanLyCuaHangSach.csproj",
       "packagesPath": "C:\\Users\\CHIEN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CHIEN\\Desktop\\Thư mục mới\\datn\\QuanLyCuaHangSach\\obj\\",
+      "outputPath": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

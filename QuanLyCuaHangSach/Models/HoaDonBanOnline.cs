@@ -22,7 +22,7 @@ namespace QuanLyCuaHangSach.Models
 
         public string TrangThai { get; set; } 
 
-        public string LoaiThanhToan { get; set; } = "Online"; // Xác định đây là đơn hàng online
+        public string LoaiThanhToan { get; set; } = "Momo"; // Xác định đây là đơn hàng online
 
         public List<ChiTietHoaDonOnline> ChiTietHoaDon { get; set; }
     }

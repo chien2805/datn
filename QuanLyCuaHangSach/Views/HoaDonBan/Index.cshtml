@@ -15,6 +15,7 @@
             <th>Tên Nhân Viên</th>
             <th>Ngày Lập</th>
             <th>Tổng Tiền</th>
+            <th>Loại Hóa Đơn</th>
             <th>Thao Tác</th>
         </tr>
     </thead>
@@ -25,15 +26,17 @@
                 <td>@hoaDon.MaHoaDon</td>
                 <td>@hoaDon.TenKhachHang</td>
                 <td>@hoaDon.SoDienThoai</td>
-                <td>@hoaDon.TenNhanVien</td>
+                <td>@(hoaDon.TenNhanVien ?? "Không có")</td> <!-- Xử lý null -->
                 <td>@hoaDon.NgayLap.ToString("dd/MM/yyyy")</td>
                 <td>@hoaDon.TongTien.ToString("N0") VNĐ</td>
+                <td>@(hoaDon.LoaiHoaDon == "quay" ? "Tại quầy" : "Online")</td>
                 <td>
-                    <button class="btn btn-info" onclick="xemHoaDon(@hoaDon.MaHoaDon)">Xem</button>
+                    <button class="btn btn-info" onclick="xemHoaDon('@hoaDon.MaHoaDon', '@hoaDon.LoaiHoaDon')">Xem</button>
                 </td>
             </tr>
         }
     </tbody>
+</table>
 </table>
 
 <!-- Modal xem hóa đơn -->
@@ -91,7 +94,7 @@
                             </div>
                             <div class="col-4">
                                 <label for="giaSach0" class="form-label">Giá</label>
-                                <input type="number" step="0.01" class="form-control giaSach" id="giaSach0" name="ChiTietHoaDon[0].Gia" placeholder="Giá" required readonly>
+                                <input type="number" step="1" class="form-control giaSach" id="giaSach0" name="ChiTietHoaDon[0].Gia" placeholder="Giá" required readonly>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -101,7 +104,7 @@
                             </div>
                             <div class="col-4">
                                 <label for="thanhTien0" class="form-label">Thành tiền</label>
-                                <input type="number" step="0.01" class="form-control thanhTien" id="thanhTien0" name="ChiTietHoaDon[0].ThanhTien" placeholder="Thành tiền" readonly>
+                                <input type="number" step="1" class="form-control thanhTien" id="thanhTien0" name="ChiTietHoaDon[0].ThanhTien" placeholder="Thành tiền" readonly>
                             </div>
                         </div>
                     </div>
@@ -115,25 +118,32 @@
 
 @section Scripts {
     <script>
-        // Hàm xem hóa đơn qua AJAX (giữ nguyên nếu đã hoạt động)
-        function xemHoaDon(maHoaDon) {
+                // Hàm xem hóa đơn qua AJAX
+        function xemHoaDon(maHoaDon, loaiHoaDon) {
             $.ajax({
                 url: '@Url.Action("XemHoaDon", "HoaDonBan")',
                 type: 'GET',
-                data: { id: maHoaDon },
+                data: { id: maHoaDon, loaiHoaDon: loaiHoaDon }, // Gửi loại hóa đơn
                 success: function (response) {
+                    if (!response) {
+                        alert('Không tìm thấy hóa đơn.');
+                        return;
+                    }
+
                     const hoaDonHtml = `
                         <p><strong>Mã hóa đơn:</strong> ${response.maHoaDon}</p>
                         <p><strong>Tên khách hàng:</strong> ${response.tenKhachHang}</p>
                         <p><strong>Số điện thoại:</strong> ${response.soDienThoai}</p>
-                        <p><strong>Tên nhân viên:</strong> ${response.tenNhanVien}</p>
+                        <p><strong>Tên nhân viên:</strong> ${response.tenNhanVien ?? 'N/A'}</p>
                         <p><strong>Ngày lập:</strong> ${new Date(response.ngayLap).toLocaleDateString()}</p>
                         <p><strong>Tổng tiền:</strong> ${response.tongTien?.toLocaleString() ?? '0'} VNĐ</p>
                         <h5>Chi tiết hóa đơn</h5>
                         <ul>
                             ${response.chiTietHoaDon && response.chiTietHoaDon.length > 0
                                 ? response.chiTietHoaDon.map(ct => `
-                                    <li>${ct.tieuDe ?? 'N/A'} - SL: ${ct.soLuong ?? 0} - Giá: ${ct.gia?.toLocaleString() ?? '0'} VNĐ - Thành tiền: ${ct.thanhTien?.toLocaleString() ?? '0'} VNĐ</li>
+                                    <li>${ct.tieuDe ?? 'N/A'} - SL: ${ct.soLuong ?? 0} -
+                                    Giá: ${ct.gia?.toLocaleString() ?? '0'} VNĐ -
+                                    Thành tiền: ${ct.thanhTien?.toLocaleString() ?? '0'} VNĐ</li>
                                 `).join('')
                                 : '<li>Không có chi tiết hóa đơn</li>'
                             }
@@ -148,6 +158,7 @@
                 }
             });
         }
+
 
         // Autocomplete cho ô tên sách dòng đầu tiên
         $(document).ready(function () {
