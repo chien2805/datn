@@ -1,0 +1,144 @@
+﻿@model QuanLyCuaHangSach.Models.ThongKeViewModel
+@{
+    ViewData["Title"] = "Thống kê theo ngày";
+    var selectedMonth = (int)(ViewBag.SelectedMonth ?? DateTime.Now.Month);
+    var selectedYear = (int)(ViewBag.SelectedYear ?? DateTime.Now.Year);
+}
+
+<h2>Thống Kê Tổng Tiền Bán Sách</h2>
+
+<form method="get">
+    <label for="month">Chọn tháng:</label>
+    <select id="month" name="month">
+        @for (int i = 1; i <= 12; i++)
+        {
+            if (i == selectedMonth)
+            {
+                <option value="@i" selected="selected">@i</option>
+            }
+            else
+            {
+                <option value="@i">@i</option>
+            }
+        }
+    </select>
+
+    <label for="year">Chọn năm:</label>
+    <select id="year" name="year">
+        @for (int i = 2020; i <= DateTime.Now.Year; i++)
+        {
+            if (i == selectedYear)
+            {
+                <option value="@i" selected="selected">@i</option>
+            }
+            else
+            {
+                <option value="@i">@i</option>
+            }
+        }
+    </select>
+
+    <button type="submit">Xem</button>
+</form>
+
+<div class="chart-wrapper">
+    <div class="chart-container">
+        <canvas id="thongKeChart"></canvas>
+        <div class="info-container">
+            <p><strong>Tổng số sách bán:</strong> @ViewBag.TotalBooksSold</p>
+            <p><strong>Tổng số sách mượn:</strong> @ViewBag.TotalBooksBorrowed</p>
+            <p>
+                <strong>Tổng doanh thu của tháng:</strong>
+                @(((decimal)ViewBag.TotalRevenue).ToString("N0")) VNĐ
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Style để căn chỉnh bố cục -->
+<style>
+    .chart-wrapper {
+        display: flex;
+        justify-content: center; /* Căn giữa biểu đồ */
+        margin-top: 20px;
+    }
+
+    .chart-container {
+        position: relative;
+        width:850px; /* Độ rộng biểu đồ */
+        height: 350px;
+    }
+    /* Điều chỉnh kích thước biểu đồ */
+    #thongKeChart {
+        width: 100%;
+        height: 100%;
+    }
+
+    .info-container {
+        position: absolute;
+        bottom: -210px;
+        right: 10px;
+        text-align: right;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 8px;
+        border-radius: 5px;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Lấy dữ liệu từ ViewBag
+    var fullLabels = @Html.Raw(ViewBag.Labels);
+    var banOnlineData = @Html.Raw(ViewBag.BanOnlineData);
+    var banQuayData = @Html.Raw(ViewBag.BanQuayData);
+    var muonSachData = @Html.Raw(ViewBag.MuonSachData);
+
+    // Chuyển đổi fullLabels sang chỉ ngày (dd)
+    var dayLabels = fullLabels.map(function(dateStr) {
+        var d = new Date(dateStr);
+        return d.getDate().toString().padStart(2, '0');
+    });
+
+    // Tạo biểu đồ
+    var ctx = document.getElementById('thongKeChart').getContext('2d');
+    var thongKeChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: dayLabels,
+            datasets: [
+                {
+                    label: "Bán Online (Tổng Tiền)",
+                    data: banOnlineData,
+                    backgroundColor: "#3498db",
+                    stack: 'Stack 1'
+                },
+                {
+                    label: "Bán Tại Quầy (Tổng Tiền)",
+                    data: banQuayData,
+                    backgroundColor: "#2ecc71",
+                    stack: 'Stack 1'
+                },
+                {
+                    label: "Mượn Sách (Tổng Tiền)",
+                    data: muonSachData,
+                    backgroundColor: "#f39c12",
+                    stack: 'Stack 1'
+                }
+            ]
+        },
+        options: {
+            responsive: false, // Đảm bảo biểu đồ tuân theo kích thước CSS
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            },
+            scales: {
+                x: { stacked: true },
+                y: { stacked: true, beginAtZero: true }
+            }
+        }
+    });
+</script>

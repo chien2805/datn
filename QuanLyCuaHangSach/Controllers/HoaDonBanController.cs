@@ -3,6 +3,7 @@ using QuanLyCuaHangSach.Models;
 using System.Linq;
 using QuanLyCuaHangSach.Context;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace QuanLyCuaHangSach.Controllers
 {
@@ -76,13 +77,21 @@ namespace QuanLyCuaHangSach.Controllers
                 {
                     // Lấy giá của sách từ bảng Sach
                     var giaSach = _context.Sach.FirstOrDefault(s => s.MaSach == ct.MaSach)?.Gia ?? 0;
+
                     // Tính thành tiền cho mỗi chi tiết hóa đơn
                     ct.ThanhTien = giaSach * ct.SoLuong;
+
                     return ct.ThanhTien; // Trả về thanh tiền để tính tổng
                 });
 
+                // Kiểm tra trước khi thêm vào CSDL
+                Console.WriteLine($"HoaDonBan MaHoaDon: {hoaDon.MaHoaDon}, NgayLap: {hoaDon.NgayLap}, TongTien: {hoaDon.TongTien}");
+
                 _context.HoaDonBan.Add(hoaDon);
                 _context.SaveChanges();
+
+                // Sau khi lưu vào CSDL, kiểm tra lại MaHoaDon
+                Console.WriteLine($"Sau khi SaveChanges - MaHoaDon: {hoaDon.MaHoaDon}");
 
                 // Thêm chi tiết hóa đơn vào cơ sở dữ liệu
                 foreach (var item in chiTietHoaDon)

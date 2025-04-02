@@ -125,6 +125,7 @@ namespace QuanLyCuaHangSach.Controllers
                 MaTaiKhoan = maTaiKhoan,
                 NgayDat = DateTime.Now,
                 NgayTra = DateTime.Now.AddDays(7), // Mặc định trả sau 7 ngày
+                ThanhTien = 7000,
                 TrangThai = "Đang xử lý"
             };
 
@@ -136,7 +137,8 @@ namespace QuanLyCuaHangSach.Controllers
             {
                 MaPhieuDatTruoc = phieu.MaPhieuDatTruoc,
                 MaSach = maSach,
-                SoLuongMuon = 1 // Mặc định mượn 1 cuốn
+                SoLuongMuon = 1, // Mặc định mượn 1 cuốn
+                
             };
 
             _context.ChiTietPhieuDatTruoc.Add(chiTiet);
@@ -148,67 +150,6 @@ namespace QuanLyCuaHangSach.Controllers
             TempData["Success"] = "Đặt sách thành công!";
             return RedirectToAction("Index", "TrangChu");
         }
-
-
-
-
-        /* [HttpPost]
-         public IActionResult TaoPhieu(int maNguoiDung, int maSach)
-         {
-             // Kiểm tra thông tin người dùng
-             var thongTin = _context.ThongTinNguoiDung.FirstOrDefault(t => t.MaTaiKhoan == maNguoiDung);
-             if (thongTin == null)
-             {
-                 return NotFound("Không tìm thấy thông tin người dùng");
-             }
-
-             // Kiểm tra mã sách
-             var sach = _context.Sach.FirstOrDefault(s => s.MaSach == maSach);
-             if (sach == null)
-             {
-                 return NotFound("Không tìm thấy sách nào");
-             }
-
-             // Tạo phiếu đặt trước
-             var phieuDatTruoc = new PhieuDatTruoc
-             {
-                 MaThongTinNguoiDung = thongTin.MaThongTinNguoiDung,
-                 NgayDat = DateTime.Now,
-                 TrangThai = "ChoXacNhan",
-                 ChiTietPhieuDatTruoc = new List<ChiTietPhieuDatTruoc>
-         {
-             new ChiTietPhieuDatTruoc
-             {
-                 MaSach = sach.MaSach,
-                 SoLuongMuon = 1
-             }
-         }
-             };
-
-             _context.PhieuDatTruoc.Add(phieuDatTruoc);
-             _context.SaveChanges();
-
-             return Json(new
-             {
-                 success = true,
-                 message = "Đặt trước thành công!",
-                 hoTen = thongTin.HoTen ?? "Không có dữ liệu",
-                 soDienThoai = thongTin.SoDienThoai ?? "Không có dữ liệu"
-             });
-         }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         [HttpPost]

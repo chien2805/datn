@@ -17,6 +17,7 @@
                 <th>Ngày Trả</th>
                 <th>Trạng Thái</th>
                 <th>Sách Đặt Trước</th>
+                <th>Thành Tiền</th>
                 <th>Thao Tác</th>
             </tr>
         </thead>
@@ -41,6 +42,11 @@
                             }
                         </ul>
                     </td>
+                    <td>
+                        @(phieu.ThanhTien?.ToString("N0") ?? "0") VND
+                    </td>
+
+
                     <td class="d-flex">
                         @if(phieu.TrangThai == "Đang xử lý"){
                             <form asp-action="DuyetPhieu" asp-controller="PhieuDatTruoc" method="post">

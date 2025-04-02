@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyCuaHangSach.Context;
 
@@ -11,9 +12,11 @@ using QuanLyCuaHangSach.Context;
 namespace QuanLyCuaHangSach.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250401133755_themthanhtienphieudattruoc")]
+    partial class themthanhtienphieudattruoc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -128,6 +131,9 @@ namespace QuanLyCuaHangSach.Migrations
 
                     b.Property<int>("SoLuongMuon")
                         .HasColumnType("int");
+
+                    b.Property<decimal?>("ThanhTien")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("MaChiTiet");
 
@@ -306,9 +312,6 @@ namespace QuanLyCuaHangSach.Migrations
 
                     b.Property<DateTime>("NgayTra")
                         .HasColumnType("datetime2");
-
-                    b.Property<decimal?>("ThanhTien")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TrangThai")
                         .IsRequired()

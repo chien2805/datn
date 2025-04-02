@@ -9,6 +9,7 @@
 
         public DateTime NgayDat { get; set; }
         public DateTime NgayTra { get; set; }
+        public decimal? ThanhTien { get; set; }
         public string TrangThai { get; set; }
 
         // Ràng buộc quan hệ

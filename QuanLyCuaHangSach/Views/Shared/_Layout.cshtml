@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/QuanLyCuaHangSach.styles.css" asp-append-version="true" />
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     @{
@@ -61,9 +61,14 @@
                             </li>
 
                         }
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="HoaDonBan" asp-action="Index">Thống kê</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ThongKe" asp-action="Index">
+                                <i class="fas fa-chart-pie me-2"></i> Thống kê
+                            </a>
+                        </li>
+
+
+
                         <!-- Nút mở giỏ hàng trên Navbar -->
                         <button type="button" class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#gioHangModal">
                             🛒
