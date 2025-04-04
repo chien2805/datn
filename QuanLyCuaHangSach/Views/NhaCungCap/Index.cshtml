@@ -1,25 +1,26 @@
-﻿/* Index.cshtml - Danh sách nhà cung cấp */
-@model IEnumerable<NhaCungCap>
-<h2>Danh sách nhà cung cấp</h2>
-<a asp-action="Create" class="btn btn-primary">Thêm nhà cung cấp</a>
-<table class="table">
-    <thead>
+﻿@model IEnumerable<NhaCungCap>
+<h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Nhà Cung Cấp</h2>
+
+<a asp-action="Create" class="btn" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;">Thêm nhà cung cấp</a>
+
+<table class="table" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <thead style="background-color: #4a90e2; color: #fff;">
         <tr>
-            <th>Tên nhà cung cấp</th>
-            <th>Thông tin liên hệ</th>
-            <th>Thao tác</th>
+            <th style="padding: 10px; text-align: center;">Tên nhà cung cấp</th>
+            <th style="padding: 10px; text-align: center;">Thông tin liên hệ</th>
+            <th style="padding: 10px; text-align: center;">Thao tác</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var ncc in Model)
         {
-            <tr>
-                <td>@ncc.TenNhaCungCap</td>
-                <td>@ncc.ThongTinLienHe</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@ncc.MaNhaCungCap" class="btn btn-warning">Sửa</a>
-                    <a asp-action="Details" asp-route-id="@ncc.MaNhaCungCap" class="btn btn-info">Chi tiết</a>
-                    <a href="#" class="btn btn-danger" onclick="confirmDelete(@ncc.MaNhaCungCap)">Xóa</a>
+            <tr style="background-color: #f9f9f9; transition: background-color 0.3s ease;">
+                <td style="padding: 10px; text-align: center;">@ncc.TenNhaCungCap</td>
+                <td style="padding: 10px; text-align: center;">@ncc.ThongTinLienHe</td>
+                <td style="padding: 10px; text-align: center;">
+                    <a asp-action="Edit" asp-route-id="@ncc.MaNhaCungCap" class="btn" style="padding: 5px 15px; margin-right: 10px; background-color: #27ae60; color: white; border-radius: 5px;">Sửa</a>
+                    <a asp-action="Details" asp-route-id="@ncc.MaNhaCungCap" class="btn" style="padding: 5px 15px; margin-right: 10px; background-color: #3498db; color: white; border-radius: 5px;">Chi tiết</a>
+                    <a href="#" class="btn" onclick="confirmDelete(@ncc.MaNhaCungCap)" style="padding: 5px 15px; background-color: #e74c3c; color: white; border-radius: 5px;">Xóa</a>
                 </td>
             </tr>
         }
@@ -29,10 +30,10 @@
 <!-- Modal Xác nhận Xoá -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" style="border-radius: 10px;">
+            <div class="modal-header" style="background-color: #e74c3c;">
                 <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xoá</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -41,8 +42,8 @@
             </div>
             <div class="modal-footer">
                 <form id="deleteForm" method="post">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
-                    <button type="submit" class="btn btn-danger">Xoá</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #7ed6df; color: white; border-radius: 5px;">Huỷ</button>
+                    <button type="submit" class="btn btn-danger" style="background-color: #e74c3c; color: white; border-radius: 5px;">Xoá</button>
                 </form>
             </div>
         </div>

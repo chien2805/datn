@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -18,8 +18,73 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #f9f9f9;
+    color: #333333;
 }
 footer {
     display: none;
 }
+/* Navbar */
+.custom-navbar {
+    background-color: #ce7745; /* Màu chủ đạo */
+    color: #000f; /* Màu chữ trắng */
+}
+
+    .custom-navbar .nav-link {
+        color: #808080; /* Màu chữ liên kết */
+    }
+
+        .custom-navbar .nav-link:hover {
+            background-color: #7ed6df; /* Màu khi hover */
+            color: #f9f9f9; /* Màu chữ khi hover */
+        }
+
+/* Sidebar dành cho Admin */
+.admin-sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    overflow-y: auto;
+    background-color: #f0ebe3; /* Màu nền sáng cho sidebar */
+    color: #333333; /* Màu chữ chính */
+}
+
+    .admin-sidebar .nav-link {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #333333; /* Màu chữ các liên kết */
+    }
+
+        .admin-sidebar .nav-link:hover {
+            background-color: #7ed6df; /* Màu nền khi hover */
+            color: #ffffff; /* Màu chữ khi hover */
+        }
+
+/* Nội dung chính */
+.admin-content {
+    margin-left: 290px;
+    margin-right: 40px;
+    background-color: #f9f9f9; /* Nền sáng cho nội dung */
+    color: #333333;
+}
+
+    .admin-content h1, .admin-content h2, .admin-content h3 {
+        color: #333333; /* Màu chữ các tiêu đề */
+    }
+
+/* Nút đăng xuất */
+.btn-logout {
+    background-color: #e74c3c; /* Màu đỏ cho nút đăng xuất */
+    color: #ffffff; /* Màu chữ trắng */
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+    .btn-logout:hover {
+        background-color: #c0392b; /* Màu đỏ đậm khi hover */
+    }

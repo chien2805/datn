@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - QuanLyCuaHangSach</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -15,100 +15,110 @@
         var isLoggedIn = Context.Session.GetString("UserEmail") != null; // Kiểm tra đã đăng nhập chưa
     }
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark custom-navbar border-bottom box-shadow mb-3">
+
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Sach" asp-action="Index">QuanLyCuaHangSach</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <!-- Trang chủ luôn hiển thị -->
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="TrangChu" asp-action="Index">🏠 Trang chủ</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a>
-                        </li>
-
-                        @if (!isLoggedIn) // Chỉ hiển thị "Đăng ký" nếu chưa đăng nhập
-                        {
+                @if (userRole != "Admin")
+                {
+                    <!-- Navbar ngang dành cho khách hàng -->
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="DangKi" asp-action="DangKy"><i class="fa-solid fa-user-plus"></i> Đăng ký</a>
-                            </li>
-                        }
-
-                        @if (userRole == "Admin")
-                        {
-                            <!-- Menu chỉ hiển thị với Admin -->
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Sach" asp-action="Index">📖 Sách</a>
+                                <a class="nav-link text-dark" asp-controller="TrangChu" asp-action="Index">🏠 Trang chủ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a>
+                                <a class="nav-link text-dark" asp-controller="TrangChu" asp-action="Index">Giới thiệu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="NhaCungCap" asp-action="Index">🏢 Nhà cung cấp</a>
+                                <a class="nav-link text-dark" asp-controller="TrangChu" asp-action="Index">Liên hệ</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="TaiKhoanNguoiDung" asp-action="Index">👤Tài khoản</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="HoaDonBan" asp-action="Index">📜 Hóa đơn</a>
-                            </li>
+                        </ul>
 
-                        }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ThongKe" asp-action="Index">
-                                <i class="fas fa-chart-pie me-2"></i> Thống kê
-                            </a>
-                        </li>
-
-
-
-                        <!-- Nút mở giỏ hàng trên Navbar -->
                         <button type="button" class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#gioHangModal">
                             🛒
                             <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">0</span>
                         </button>
 
                         <ul class="navbar-nav">
-                            @if (isLoggedIn)
+                            @if (!isLoggedIn)
                             {
-                                <!-- Hiển thị thông tin người dùng và menu thả xuống khi đăng nhập -->
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="DangKi" asp-action="DangKy">
+                                        <i class="fa-solid fa-user-plus"></i> Đăng ký
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-dark" onclick="showLoginModal()">
+                                        <i class="fa-solid fa-sign-in-alt"></i> Đăng nhập
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
                                 <li class="nav-item d-flex align-items-center position-relative" onmouseover="showUserOptions()" onmouseout="hideUserOptions()">
                                     <span class="nav-link text-dark" style="cursor: pointer;">
                                         <i class="fa-solid fa-user"></i> Xin chào, @(string.IsNullOrEmpty(Context.Session.GetString("HoTen")) ? Context.Session.GetString("UserEmail") : Context.Session.GetString("HoTen"))
                                     </span>
                                     <div id="userOptions" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; border-radius: 5px; z-index: 1000;">
-                                        <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal"><i class="fa-solid fa-id-card"></i> Thông tin tài khoản</a>
+                                        <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal">
+                                            <i class="fa-solid fa-id-card"></i> Thông tin tài khoản
+                                        </a>
                                         <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post">
                                             <button type="submit" class="btn btn-danger btn-sm w-100">🚪 Đăng xuất</button>
                                         </form>
                                     </div>
                                 </li>
                             }
-                            else
-                            {
-                                <!-- Hiển thị link đăng nhập nếu chưa đăng nhập -->
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link text-dark" onclick="showLoginModal()"> <i class="fa-solid fa-sign-in-alt"></i>Đăng nhập</a>
-                                </li>
-                            }
                         </ul>
-                    </ul>
-                </div>
+                    </div>
+                }
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+    @if (userRole == "Admin")
+    {
+        <div class="d-flex">
+            <div class="admin-sidebar p-3 vh-100">
+                <h4 class="text-center admin-title">📋 Quản lý</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Sach" asp-action="Index">📖 Sách</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="NhaCungCap" asp-action="Index">🏢 Nhà cung cấp</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="TaiKhoanNguoiDung" asp-action="Index">👤 Tài khoản</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="HoaDonBan" asp-action="Index">📜 Hóa đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="ThongKe" asp-action="Index"><i class="fas fa-chart-pie me-2"></i> Thống kê</a></li>
+                </ul>
+                <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post">
+                    <button type="submit" class="btn btn-logout mt-4">🚪 Đăng xuất</button>
+                </form>
+            </div>
+
+            <div class="admin-content flex-grow-1">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    }
+
+    else
+    {
+        <!-- Trang chủ với padding 2 bên là 50px -->
+        <div class="container home-page">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }
+
 
     <footer class="border-top footer text-muted">
         <div class="container">

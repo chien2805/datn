@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LZJJGcoa55zHPfREuOTFnvS84Agx5BvvmxeezheDjco=",
+  "Hash": "L6Tq1xBoRKSjhbhHKUbmQdTxK3MT8rbDDOWLxxsCrmk=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -59,6 +59,27 @@
       "OriginalItemSpec": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\_AdminNavbar.css",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "css/_AdminNavbar#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3koytnxqe1",
+      "Integrity": "0zm6qVA49oZn9w66GF8MBxvkfDnOCCbElch7BTvbiUI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\_AdminNavbar.css"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -73,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "2yksou9qe1",
+      "Integrity": "9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1573,8 +1594,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "Route": "css/_AdminNavbar.3koytnxqe1.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\_AdminNavbar.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1583,7 +1604,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "352"
         },
         {
           "Name": "Content-Type",
@@ -1591,11 +1612,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"0zm6qVA49oZn9w66GF8MBxvkfDnOCCbElch7BTvbiUI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 29 Mar 2025 13:02:55 GMT"
+          "Value": "Fri, 04 Apr 2025 13:54:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1605,7 +1626,89 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "3koytnxqe1"
+        },
+        {
+          "Name": "label",
+          "Value": "css/_AdminNavbar.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0zm6qVA49oZn9w66GF8MBxvkfDnOCCbElch7BTvbiUI="
+        }
+      ]
+    },
+    {
+      "Route": "css/_AdminNavbar.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\_AdminNavbar.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0zm6qVA49oZn9w66GF8MBxvkfDnOCCbElch7BTvbiUI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 13:54:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0zm6qVA49oZn9w66GF8MBxvkfDnOCCbElch7BTvbiUI="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.2yksou9qe1.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 14:54:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2yksou9qe1"
         },
         {
           "Name": "label",
@@ -1613,7 +1716,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis="
         }
       ]
     },
@@ -1628,7 +1731,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "2128"
         },
         {
           "Name": "Content-Type",
@@ -1636,11 +1739,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 29 Mar 2025 13:02:55 GMT"
+          "Value": "Fri, 04 Apr 2025 14:54:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1650,7 +1753,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis="
         }
       ]
     },

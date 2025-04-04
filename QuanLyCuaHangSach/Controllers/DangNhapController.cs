@@ -86,7 +86,15 @@ namespace QuanLyCuaHangSach.Controllers
             HttpContext.Session.SetString("SoDienThoai", userInfo.SoDienThoai);
             HttpContext.Session.SetString("DiaChi", userInfo.DiaChi);
 
-            return RedirectToAction("Index", "TrangChu");
+            // Kiểm tra vai trò người dùng và chuyển hướng đến trang phù hợp
+            if (user.VaiTro == "Admin")
+            {
+                return RedirectToAction("Index", "Sach"); // Nếu là Admin, chuyển đến trang sách
+            }
+            else
+            {
+                return RedirectToAction("Index", "TrangChu"); // Nếu là vai trò khác, chuyển đến trang chủ
+            }
         }
 
 

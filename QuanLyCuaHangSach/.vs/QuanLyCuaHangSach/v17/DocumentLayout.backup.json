@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\thongke\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\thongke\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\theloai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\theloai\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\controllers\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:controllers\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\phieudattruoc\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\phieudattruoc\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\services\\thongkeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:services\\thongkeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\nhacungcap\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\nhacungcap\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\models\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:models\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\sach\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\sach\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\taikhoannguoidung\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\taikhoannguoidung\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-17T13:23:46.78Z",
               "IsPinned": true,
@@ -48,54 +56,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\ThongKe\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ThongKe\\Index.cshtml",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\ThongKe\\Index.cshtml",
-              "RelativeToolTip": "Views\\ThongKe\\Index.cshtml",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAqwI8AAAAJAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\TaiKhoanNguoiDung\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\TaiKhoanNguoiDung\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\TaiKhoanNguoiDung\\Index.cshtml",
+              "RelativeToolTip": "Views\\TaiKhoanNguoiDung\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T15:12:17.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThongKeService.cs",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Services\\ThongKeService.cs",
-              "RelativeDocumentMoniker": "Services\\ThongKeService.cs",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Services\\ThongKeService.cs",
-              "RelativeToolTip": "Services\\ThongKeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:36:58.424Z",
+              "WhenOpened": "2025-04-04T15:07:40.665Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ThongKeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Models\\ThongKeViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ThongKeViewModel.cs",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Models\\ThongKeViewModel.cs",
-              "RelativeToolTip": "Models\\ThongKeViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:34:51.128Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Sach\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sach\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Sach\\Index.cshtml",
+              "RelativeToolTip": "Views\\Sach\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T15:29:47.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\NhaCungCap\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\NhaCungCap\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\NhaCungCap\\Index.cshtml",
+              "RelativeToolTip": "Views\\NhaCungCap\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAChAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T15:06:04.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ThongKeController.cs",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\ThongKeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ThongKeController.cs",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\ThongKeController.cs",
-              "RelativeToolTip": "Controllers\\ThongKeController.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAqwIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:16:12.438Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\PhieuDatTruoc\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\PhieuDatTruoc\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\PhieuDatTruoc\\Index.cshtml",
+              "RelativeToolTip": "Views\\PhieuDatTruoc\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T15:02:36.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\TheLoai\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\TheLoai\\Index.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\TheLoai\\Index.cshtml",
+              "RelativeToolTip": "Views\\TheLoai\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAACtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T14:58:12.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-04T13:31:59.711Z",
               "EditorCaption": ""
             }
           ]

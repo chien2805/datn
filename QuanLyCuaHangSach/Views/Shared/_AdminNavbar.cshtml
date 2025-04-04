@@ -1,0 +1,38 @@
+﻿<!-- Thanh điều hướng riêng cho Admin -->
+<nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Sach" asp-action="Index">QuanLyCuaHangSach</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <!-- Menu chỉ hiển thị với Admin -->
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="HoaDonBan" asp-action="Index">📜 Hóa đơn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Sach" asp-action="Index">📖 Sách</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="NhaCungCap" asp-action="Index">🏢 Nhà cung cấp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="TaiKhoanNguoiDung" asp-action="Index">👤Tài khoản</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="ThongKe" asp-action="Index">
+                        <i class="fas fa-chart-pie me-2"></i> Thống kê
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

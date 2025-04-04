@@ -1,25 +1,27 @@
-﻿/* Index.cshtml - Danh sách thể loại */
+﻿
 @model IEnumerable<TheLoai>
 
-<h2>Danh sách thể loại</h2>
-<a asp-action="Create" class="btn btn-primary">Thêm thể loại</a>
-<table class="table">
-    <thead>
+<h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Thể Loại</h2>
+
+<a asp-action="Create" class="btn btn-primary" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;">Thêm thể loại</a>
+
+<table class="table" style="width: 100%; border-collapse: collapse;">
+    <thead  style="background-color: #4a90e2; color: #fff;">
         <tr>
-            <th>Tên thể loại</th>
-            <th>Mô tả</th>
-            <th>Thao tác</th>
+            <th style="padding: 10px; text-align: center;">Tên thể loại</th>
+            <th style="padding: 10px; text-align: center;">Mô tả</th>
+            <th style="padding: 10px; text-align: center;">Thao tác</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var theLoai in Model)
         {
-            <tr>
-                <td>@theLoai.TenTheLoai</td>
-                <td>@theLoai.MoTa</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@theLoai.MaTheLoai" class="btn btn-warning">Sửa</a>
-                    <a href="#" onclick="confirmDelete(@theLoai.MaTheLoai)" class="btn btn-danger">Xóa</a>
+            <tr style="background-color: #f9f9f9; transition: background-color 0.3s ease;">
+                <td style="padding: 10px; text-align: center;">@theLoai.TenTheLoai</td>
+                <td style="padding: 10px; text-align: center;">@theLoai.MoTa</td>
+                <td style="padding: 10px; text-align: center;">
+                    <a asp-action="Edit" asp-route-id="@theLoai.MaTheLoai" class="btn btn-warning" style="padding: 5px 15px; margin-right: 10px;">Sửa</a>
+                    <a href="#" onclick="confirmDelete(@theLoai.MaTheLoai)" class="btn btn-danger" style="padding: 5px 15px;">Xóa</a>
                 </td>
             </tr>
         }
@@ -56,5 +58,6 @@
         $('#confirmDeleteModal').modal('show');
     }
 </script>
+
 
 

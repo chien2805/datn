@@ -4,72 +4,68 @@
     ViewData["Title"] = "Danh sách phiếu đặt trước";
 }
 
-<h2 class="mb-3">📌 Danh Sách Phiếu Đặt Trước</h2>
+<h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Phiếu Đặt Trước</h2>
 
 @if (Model.Any())
 {
-    <table class="table table-bordered table-hover">
-        <thead class="table-dark">
+    <table class="table table-bordered table-hover" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+        <thead  style="background-color: #4a90e2; color: #fff;">
             <tr>
-                <th>#</th>
-                <th>Tên Khách Hàng</th>
-                <th>Ngày Đặt</th>
-                <th>Ngày Trả</th>
-                <th>Trạng Thái</th>
-                <th>Sách Đặt Trước</th>
-                <th>Thành Tiền</th>
-                <th>Thao Tác</th>
+                <th style="text-align: center; padding: 10px;">#</th>
+                <th style ="text-align: center; padding: 10px;">Tên Khách Hàng</th>
+                <th style="text-align: center; padding: 10px;">Ngày Đặt</th>
+                <th style="text-align: center; padding: 10px;">Ngày Trả</th>
+                <th style="text-align: center; padding: 10px;">Trạng Thái</th>
+                <th style="text-align: center; padding: 10px;">Sách Đặt Trước</th>
+                <th style="text-align: center; padding: 10px;">Thành Tiền</th>
+                <th style="text-align: center; padding: 10px;">Thao Tác</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var phieu in Model)
             {
-                <tr>
-                    <td>@phieu.MaPhieuDatTruoc</td>
-                    <td>@phieu.TaiKhoanNguoiDung?.ThongTinNguoiDung?.HoTen</td>
-                    <td>@phieu.NgayDat.ToString("dd/MM/yyyy")</td>
-                    <td>@phieu.NgayTra.ToString("dd/MM/yyyy")</td>
-                    <td>
-                        <span class="badge @(phieu.TrangThai == "Đã xử lý" ? "bg-success" : "bg-warning")">
+                <tr style="background-color: #f9f9f9; transition: background-color 0.3s ease;">
+                    <td style="text-align: center; padding: 10px;">@phieu.MaPhieuDatTruoc</td>
+                    <td style="text-align: center; padding: 10px;">@phieu.TaiKhoanNguoiDung?.ThongTinNguoiDung?.HoTen</td>
+                    <td style="text-align: center; padding: 10px;">@phieu.NgayDat.ToString("dd/MM/yyyy")</td>
+                    <td style="text-align: center; padding: 10px;">@phieu.NgayTra.ToString("dd/MM/yyyy")</td>
+                    <td style="text-align: center; padding: 10px;">
+                        <span class="badge @(phieu.TrangThai == "Đã xử lý" ? "bg-success" : "bg-warning")" style="font-size: 0.9rem;">
                             @phieu.TrangThai
                         </span>
                     </td>
-                    <td>
-                        <ul>
+                    <td style="padding: 10px;">
+                        <ul style="list-style-type: none; padding-left: 0; margin: 0;">
                             @foreach (var chiTiet in phieu.ChiTietPhieuDatTruoc)
                             {
                                 <li>@chiTiet.Sach.TieuDe (SL: @chiTiet.SoLuongMuon)</li>
                             }
                         </ul>
                     </td>
-                    <td>
+                    <td style="text-align: center; padding: 10px;">
                         @(phieu.ThanhTien?.ToString("N0") ?? "0") VND
                     </td>
 
 
-                    <td class="d-flex">
+                    <td class="d-flex justify-content-center" style="padding: 10px;">
                         @if(phieu.TrangThai == "Đang xử lý"){
                             <form asp-action="DuyetPhieu" asp-controller="PhieuDatTruoc" method="post">
                                 <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
-                                <button class="btn btn-success btn-sm me-2">✅ Duyệt</button>
+                                <button class="btn btn-success btn-sm" style="padding: 5px 15px; margin-right:5px">✅ Duyệt</button>
                             </form>
                             <form asp-action="Huy" asp-controller="PhieuDatTruoc" method="post">
                                 <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
-                                <button class="btn btn-danger btn-sm">❌ Hủy</button>
+                                <button class="btn btn-danger btn-sm" style="padding: 5px 15px;">❌ Hủy</button>
                             </form>
                            
                         }
                         else if (phieu.TrangThai == "Đã xử lý")
                         {
-                            <form asp-action="DaTra" asp-controller="PhieuDatTruoc" method="post">
+                            <form asp-action="DaTra" asp-controller="PhieuDatTruoc" method="post" style="margin-right: 10px;">
                                 <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
-                                <button class="btn btn-outline-success btn-sm me-2"> ✅ Đã trả</button>
+                                <button class="btn btn-outline-success btn-sm" style="padding: 5px 15px;"> ✅ Đã trả</button>
                             </form>
-                        }
-                        else{
-
-                        }
-                        
+                        }                     
                     </td>
                 </tr>
             }
@@ -78,5 +74,5 @@
 }
 else
 {
-    <div class="alert alert-info">Chưa có phiếu đặt trước nào.</div>
+    <div class="alert alert-info" style="font-size: 1.2rem; color: #555;">Chưa có phiếu đặt trước nào.</div>
 }

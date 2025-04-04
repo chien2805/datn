@@ -1,0 +1,14 @@
+﻿/* Ghi đè lại các thuộc tính trong site.css chỉ cho Admin */
+body.admin-layout .navbar-nav {
+    display: block !important;
+    flex-direction: column !important;
+}
+
+body.admin-layout .nav-item {
+    margin: 10px 0 !important;
+}
+
+body.admin-layout .nav-link {
+    padding: 10px 20px !important;
+    color: #333 !important;
+}
