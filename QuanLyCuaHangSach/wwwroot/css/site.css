@@ -22,6 +22,10 @@ body {
     background-color: #f9f9f9;
     color: #333333;
 }
+.container {
+    margin-left:150px;
+    margin-right:100px;
+}
 footer {
     display: none;
 }
@@ -88,3 +92,96 @@ footer {
     .btn-logout:hover {
         background-color: #c0392b; /* Màu đỏ đậm khi hover */
     }
+/*modal đăng nhập*/
+/* Modal Đăng nhập */
+.modal-dialog {
+    max-width: 500px; /* Giới hạn chiều rộng modal */
+    margin: 30px auto; /* Canh giữa modal */
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    color: #8b4513;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.close {
+    color: #8b4513;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+    .close:hover {
+        color: #e74c3c;
+    }
+
+/* Các trường nhập liệu */
+.form-group label {
+    font-weight: bold;
+    color: #6e4b3b;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #d5b29a;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+    .form-control:focus {
+        border-color: #8b4513;
+        box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
+    }
+
+/* Các nút bấm */
+.btn {
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    background-color: #f0ebe3;
+    border-color: #d5b29a;
+    color: #8b4513;
+}
+
+    .btn-secondary:hover {
+        background-color: #e3d0b3;
+    }
+
+.btn-primary {
+    background-color: #8b4513;
+    border-color: #8b4513;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #7a3e0a;
+        border-color: #7a3e0a;
+    }
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    text-align: right;
+}
+
+/* Khi modal đóng */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}

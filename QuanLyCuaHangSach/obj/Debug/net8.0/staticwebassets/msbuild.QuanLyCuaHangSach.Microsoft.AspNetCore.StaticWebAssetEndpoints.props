@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/site.2yksou9qe1.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2yksou9qe1"},{"Name":"integrity","Value":"sha256-9kaJAFE9ny3rJbVvN\u002BpniVhDjRVnT5OGs\u002B3bVO9UHis="},{"Name":"label","Value":"_content/QuanLyCuaHangSach/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2128"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229kaJAFE9ny3rJbVvN\u002BpniVhDjRVnT5OGs\u002B3bVO9UHis=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 14:54:25 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9kaJAFE9ny3rJbVvN\u002BpniVhDjRVnT5OGs\u002B3bVO9UHis="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2128"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229kaJAFE9ny3rJbVvN\u002BpniVhDjRVnT5OGs\u002B3bVO9UHis=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 14:54:25 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3888"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 13:47:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/site.u64n2fuxfp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u64n2fuxfp"},{"Name":"integrity","Value":"sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="},{"Name":"label","Value":"_content/QuanLyCuaHangSach/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3888"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 13:47:34 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/_AdminNavbar.3koytnxqe1.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\_AdminNavbar.css'))</AssetFile>

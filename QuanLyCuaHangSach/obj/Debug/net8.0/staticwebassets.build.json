@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L6Tq1xBoRKSjhbhHKUbmQdTxK3MT8rbDDOWLxxsCrmk=",
+  "Hash": "YbrILCYQVs5gUHyI43hlDDJGySq9b/fCwzd+OOofGPU=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2yksou9qe1",
-      "Integrity": "9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis=",
+      "Fingerprint": "u64n2fuxfp",
+      "Integrity": "Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1676,51 +1676,6 @@
       ]
     },
     {
-      "Route": "css/site.2yksou9qe1.css",
-      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2128"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 14:54:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "2yksou9qe1"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1731,7 +1686,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2128"
+          "Value": "3888"
         },
         {
           "Name": "Content-Type",
@@ -1739,11 +1694,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis=\""
+          "Value": "\"Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 14:54:25 GMT"
+          "Value": "Sun, 06 Apr 2025 13:47:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1753,7 +1708,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9kaJAFE9ny3rJbVvN+pniVhDjRVnT5OGs+3bVO9UHis="
+          "Value": "sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.u64n2fuxfp.css",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 13:47:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u64n2fuxfp"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="
         }
       ]
     },

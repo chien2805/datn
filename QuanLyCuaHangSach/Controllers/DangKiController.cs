@@ -37,7 +37,7 @@ namespace QuanLyCuaHangSach.Controllers
                 if (_context.TaiKhoanNguoiDung.Any(t => t.TenDangNhap == model.TenDangNhap))
                 {
                     ModelState.AddModelError("TenDangNhap", "Email đã được sử dụng");
-                    return View(model);
+                    return Json(new { success = false, message = "Email đã được sử dụng" });
                 }
 
                 // Mặc định vai trò là KhachHang
@@ -46,11 +46,13 @@ namespace QuanLyCuaHangSach.Controllers
                 _context.TaiKhoanNguoiDung.Add(model);
                 _context.SaveChanges();
 
-                return RedirectToAction("Index", "TrangChu");
+                // Trả về JSON với kết quả đăng ký thành công
+                return Json(new { success = true });
             }
 
-            return View(model);
+            return Json(new { success = false, message = "Dữ liệu không hợp lệ" });
         }
+
 
     }
 }

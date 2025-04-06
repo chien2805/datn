@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/QuanLyCuaHangSach.styles.css" asp-append-version="true" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     @{
         var userRole = Context.Session.GetString("UserRole"); // Vai trò: "Admin" hoặc "KhachHang"
         var isLoggedIn = Context.Session.GetString("UserEmail") != null; // Kiểm tra đã đăng nhập chưa
+    }
+    <!-- Hiển thị thông báo từ TempData -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
     }
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark custom-navbar border-bottom box-shadow mb-3">
@@ -49,7 +57,7 @@
                             @if (!isLoggedIn)
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-controller="DangKi" asp-action="DangKy">
+                                    <a href="#" class="nav-link text-dark" onclick="showRegisterModal()">
                                         <i class="fa-solid fa-user-plus"></i> Đăng ký
                                     </a>
                                 </li>
@@ -158,8 +166,123 @@
             </div>
         </div>
     </div>
+    <!-- Modal Đăng ký -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Đăng ký</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeRegisterModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm" method="post" action="/DangKi/DangKy">
+                        @Html.AntiForgeryToken() <!-- Thêm dòng này vào để bảo vệ CSRF -->
+                        <div class="form-group">
+                            <label for="TenDangNhap">Email:</label>
+                            <input type="email" class="form-control" name="TenDangNhap" required>
+                            <span id="emailError" class="text-danger"></span> <!-- Thông báo lỗi email -->
+                        </div>
+                        <div class="form-group">
+                            <label for="MatKhau">Mật khẩu:</label>
+                            <input type="password" class="form-control" name="MatKhau" required>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- Nút huỷ (đóng modal đăng ký) -->
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeRegisterModal()">Huỷ</button>
+                            <button type="submit" class="btn btn-primary">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Đăng ký thành công -->
+    <div class="modal fade" id="registerSuccessModal" tabindex="-1" role="dialog" aria-labelledby="registerSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerSuccessModalLabel">Đăng ký thành công</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeRegisterSuccessModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn đã đăng ký thành công. Bạn có muốn đăng nhập ngay không?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeRegisterSuccessModal()">Đóng</button>
+                    <button type="button" class="btn btn-primary" onclick="openLoginModal()">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Script mở modal -->
+    <script>
+                // Hàm để mở modal Đăng ký
+        function showRegisterModal() {
+            $('#registerModal').modal('show');
+        }
+
+
+        // Hàm để đóng modal Đăng ký
+        function closeRegisterModal() {
+            $('#registerModal').modal('hide');
+        }
+        // Hàm để mở modal Đăng ký thành công
+        function showRegisterSuccessModal() {
+            $('#registerSuccessModal').modal('show');
+        }
+
+        // Hàm để đóng modal Đăng ký thành công
+        function closeRegisterSuccessModal() {
+            $('#registerSuccessModal').modal('hide');
+        }
+
+        // Hàm xử lý form đăng ký
+        $(document).ready(function () {
+            // Khi form đăng ký được gửi, thực hiện AJAX
+            $('#registerForm').submit(function (event) {
+                event.preventDefault(); // Ngừng gửi form theo cách mặc định
+
+                // Gửi AJAX request để đăng ký
+                $.ajax({
+                    url: '/DangKi/DangKy',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                    if (response.success) {
+                        // Mở modal đăng ký thành công
+                        showRegisterSuccessModal();
+                        closeRegisterModal(); // Đóng modal đăng ký
+                    } else {
+                        // Hiển thị lỗi nếu email đã tồn tại
+                        if (response.message === "Email đã được sử dụng") {
+                            $('#emailError').text('Email đã được sử dụng');
+                        } else {
+                            $('#emailError').text('');
+                        }
+                    }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra khi đăng ký');
+                    }
+                });
+            });
+        });
+                // Hàm mở modal Đăng nhập khi bấm Đăng nhập
+        function openLoginModal() {
+            // Đóng modal Đăng ký thành công
+            $('#registerSuccessModal').modal('hide');
+            // Mở modal Đăng nhập
+            $('#loginModal').modal('show');
+        }
+    </script>
+
+
     <script>
         function showLoginModal() {
             $('#loginModal').modal('show');
@@ -257,8 +380,6 @@
             </div>
         </div>
     </div>
-
-    
 
     <script>
         function showUserOptions() {
@@ -422,6 +543,9 @@
     <!-- jQuery UI -->
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <!-- Thêm các thư viện JavaScript ở cuối trang -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
  
 </body>
 

@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<QuanLyCuaHangSach.Models.Sach>
 
-<h2>Danh sách sách</h2>
 @if (Model.Any())
 {
     <h3>Có @Model.Count() sách</h3>
@@ -10,24 +9,19 @@ else
     <h3>Không có sách nào</h3>
 }
 
-<div class="row">
-    <!-- Cột chọn thể loại bên trái -->
-    <div class="col-md-3">
-        <h4>Thể loại</h4>
-        <ul class="list-group">
-            <!-- Nút "Tất cả" để hiển thị tất cả sách -->
-            <li class="list-group-item">
-                <a asp-action="Index" asp-route-theLoaiId="" title="Hiển thị tất cả các sách" data-bs-toggle="tooltip">
-                    Tất cả
-                </a>
-            </li>
 
+<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+    <!-- Cột thể loại bên trái -->
+    <div class="col-md-2" style="background-color: #f4e1d2; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <h4 style="color: #8b4513; font-size: 1.2rem; font-weight: bold;">Thể loại</h4>
+        <ul class="list-group" style="margin-top: 15px;">
+            <li class="list-group-item" style="padding: 10px; background-color: #ffffff; border: 1px solid #d5b29a; border-radius: 5px; margin-bottom: 5px;">
+                <a asp-action="Index" asp-route-theLoaiId="" title="Hiển thị tất cả các sách" data-bs-toggle="tooltip" style="color: #8b4513; text-decoration: none;">Tất cả</a>
+            </li>
             @foreach (var theLoai in ViewBag.DanhSachTheLoai)
             {
-                <li class="list-group-item">
-                    <a asp-action="Index" asp-route-theLoaiId="@theLoai.MaTheLoai"
-                       title="@theLoai.MoTa"
-                       data-bs-toggle="tooltip">
+                <li class="list-group-item" style="padding: 10px; background-color: #ffffff; border: 1px solid #d5b29a; border-radius: 5px; margin-bottom: 5px;">
+                    <a asp-action="Index" asp-route-theLoaiId="@theLoai.MaTheLoai" title="@theLoai.MoTa" data-bs-toggle="tooltip" style="color: #8b4513; text-decoration: none;">
                         @theLoai.TenTheLoai
                     </a>
                 </li>
@@ -35,67 +29,51 @@ else
         </ul>
     </div>
 
-    <!-- Cột danh sách sách bên phải -->
-    <div class="col-md-9">
-        <div class="row">
-            @foreach (var sach in Model)
-            {
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="row g-0">
-                            <div class="col-4 d-flex align-items-center">
-                                <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/") ? sach.HinhAnh : "~/images/sach/default.jpg")"
-                                     class="img-fluid rounded-start"
-                                     alt="@sach.TieuDe"
-                                     style="height: 100%; object-fit: cover;" />
-                            </div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">@sach.TieuDe</h5>
-                                    <p class="card-text"><strong>Giá:</strong> @sach.Gia.ToString("N0") VNĐ</p>
-                                    <p class="card-text"><strong>Thể loại:</strong> @sach.TheLoai?.TenTheLoai</p>
-                                    <p class="card-text"><strong>Số lượng đã mượn:</strong> @sach.SoLuongMuon cuốn</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center gap-3 mt-3">
-                            <button type="button" class="btn btn-primary" onclick="themVaoGio(@sach.MaSach)">
-                                Thêm vào giỏ
-                            </button>
+    <!-- Cột sách + tìm kiếm bên phải -->
+    <div class="col-md-9" style="padding-left: 15px;">
+        <div class="d-flex mb-3">
+            <input type="text"
+                   id="searchBox"
+                   class="form-control"
+                   placeholder="Tìm kiếm sách..."
+                   value="@ViewBag.SearchString"
+                   style="max-width: 100%; border-radius: 8px; padding: 10px; font-size: 1rem; border: 1px solid #d5b29a; background-color: #f9f9f9;" />
+        </div>
 
-                            <!-- Form đặt thuê -->
-                            <form id="datThueForm" asp-controller="PhieuDatTruoc" asp-action="TaoPhieu" method="post">
-                                <input type="hidden" value="@sach.MaSach" name="maSach" />
-                                <input type="hidden" value="@ViewBag.MaTaiKhoan" name="maTaiKhoan" />
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#xacNhanModal">
-                                    📚 Đặt thuê
-                                </button>
-                            </form>
+        <!-- Đây là chỗ sẽ được load lại nguyên vẹn _ListWrapper -->
+        @await Html.PartialAsync("_ListWrapper", Model)
 
-                            <!-- Modal xác nhận -->
-                            <div class="modal fade" id="xacNhanModal" tabindex="-1" aria-labelledby="xacNhanModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="xacNhanModalLabel">Xác nhận đặt thuê</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Bạn có chắc chắn muốn đặt thuê sách này không?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                            <button type="button" class="btn btn-primary" id="xacNhanDatThue">Xác nhận</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Form duy nhất để submit đặt thuê -->
+        <form id="datThueForm" asp-controller="PhieuDatTruoc" asp-action="TaoPhieu" method="post" style="display:none;">
+            <input type="hidden" id="modalMaSach" name="maSach" value="" />
+            <input type="hidden" name="maTaiKhoan" value="@ViewBag.MaTaiKhoan" />
+        </form>
+
+        <!-- Modal duy nhất -->
+        <div class="modal fade" id="xacNhanModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #fff8f0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+                    <div class="modal-header" style="background-color: #f0ebe3; border-bottom: none; padding: 1rem 1.5rem;">
+                        <h5 class="modal-title" style="color: #4a90e2; font-size: 1.25rem; font-weight: 600;">
+                            Xác nhận đặt thuê
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" style="filter: invert(30%);"></button>
+                    </div>
+                    <div class="modal-body" style="color: #333333; font-size: 1rem; padding: 1rem 1.5rem;">
+                        Bạn có chắc chắn muốn đặt thuê quyển sách này không?
+                    </div>
+                    <div class="modal-footer" style="background-color: #f9f9f9; border-top: none; padding: 1rem 1.5rem;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #7ed6df; color: #333333; border: none; border-radius: 5px; padding: 0.5rem 1rem; font-size: 1rem;">
+                            Hủy
+                        </button>
+                        <button type="button" class="btn btn-primary" id="xacNhanDatThue" style="background-color: #4a90e2; color: #ffffff; border: none; border-radius: 5px; padding: 0.5rem 1rem; font-size: 1rem;">
+                            Xác nhận
+                        </button>
                     </div>
                 </div>
-         
-            }
+            </div>
         </div>
+
     </div>
 </div>
 
@@ -110,10 +88,18 @@ else
         });
     });
 </script>
+
 <script>
-    document.getElementById("xacNhanDatThue").addEventListener("click", function () {
-        document.getElementById("datThueForm").submit();
-    });
+    // Khi click "Đặt thuê" trên từng card, gán maSach vào form ẩn
+    function prepareDatThue(maSach) {
+        document.getElementById("modalMaSach").value = maSach;
+    }
+
+    // Khi click "Xác nhận" trong modal, submit form chung
+    document.getElementById("xacNhanDatThue")
+        .addEventListener("click", function () {
+            document.getElementById("datThueForm").submit();
+        });
 </script>
 
 <script>
@@ -129,4 +115,42 @@ else
     }
 </script>
 
-<!-- Hỏi đặt trước -->
+<script>
+    const searchBox = document.getElementById("searchBox");
+    const listWrapper = document.getElementById("listWrapper");
+    let debounce;
+
+    function loadPage(page = 1) {
+        const q = encodeURIComponent(searchBox.value);
+        const tl = '@ViewBag.CurrentTheLoaiId';
+        const url = `/TrangChu/TimKiemPhanTrang?pageNumber=${page}`
+            + `&searchString=${q}`
+            + (tl ? `&theLoaiId=${tl}` : '');
+
+        fetch(url)
+            .then(r => r.text())
+            .then(html => {
+                listWrapper.innerHTML = html;
+                bindPaginationLinks();
+            });
+    }
+
+    function bindPaginationLinks() {
+        listWrapper.querySelectorAll('#pagination a[data-page]')
+            .forEach(a => {
+                a.onclick = e => {
+                    e.preventDefault();
+                    loadPage(a.getAttribute('data-page'));
+                };
+            });
+    }
+
+    // Khi gõ tìm kiếm: đợi 500ms rồi load lại trang 1
+    searchBox.addEventListener('input', () => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => loadPage(1), 500);
+    });
+
+    // Khởi tạo bind cho lần đầu
+    document.addEventListener('DOMContentLoaded', bindPaginationLinks);
+</script>

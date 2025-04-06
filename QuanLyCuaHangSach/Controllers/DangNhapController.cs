@@ -99,6 +99,7 @@ namespace QuanLyCuaHangSach.Controllers
 
 
         // Đăng xuất
+        // Đăng xuất
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
