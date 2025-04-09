@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using QuanLyCuaHangSach.Context;
 using QuanLyCuaHangSach.Models;
+using System.Globalization;
+using System.Text;
 
 namespace QuanLyCuaHangSach.Controllers
 {
@@ -172,6 +175,67 @@ namespace QuanLyCuaHangSach.Controllers
         private bool SachExists(int id)
         {
             return _context.Sach.Any(e => e.MaSach == id);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ImportExcel(IFormFile file)
+        {
+            if (file != null && file.Length > 0)
+            {
+                using (var stream = new MemoryStream())
+                {
+                    await file.CopyToAsync(stream);
+                    stream.Position = 0;
+
+                    // Bắt buộc: Thiết lập context cho EPPlus
+                    ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+                    using (var package = new ExcelPackage(stream))
+                    {
+                        var worksheet = package.Workbook.Worksheets.FirstOrDefault();
+                        if (worksheet == null) return RedirectToAction("Index");
+
+                        int rowCount = worksheet.Dimension.Rows;
+
+                        for (int row = 2; row <= rowCount; row++)
+                        {
+                            string tieuDe = worksheet.Cells[row, 1].Text.Trim();
+                            int soLuong = int.TryParse(worksheet.Cells[row, 2].Text.Trim(), out int sl) ? sl : 0;
+
+                            if (!string.IsNullOrEmpty(tieuDe) && soLuong > 0)
+                            {
+                                string tieuDeChuanHoa = ChuanHoaChuoi(tieuDe);
+
+                                // So sánh tên đã chuẩn hóa
+                                var sach = _context.Sach
+                                    .AsEnumerable()
+                                    .FirstOrDefault(s => ChuanHoaChuoi(s.TieuDe) == tieuDeChuanHoa);
+
+                                if (sach != null)
+                                {
+                                    sach.SoLuongTon += soLuong;
+                                }
+                            }
+                        }
+
+                        await _context.SaveChangesAsync();
+                    }
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        // Hàm chuẩn hóa chuỗi: xóa dấu và đưa về chữ thường
+        public static string ChuanHoaChuoi(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return "";
+
+            input = input.ToLower().Trim();
+
+            string normalized = input.Normalize(NormalizationForm.FormD);
+            var chars = normalized.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray();
+            return new string(chars).Normalize(NormalizationForm.FormC);
         }
     }
 }

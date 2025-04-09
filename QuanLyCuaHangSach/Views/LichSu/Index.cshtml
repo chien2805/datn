@@ -1,0 +1,102 @@
+﻿@model QuanLyCuaHangSach.Models.LichSuViewModel
+
+@{
+    ViewData["Title"] = "Lịch sử giao dịch";
+    var allGiaoDich = new List<dynamic>();
+
+    // Gộp phiếu đặt trước
+    foreach (var muon in Model.LichSuMuon)
+    {
+        allGiaoDich.Add(new
+        {
+            Ngay = muon.NgayDat,
+            Loai = "Đặt mượn",
+            Sach = muon.ChiTietPhieuDatTruoc.Select(ct => new
+            {
+                TenSach = ct.Sach.TieuDe,
+                SoLuong = ct.SoLuongMuon
+            }),
+            TongTien = muon.ThanhTien
+        });
+    }
+
+    // Gộp hóa đơn online
+    foreach (var mua in Model.LichSuMua)
+    {
+        allGiaoDich.Add(new
+        {
+            Ngay = mua.NgayTao,
+            Loai = "Mua Online",
+            Sach = mua.ChiTietHoaDon.Select(ct => new
+            {
+                TenSach = ct.Sach.TieuDe,
+                SoLuong = ct.SoLuong
+            }),
+            TongTien = mua.TongTien
+        });
+    }
+
+    // Sắp xếp giảm dần theo ngày
+    allGiaoDich = allGiaoDich.OrderByDescending(x => x.Ngay).ToList();
+}
+
+<div style="margin-bottom: 1rem; font-size: 0.95rem; color: #777;">
+    <a asp-controller="TrangChu" asp-action="Index" style="color: #4a90e2; text-decoration: none;">
+        Trang chủ
+    </a> &gt; Lịch sử giao dịch
+</div>
+
+<h2 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: #4a90e2;">
+    Lịch sử giao dịch
+</h2>
+
+@if (allGiaoDich.Any())
+{
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc; background-color: #fff; border-radius: 10px; overflow: hidden;">
+        <thead style="background-color: #f0ebe3; color: #333;">
+            <tr>
+                <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ccc;">Ngày</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ccc;">Loại giao dịch</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ccc;">Sách</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ccc;">Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in allGiaoDich)
+            {
+                <tr style="border-top: 1px solid #ccc; transition: background 0.2s;" onmouseover="this.style.background='#7ed6df'" onmouseout="this.style.background='white'">
+                    <td style="padding: 12px; color: #333;">@item.Ngay.ToString("dd/MM/yyyy")</td>
+                    <td style="padding: 12px;">
+                        @if (item.Loai == "Mua Online")
+                        {
+                            <span style="background-color: #d0e8ff; color: #007bff; padding: 4px 10px; border-radius: 20px; font-weight: 500;">
+                                🛒 @item.Loai
+                            </span>
+                        }
+                        else if (item.Loai == "Đặt mượn")
+                        {
+                            <span style="background-color: #ffe0b2; color: #e67e22; padding: 4px 10px; border-radius: 20px; font-weight: 500;">
+                                📚 @item.Loai
+                            </span>
+                        }
+                    </td>
+                    <td style="padding: 12px; color: #333;">
+                        <ul style="padding-left: 1.25rem; margin: 0;">
+                            @foreach (var sach in item.Sach)
+                            {
+                                <li>@sach.TenSach (SL: @sach.SoLuong)</li>
+                            }
+                        </ul>
+                    </td>
+                    <td style="padding: 12px; color: #333;">
+                        @((item.TongTien != null) ? ((decimal)item.TongTien).ToString("N0") + " đ" : "-")
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p style="color: #777;">Chưa có giao dịch nào.</p>
+}

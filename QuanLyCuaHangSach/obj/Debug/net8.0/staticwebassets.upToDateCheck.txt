@@ -1,5 +1,6 @@
 wwwroot\css\_AdminNavbar.css
 wwwroot\css\site.css
+wwwroot\chatbox-mrob-b9773ec4f7cf.json
 wwwroot\favicon.ico
 wwwroot\images\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg
 wwwroot\images\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg

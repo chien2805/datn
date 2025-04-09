@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YbrILCYQVs5gUHyI43hlDDJGySq9b/fCwzd+OOofGPU=",
+  "Hash": "kOhAbgFU3IOKAzPyDvzGVRbNwo/nzDMdrbV27Ql1RjM=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-b9773ec4f7cf.json",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "chatbox-mrob-b9773ec4f7cf#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a7lcg8bd03",
+      "Integrity": "qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\chatbox-mrob-b9773ec4f7cf.json"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
@@ -1698,7 +1719,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 13:47:34 GMT"
+          "Value": "Tue, 08 Apr 2025 16:15:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1735,7 +1756,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 13:47:34 GMT"
+          "Value": "Tue, 08 Apr 2025 16:15:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1754,6 +1775,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="
+        }
+      ]
+    },
+    {
+      "Route": "chatbox-mrob-b9773ec4f7cf.a7lcg8bd03.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-b9773ec4f7cf.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 14:10:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a7lcg8bd03"
+        },
+        {
+          "Name": "label",
+          "Value": "chatbox-mrob-b9773ec4f7cf.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0="
+        }
+      ]
+    },
+    {
+      "Route": "chatbox-mrob-b9773ec4f7cf.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-b9773ec4f7cf.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 14:10:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0="
         }
       ]
     },

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Chat với Trợ Lý Ảo";
+}
+
+<div style="max-width: 600px; margin: 40px auto; border: 1px solid #ccc; border-radius: 10px; padding: 20px;">
+    <h3>💬 Chat với Trợ Lý Ảo</h3>
+    <div id="chatbox" style="height: 300px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+        <!-- Tin nhắn sẽ hiển thị ở đây -->
+    </div>
+    <div style="display: flex; gap: 10px;">
+        <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." class="form-control" />
+        <button onclick="sendMessage()" class="btn btn-primary">Gửi</button>
+    </div>
+</div>
+
+<script>
+    function appendMessage(sender, text) {
+        const chat = document.getElementById("chatbox");
+        const div = document.createElement("div");
+        // ✅ Thay \n bằng <br> để xuống dòng đúng
+        const formattedText = text.replace(/\n/g, "<br>");
+        div.innerHTML = `<strong>${sender}:</strong> ${formattedText}`;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+    }
+
+    function sendMessage() {
+        const input = document.getElementById("messageInput");
+        const text = input.value.trim();
+        if (!text) return;
+
+        appendMessage("Bạn", text);
+        input.value = "";
+
+        fetch(`/Chatbot/GetResponse?userMessage=${encodeURIComponent(text)}`)
+                .then(response => response.text()) // 👈 lấy text trực tiếp, không phải JSON
+    .then(reply => {
+        const formattedReply = reply.replace(/\n/g, "<br>");
+        appendMessage("Bot", formattedReply);
+    })
+            .catch(error => {
+                appendMessage("Bot", "Xin lỗi, có lỗi xảy ra.");
+                console.error(error);
+            });
+    }
+</script>

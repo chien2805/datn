@@ -85,6 +85,88 @@
       ]
     },
     {
+      "Route": "chatbox-mrob-b9773ec4f7cf.a7lcg8bd03.json",
+      "AssetFile": "chatbox-mrob-b9773ec4f7cf.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 14:10:44 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a7lcg8bd03"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0="
+        },
+        {
+          "Name": "label",
+          "Value": "chatbox-mrob-b9773ec4f7cf.json"
+        }
+      ]
+    },
+    {
+      "Route": "chatbox-mrob-b9773ec4f7cf.json",
+      "AssetFile": "chatbox-mrob-b9773ec4f7cf.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 14:10:44 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj+ITtySM0="
+        }
+      ]
+    },
+    {
       "Route": "css/_AdminNavbar.3koytnxqe1.css",
       "AssetFile": "css/_AdminNavbar.css",
       "Selectors": [],
@@ -193,7 +275,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 13:47:34 GMT"
+          "Value": "Tue, 08 Apr 2025 16:15:20 GMT"
         }
       ],
       "EndpointProperties": [
@@ -230,7 +312,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 13:47:34 GMT"
+          "Value": "Tue, 08 Apr 2025 16:15:20 GMT"
         }
       ],
       "EndpointProperties": [

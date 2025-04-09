@@ -52,10 +52,8 @@ namespace QuanLyCuaHangSach.Controllers
                 var tenKhachHang = tenKhachHangMatch.Success ? tenKhachHangMatch.Groups[1].Value.Trim() : "";
                 var diaChi = diaChiMatch.Success ? diaChiMatch.Groups[1].Value.Trim() : "";
                 var soDienThoai = soDienThoaiMatch.Success ? soDienThoaiMatch.Groups[1].Value.Trim() : "";
-
-                Console.WriteLine(tenKhachHang);
-                Console.WriteLine(diaChi);
-                Console.WriteLine(soDienThoai);
+                // 🔹 Nếu người dùng đã đăng nhập thì gán MaTaiKhoan
+                var maTaiKhoan = HttpContext.Session.GetInt32("MaTaiKhoan");
                 // 🔹 Tạo hóa đơn mới
                 var hoaDon = new HoaDonBanOnline
                 {
@@ -65,7 +63,9 @@ namespace QuanLyCuaHangSach.Controllers
                     NgayTao = DateTime.Now,
                     TongTien = decimal.Parse(response.Amount),
                     TrangThai = "Đã thanh toán", // ✅ Thêm trạng thái đơn hàng
-                    LoaiThanhToan = "Momo"
+                    LoaiThanhToan = "Momo",
+                    MaTaiKhoan = maTaiKhoan.Value,
+
                 };
                 _context.HoaDonBanOnline.Add(hoaDon);
                 _context.SaveChanges(); // Lưu hóa đơn để có MaHoaDon

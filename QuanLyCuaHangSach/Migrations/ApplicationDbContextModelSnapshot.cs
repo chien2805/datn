@@ -201,6 +201,9 @@ namespace QuanLyCuaHangSach.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("MaTaiKhoan")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("NgayTao")
                         .HasColumnType("datetime2");
 
@@ -220,6 +223,8 @@ namespace QuanLyCuaHangSach.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaHoaDon");
+
+                    b.HasIndex("MaTaiKhoan");
 
                     b.ToTable("HoaDonBanOnline");
                 });
@@ -586,6 +591,15 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Navigation("Sach");
                 });
 
+            modelBuilder.Entity("QuanLyCuaHangSach.Models.HoaDonBanOnline", b =>
+                {
+                    b.HasOne("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", "TaiKhoanNguoiDung")
+                        .WithMany("HoaDonBanOnline")
+                        .HasForeignKey("MaTaiKhoan");
+
+                    b.Navigation("TaiKhoanNguoiDung");
+                });
+
             modelBuilder.Entity("QuanLyCuaHangSach.Models.KhachHang", b =>
                 {
                     b.HasOne("QuanLyCuaHangSach.Models.ThongTinNguoiDung", "ThongTinNguoiDung")
@@ -703,6 +717,8 @@ namespace QuanLyCuaHangSach.Migrations
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", b =>
                 {
+                    b.Navigation("HoaDonBanOnline");
+
                     b.Navigation("PhieuDatTruoc");
 
                     b.Navigation("ThongTinNguoiDung")

@@ -77,6 +77,9 @@
                                         <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal">
                                             <i class="fa-solid fa-id-card"></i> Thông tin tài khoản
                                         </a>
+                                        <a asp-controller="LichSu" asp-action="Index" class="nav-link text-dark">
+                                            <i class="fa-solid fa-clock-rotate-left"></i> Lịch sử giao dịch
+                                        </a>
                                         <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post">
                                             <button type="submit" class="btn btn-danger btn-sm w-100">🚪 Đăng xuất</button>
                                         </form>
@@ -374,12 +377,47 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Lưu thay đổi</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeEditModal()">Hủy</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+            function closeEditModal() {
+            var editModal = bootstrap.Modal.getInstance(document.getElementById('chinhSuaTaiKhoanModal'));
+            if (editModal) {
+                editModal.hide();
+            }
+
+            // Nếu cần: Xử lý thủ công backdrop nếu Bootstrap không remove
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) backdrop.remove();
+
+            document.body.classList.remove('modal-open');
+            document.body.style = '';
+        }
+        function switchToEditModal() {
+            var infoModalEl = document.getElementById('thongTinTaiKhoanModal');
+            var infoModal = bootstrap.Modal.getInstance(infoModalEl);
+            infoModalEl.addEventListener('hidden.bs.modal', function () {
+                var editModal = new bootstrap.Modal(document.getElementById('chinhSuaTaiKhoanModal'));
+                editModal.show();
+            }, { once: true }); // đảm bảo chỉ chạy 1 lần
+            infoModal.hide();
+        }
+
+        function switchToInfoModal() {
+            var editModalEl = document.getElementById('chinhSuaTaiKhoanModal');
+            var editModal = bootstrap.Modal.getInstance(editModalEl);
+            editModalEl.addEventListener('hidden.bs.modal', function () {
+                var infoModal = new bootstrap.Modal(document.getElementById('thongTinTaiKhoanModal'));
+                infoModal.show();
+            }, { once: true }); // đảm bảo chỉ chạy 1 lần
+            editModal.hide();
+        }
+    </script>
 
     <script>
         function showUserOptions() {
@@ -391,23 +429,6 @@
         }
     </script>
 
-    <script>
-        function switchToInfoModal() {
-            var editModal = bootstrap.Modal.getInstance(document.getElementById('chinhSuaTaiKhoanModal'));
-            editModal.hide(); // Đóng modal chỉnh sửa
-            var infoModal = new bootstrap.Modal(document.getElementById('thongTinTaiKhoanModal'));
-            infoModal.show(); // Mở modal thông tin
-        }
-    </script>
-
-    <script>
-        function switchToEditModal() {
-            var infoModal = bootstrap.Modal.getInstance(document.getElementById('thongTinTaiKhoanModal'));
-            infoModal.hide(); // Đóng modal thông tin
-            var editModal = new bootstrap.Modal(document.getElementById('chinhSuaTaiKhoanModal'));
-            editModal.show(); // Mở modal chỉnh sửa
-        }
-    </script>
 
     <!-- Modal Giỏ Hàng -->
     <!-- Offcanvas giỏ hàng -->
@@ -546,7 +567,8 @@
     <!-- Thêm các thư viện JavaScript ở cuối trang -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

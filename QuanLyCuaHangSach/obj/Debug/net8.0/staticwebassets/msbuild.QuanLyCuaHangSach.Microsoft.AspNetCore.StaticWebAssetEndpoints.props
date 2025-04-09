@@ -1,16 +1,28 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/chatbox-mrob-b9773ec4f7cf.a7lcg8bd03.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\chatbox-mrob-b9773ec4f7cf.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a7lcg8bd03"},{"Name":"integrity","Value":"sha256-qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj\u002BITtySM0="},{"Name":"label","Value":"_content/QuanLyCuaHangSach/chatbox-mrob-b9773ec4f7cf.json"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2364"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj\u002BITtySM0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 14:10:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/chatbox-mrob-b9773ec4f7cf.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\chatbox-mrob-b9773ec4f7cf.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj\u002BITtySM0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2364"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022qun8tqZCPiP0gGz57K9dLBFueLe6h4Ysjuj\u002BITtySM0=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 14:10:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3888"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 13:47:34 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3888"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 08 Apr 2025 16:15:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/site.u64n2fuxfp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u64n2fuxfp"},{"Name":"integrity","Value":"sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="},{"Name":"label","Value":"_content/QuanLyCuaHangSach/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3888"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\u0022"},{"Name":"Last-Modified","Value":"Sun, 06 Apr 2025 13:47:34 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3888"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 08 Apr 2025 16:15:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuanLyCuaHangSach/css/_AdminNavbar.3koytnxqe1.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\_AdminNavbar.css'))</AssetFile>

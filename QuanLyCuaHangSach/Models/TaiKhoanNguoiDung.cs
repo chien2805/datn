@@ -17,6 +17,8 @@ namespace QuanLyCuaHangSach.Models
 
         // Thêm danh sách phiếu đặt trước
         public List<PhieuDatTruoc>? PhieuDatTruoc { get; set; }
+        // 🔹 Thêm danh sách hóa đơn bán online của người dùng này
+        public List<HoaDonBanOnline>? HoaDonBanOnline { get; set; }
     }
 
 }

@@ -2,7 +2,12 @@
 @model IEnumerable<Sach>
 <h2 style="font-size: 2rem; color: #333333; margin-bottom: 20px;">Danh sách sách</h2>
 <a asp-action="Create" class="btn btn-primary" style="background-color: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-align: center;">Thêm sách</a>
-
+<form id="importForm" asp-action="ImportExcel" asp-controller="Sach" enctype="multipart/form-data" method="post" style="display: inline;">
+    <input type="file" id="fileInput" name="file" accept=".xlsx,.xls" style="display: none;" onchange="document.getElementById('importForm').submit();" />
+    <button type="button" class="btn btn-success" onclick="document.getElementById('fileInput').click();" style="background-color: #27ae60; color: #fff; padding: 10px 20px; border-radius: 5px;">
+        Nhập từ Excel
+    </button>
+</form>
 <table class="table table-bordered table-hover" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
     <thead  style="background-color: #4a90e2; color: #fff;">
         <tr>

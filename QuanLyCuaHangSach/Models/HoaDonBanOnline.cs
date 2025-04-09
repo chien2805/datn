@@ -21,9 +21,13 @@ namespace QuanLyCuaHangSach.Models
         public decimal TongTien { get; set; }
 
         public string TrangThai { get; set; } 
-
         public string LoaiThanhToan { get; set; } = "Momo"; // Xác định đây là đơn hàng online
 
+        // 🔹 Thêm khóa ngoại liên kết đến tài khoản người dùng
+        public int? MaTaiKhoan { get; set; } // nullable để đơn không cần đăng nhập vẫn được tạo
+
+        [ForeignKey("MaTaiKhoan")]
+        public TaiKhoanNguoiDung? TaiKhoanNguoiDung { get; set; }
         public List<ChiTietHoaDonOnline> ChiTietHoaDon { get; set; }
     }
 }
