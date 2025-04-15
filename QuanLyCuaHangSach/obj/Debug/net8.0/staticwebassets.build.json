@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kOhAbgFU3IOKAzPyDvzGVRbNwo/nzDMdrbV27Ql1RjM=",
+  "Hash": "bqZqdVcyoXQOxV/FXixd/CR8kg3wsxcJPlTZrCpjyow=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -94,11 +94,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u64n2fuxfp",
-      "Integrity": "Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=",
+      "Fingerprint": "w4merxesc2",
+      "Integrity": "cJlsA557h4WsOCrgweC7PgWLtc19eys8Yo81iosjvWs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-457727cec1a7.json",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "chatbox-mrob-457727cec1a7#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pek7n8g2mb",
+      "Integrity": "EXrXCeWEdTx43P2Sw5c5p3GXSd0xmXawoN1PXomp1U8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\chatbox-mrob-457727cec1a7.json"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-b9773ec4f7cf.json",
@@ -164,6 +185,27 @@
       "OriginalItemSpec": "wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p9424qab08",
+      "Integrity": "HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -185,6 +227,27 @@
       "OriginalItemSpec": "wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/1c89a927-8435-4d61-a778-418d880ea115_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p9424qab08",
+      "Integrity": "HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -204,6 +267,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h74l835b0d",
+      "Integrity": "c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
@@ -311,6 +395,27 @@
       "OriginalItemSpec": "wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/default#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gh670zlc5w",
+      "Integrity": "bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default.jpg"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -351,6 +456,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_2.webp",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/home_slider_image_2#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4uhwzto5on",
+      "Integrity": "THlxbx0O0P5HfsayMa2WVS8YaUGcHnZcWSso4y6VMkI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home_slider_image_2.webp"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_4.webp",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/home_slider_image_4#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0749kw82ih",
+      "Integrity": "fJEGCOGUGTZv9AH23JeFawcyluqwOW7A6dT11DNOJp0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home_slider_image_4.webp"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
@@ -1707,7 +1854,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3888"
+          "Value": "6594"
         },
         {
           "Name": "Content-Type",
@@ -1715,11 +1862,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\""
+          "Value": "\"cJlsA557h4WsOCrgweC7PgWLtc19eys8Yo81iosjvWs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:15:20 GMT"
+          "Value": "Tue, 15 Apr 2025 13:07:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1729,12 +1876,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="
+          "Value": "sha256-cJlsA557h4WsOCrgweC7PgWLtc19eys8Yo81iosjvWs="
         }
       ]
     },
     {
-      "Route": "css/site.u64n2fuxfp.css",
+      "Route": "css/site.w4merxesc2.css",
       "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1744,7 +1891,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3888"
+          "Value": "6594"
         },
         {
           "Name": "Content-Type",
@@ -1752,11 +1899,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=\""
+          "Value": "\"cJlsA557h4WsOCrgweC7PgWLtc19eys8Yo81iosjvWs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 16:15:20 GMT"
+          "Value": "Tue, 15 Apr 2025 13:07:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1766,7 +1913,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u64n2fuxfp"
+          "Value": "w4merxesc2"
         },
         {
           "Name": "label",
@@ -1774,7 +1921,89 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA="
+          "Value": "sha256-cJlsA557h4WsOCrgweC7PgWLtc19eys8Yo81iosjvWs="
+        }
+      ]
+    },
+    {
+      "Route": "chatbox-mrob-457727cec1a7.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-457727cec1a7.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2360"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EXrXCeWEdTx43P2Sw5c5p3GXSd0xmXawoN1PXomp1U8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 13:13:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EXrXCeWEdTx43P2Sw5c5p3GXSd0xmXawoN1PXomp1U8="
+        }
+      ]
+    },
+    {
+      "Route": "chatbox-mrob-457727cec1a7.pek7n8g2mb.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-457727cec1a7.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2360"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EXrXCeWEdTx43P2Sw5c5p3GXSd0xmXawoN1PXomp1U8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 13:13:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pek7n8g2mb"
+        },
+        {
+          "Name": "label",
+          "Value": "chatbox-mrob-457727cec1a7.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EXrXCeWEdTx43P2Sw5c5p3GXSd0xmXawoN1PXomp1U8="
         }
       ]
     },
@@ -2025,6 +2254,88 @@
       ]
     },
     {
+      "Route": "images/13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.p9424qab08.png",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1657017"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 13:21:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p9424qab08"
+        },
+        {
+          "Name": "label",
+          "Value": "images/13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo="
+        }
+      ]
+    },
+    {
+      "Route": "images/13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1657017"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 13:21:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo="
+        }
+      ]
+    },
+    {
       "Route": "images/17114bb7-7586-45d3-b27a-8252196e91ac_none.gh670zlc5w.jpg",
       "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
       "Selectors": [],
@@ -2107,6 +2418,88 @@
       ]
     },
     {
+      "Route": "images/1c89a927-8435-4d61-a778-418d880ea115_1.p9424qab08.png",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1657017"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 11:16:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p9424qab08"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1c89a927-8435-4d61-a778-418d880ea115_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo="
+        }
+      ]
+    },
+    {
+      "Route": "images/1c89a927-8435-4d61-a778-418d880ea115_1.png",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1657017"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 11:16:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo="
+        }
+      ]
+    },
+    {
       "Route": "images/39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "Selectors": [],
@@ -2185,6 +2578,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bNoJ6H7bMvn76kqSF2dbf2jCo716DZfIO2FUe2aNcaQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.h74l835b0d.png",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 14:27:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h74l835b0d"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY="
+        }
+      ]
+    },
+    {
+      "Route": "images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 14:27:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY="
         }
       ]
     },
@@ -2599,6 +3074,88 @@
       ]
     },
     {
+      "Route": "images/default.gh670zlc5w.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 13:55:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gh670zlc5w"
+        },
+        {
+          "Name": "label",
+          "Value": "images/default.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w="
+        }
+      ]
+    },
+    {
+      "Route": "images/default.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 13:55:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w="
+        }
+      ]
+    },
+    {
       "Route": "images/ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.gh670zlc5w.jpg",
       "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
       "Selectors": [],
@@ -2759,6 +3316,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w="
+        }
+      ]
+    },
+    {
+      "Route": "images/home_slider_image_2.4uhwzto5on.webp",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_2.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "223754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"THlxbx0O0P5HfsayMa2WVS8YaUGcHnZcWSso4y6VMkI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Apr 2025 14:53:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4uhwzto5on"
+        },
+        {
+          "Name": "label",
+          "Value": "images/home_slider_image_2.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-THlxbx0O0P5HfsayMa2WVS8YaUGcHnZcWSso4y6VMkI="
+        }
+      ]
+    },
+    {
+      "Route": "images/home_slider_image_2.webp",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_2.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "223754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"THlxbx0O0P5HfsayMa2WVS8YaUGcHnZcWSso4y6VMkI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Apr 2025 14:53:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-THlxbx0O0P5HfsayMa2WVS8YaUGcHnZcWSso4y6VMkI="
+        }
+      ]
+    },
+    {
+      "Route": "images/home_slider_image_4.0749kw82ih.webp",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111658"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fJEGCOGUGTZv9AH23JeFawcyluqwOW7A6dT11DNOJp0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Apr 2025 14:53:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0749kw82ih"
+        },
+        {
+          "Name": "label",
+          "Value": "images/home_slider_image_4.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fJEGCOGUGTZv9AH23JeFawcyluqwOW7A6dT11DNOJp0="
+        }
+      ]
+    },
+    {
+      "Route": "images/home_slider_image_4.webp",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111658"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fJEGCOGUGTZv9AH23JeFawcyluqwOW7A6dT11DNOJp0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Apr 2025 14:53:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fJEGCOGUGTZv9AH23JeFawcyluqwOW7A6dT11DNOJp0="
         }
       ]
     },

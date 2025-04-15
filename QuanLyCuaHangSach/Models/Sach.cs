@@ -20,5 +20,8 @@
         public decimal Gia { get; set; }
         public string? HinhAnh { get; set; } // Cho phép null} // Đường dẫn hoặc tên file ảnh
         public string TrangThai { get; set; } // Con Hang, Het Hang, Dang Muon
+
+        // Cột mới: Giới thiệu về sách
+        public string? GioiThieu { get; set; }
     }
 }

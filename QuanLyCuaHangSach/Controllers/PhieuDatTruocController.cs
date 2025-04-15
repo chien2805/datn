@@ -17,15 +17,34 @@ namespace QuanLyCuaHangSach.Controllers
         }
         public IActionResult Index()
         {
+            // Thử lấy MaTaiKhoan từ Claims
+            var maTaiKhoanClaim = User.FindFirst("MaTaiKhoan")?.Value;
+            var vaiTro = User.FindFirst(ClaimTypes.Role)?.Value;
+
+            // Nếu không có trong Claims, thử lấy từ Session
+            if (string.IsNullOrEmpty(maTaiKhoanClaim))
+            {
+                maTaiKhoanClaim = HttpContext.Session.GetString("MaTaiKhoan");
+            }
+
+            // Nếu vẫn không có, chuyển hướng
+            if (string.IsNullOrEmpty(maTaiKhoanClaim) || vaiTro == "Khach Hang")
+            {
+                return RedirectToAction("Index", "TrangChu"); // hoặc trang lỗi
+            }
+
+            int maTaiKhoan = int.Parse(maTaiKhoanClaim);
+
             var danhSachPhieu = _context.PhieuDatTruoc
-                  .Include(p=>p.TaiKhoanNguoiDung)
-                    .ThenInclude(n=>n.ThongTinNguoiDung)
-                .Include(p => p.ChiTietPhieuDatTruoc)
-                .ThenInclude(ct => ct.Sach)
-                .ToList();
+           .Include(p => p.TaiKhoanNguoiDung)
+             .ThenInclude(n => n.ThongTinNguoiDung)
+         .Include(p => p.ChiTietPhieuDatTruoc)
+         .ThenInclude(ct => ct.Sach)
+         .ToList();
 
             return View(danhSachPhieu);
         }
+
         //
         [HttpPost]
         public IActionResult DuyetPhieu(int id)

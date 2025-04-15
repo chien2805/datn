@@ -1,7 +1,7 @@
-﻿
-@model IEnumerable<Sach>
+﻿@model IEnumerable<Sach>
 <h2 style="font-size: 2rem; color: #333333; margin-bottom: 20px;">Danh sách sách</h2>
-<a asp-action="Create" class="btn btn-primary" style="background-color: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-align: center;">Thêm sách</a>
+@* <a asp-action="Create" class="btn btn-primary" style="background-color: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-align: center;">Thêm sách</a> *@
+<button class="btn btn-primary " style="padding: 10px 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;"  type="button" onclick="openAddBookModal()">➕ Thêm sách mới</button>
 <form id="importForm" asp-action="ImportExcel" asp-controller="Sach" enctype="multipart/form-data" method="post" style="display: inline;">
     <input type="file" id="fileInput" name="file" accept=".xlsx,.xls" style="display: none;" onchange="document.getElementById('importForm').submit();" />
     <button type="button" class="btn btn-success" onclick="document.getElementById('fileInput').click();" style="background-color: #27ae60; color: #fff; padding: 10px 20px; border-radius: 5px;">
@@ -9,16 +9,14 @@
     </button>
 </form>
 <table class="table table-bordered table-hover" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
-    <thead  style="background-color: #4a90e2; color: #fff;">
+    <thead style="background-color: #4a90e2; color: #fff;">
         <tr>
-            <th style="text-align: center; padding: 10px;">Tiêu đề</th>
+            <th style="text-align: center; padding: 10px;">Tiêu đề</th> <!-- Điều chỉnh độ rộng ở đây -->
             <th style="text-align: center; padding: 10px;">Tác giả</th>
             <th style="text-align: center; padding: 10px;">Thể loại</th>
             <th style="text-align: center; padding: 10px;">Nhà cung cấp</th>
             <th style="text-align: center; padding: 10px;">Giá</th>
             <th style="text-align: center; padding: 10px;">Số lượng tồn</th>
-            <th style="text-align: center; padding: 10px;">Số lượng hỏng</th>
-            <th style="text-align: center; padding: 10px;">Số lượng mất</th>
             <th style="text-align: center; padding: 10px;">Thao tác</th>
         </tr>
     </thead>
@@ -26,23 +24,22 @@
         @foreach (var sach in Model)
         {
             <tr style="text-align: center; background-color: #f9f9f9; transition: background-color 0.3s ease;">
-                <td style="padding: 10px;">@sach.TieuDe</td>
+                <td style="padding: 10px;">@sach.TieuDe</td> <!-- Điều chỉnh độ rộng ở đây -->
                 <td style="padding: 10px;">@sach.TacGia</td>
                 <td style="padding: 10px;">@sach.TheLoai.TenTheLoai</td>
                 <td style="padding: 10px;">@sach.NhaCungCap.TenNhaCungCap</td>
                 <td style="padding: 10px;">@sach.Gia</td>
                 <td style="padding: 10px;">@sach.SoLuongTon</td>
-                <td style="padding: 10px;">@sach.SoLuongHong</td>
-                <td style="padding: 10px;">@sach.SoLuongMat</td>
-                <td style="padding: 10px;">
-                    <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-warning" style="background-color: #f39c12; color: #fff; padding: 5px 10px; border-radius: 5px; margin-right: 10px;">Sửa</a>
-                    <a asp-action="Details" asp-route-id="@sach.MaSach" class="btn btn-info" style="background-color: #3498db; color: #fff; padding: 5px 10px; border-radius: 5px; margin-right: 10px;">Chi tiết</a>
-                    <button type="button" class="btn btn-danger" style="background-color: #e74c3c; color: #fff; padding: 5px 10px; border-radius: 5px;" onclick="confirmDelete(@sach.MaSach)">Xóa</button>
+                <td style="padding: 10px; display: flex; justify-content: center; align-items: center; gap: 10px;">
+                    <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-warning" style="background-color: #f39c12; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;">Sửa</a>
+                    <a asp-action="Details" asp-route-id="@sach.MaSach" class="btn btn-info" style="background-color: #3498db; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;">Chi tiết</a>
+                    <button type="button" class="btn btn-danger" style="background-color: #e74c3c; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;" onclick="confirmDelete(@sach.MaSach)">Xóa</button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
 
 <!-- Modal Xác nhận Xoá -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
@@ -50,7 +47,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: #f39c12; color: #fff;">
                 <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xoá</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -60,7 +57,7 @@
             <div class="modal-footer">
                 <form id="deleteForm" method="post">
                     @Html.AntiForgeryToken()
-                    <button type="button" class="btn btn-secondary" style="background-color: #95a5a6; color: #fff;" data-dismiss="modal">Huỷ</button>
+                    <button type="button" class="btn btn-secondary" style="background-color: #95a5a6; color: #fff;" data-bs-dismiss="modal">Huỷ</button>
                     <button type="submit" class="btn btn-danger" style="background-color: #e74c3c; color: #fff;">Xoá</button>
                 </form>
             </div>
@@ -75,3 +72,108 @@
         $('#confirmDeleteModal').modal('show');
     }
 </script>
+
+<!-- Modal Thêm Sách -->
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="border-radius:10px;">
+            <div class="modal-header" style="background-color:#4a90e2; color:white;">
+                <h5 class="modal-title" id="addBookModalLabel">Thêm sách mới</h5>
+                <button type="button" class="btn-close" aria-label="Close" onclick="closeAddBookModal()"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addBookForm" asp-action="Create" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div class="form-group mb-3">
+                        <label for="TieuDe">Tiêu đề</label>
+                        <input id="TieuDe" name="TieuDe" class="form-control" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="HinhAnhFile">Hình ảnh</label>
+                        <input type="file" id="HinhAnhFile" name="HinhAnhFile" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="TacGia">Tác giả</label>
+                        <input id="TacGia" name="TacGia" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="MaTheLoai">Thể loại</label>
+                        <select id="MaTheLoai" name="MaTheLoai" class="form-control">
+                            <option value="">-- Chọn thể loại --</option>
+                            @foreach (var item in (SelectList)ViewBag.TheLoaiList)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="MaNhaCungCap">Nhà cung cấp</label>
+                        <select id="MaNhaCungCap" name="MaNhaCungCap" class="form-control">
+                            <option value="">-- Chọn nhà cung cấp --</option>
+                            @foreach (var item in (SelectList)ViewBag.NhaCungCapList)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="NhaXuatBan">Nhà xuất bản</label>
+                        <input id="NhaXuatBan" name="NhaXuatBan" class="form-control" />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="NamXuatBan">Năm xuất bản</label>
+                            <input id="NamXuatBan" name="NamXuatBan" type="number" class="form-control" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="Gia">Giá</label>
+                            <input id="Gia" name="Gia" type="number" step="0.01" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="SoLuongTon">Số lượng tồn</label>
+                            <input id="SoLuongTon" name="SoLuongTon" type="number" class="form-control" value="0" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="SoLuongBan">Số lượng bán</label>
+                            <input id="SoLuongBan" name="SoLuongBan" type="number" class="form-control" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="SoLuongMuon">Số lượng mượn</label>
+                            <input id="SoLuongMuon" name="SoLuongMuon" type="number" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="TrangThai">Trạng thái</label>
+                        <input id="TrangThai" name="TrangThai" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="GioiThieu">Giới thiệu</label>
+                        <textarea id="GioiThieu" name="GioiThieu" class="form-control" rows="4" placeholder="Nhập giới thiệu về sách..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeAddBookModal()">Huỷ</button>
+                <button type="submit" form="addBookForm" class="btn btn-primary">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let addBookModalInstance;
+
+    function openAddBookModal() {
+        const modalElement = document.getElementById('addBookModal');
+        addBookModalInstance = new bootstrap.Modal(modalElement);
+        addBookModalInstance.show();
+    }
+
+    function closeAddBookModal() {
+        if (addBookModalInstance) {
+            addBookModalInstance.hide();
+        }
+    }
+</script>
+

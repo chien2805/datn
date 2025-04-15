@@ -1,0 +1,27 @@
+﻿@model List<Sach>
+
+<div class="mt-4" style="padding: 10px;">
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="d-flex flex-wrap" style="gap: 16px; justify-content: flex-start;">
+            @foreach (var sach in Model)
+            {
+                <div class="card" style="min-width: 200px; max-width: 200px;">
+                    <img src="@Url.Content((!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/")) ? sach.HinhAnh : "~/images/sach/default.jpg")"
+                         class="card-img-top"
+                         alt="@sach.TieuDe"
+                         style="height: 160px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h6 class="card-title">@sach.TieuDe</h6>
+                        <p class="card-text text-muted">@sach.TacGia</p>
+                        <p class="card-text fw-bold text-primary">@string.Format("{0:N0}đ", sach.Gia)</p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Chưa có sách trong thể loại này</p>
+    }
+</div>

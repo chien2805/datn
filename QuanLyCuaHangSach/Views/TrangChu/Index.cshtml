@@ -1,55 +1,148 @@
 ﻿@model IEnumerable<QuanLyCuaHangSach.Models.Sach>
-
-@if (Model.Any())
-{
-    <h3>Có @Model.Count() sách</h3>
+@{
+    var maTaiKhoan = Context.Session.GetInt32("MaTaiKhoan");
+    bool isLoggedIn = maTaiKhoan != null;
 }
-else
-{
-    <h3>Không có sách nào</h3>
-}
+<style>
+    .list-group-item:hover {
+        background-color: #2f855a; /* Màu nền khi hover */
+        color: white; /* Đổi màu chữ thành trắng khi hover */
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
-
-<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
-    <!-- Cột thể loại bên trái -->
-    <div class="col-md-2" style="background-color: #f4e1d2; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
-        <h4 style="color: #8b4513; font-size: 1.2rem; font-weight: bold;">Thể loại</h4>
-        <ul class="list-group" style="margin-top: 15px;">
-            <li class="list-group-item" style="padding: 10px; background-color: #ffffff; border: 1px solid #d5b29a; border-radius: 5px; margin-bottom: 5px;">
-                <a asp-action="Index" asp-route-theLoaiId="" title="Hiển thị tất cả các sách" data-bs-toggle="tooltip" style="color: #8b4513; text-decoration: none;">Tất cả</a>
-            </li>
-            @foreach (var theLoai in ViewBag.DanhSachTheLoai)
-            {
-                <li class="list-group-item" style="padding: 10px; background-color: #ffffff; border: 1px solid #d5b29a; border-radius: 5px; margin-bottom: 5px;">
-                    <a asp-action="Index" asp-route-theLoaiId="@theLoai.MaTheLoai" title="@theLoai.MoTa" data-bs-toggle="tooltip" style="color: #8b4513; text-decoration: none;">
-                        @theLoai.TenTheLoai
-                    </a>
-                </li>
-            }
-        </ul>
+        .dot.active {
+            background-color: #4a90e2;
+        }
+</style>
+<!-- Ô tìm kiếm lên đầu tiên -->
+<!-- === SLIDER ở trên cùng === -->
+<div id="topSlider" style="position: relative; height: 200px; overflow: hidden; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: #fff8f0;margin-top:20px;">
+    <div id="slider" style="display: flex; width: 400%; transition: transform 0.5s ease;">
+        <img src="~/images/home_slider_image_2.webp" style="width: 25%; height: 100%; object-fit: cover;" />
+        <img src="~/images/home_slider_image_4.webp" style="width: 25%; height: 100%; object-fit: cover;" />
+        <img src="~/images/home_slider_image_2.webp" style="width: 25%; height: 100%; object-fit: cover;" />
+        <img src="~/images/home_slider_image_4.webp" style="width: 25%; height: 100%; object-fit: cover;" />
     </div>
 
-    <!-- Cột sách + tìm kiếm bên phải -->
-    <div class="col-md-9" style="padding-left: 15px;">
-        <div class="d-flex mb-3">
-            <input type="text"
-                   id="searchBox"
-                   class="form-control"
-                   placeholder="Tìm kiếm sách..."
-                   value="@ViewBag.SearchString"
-                   style="max-width: 100%; border-radius: 8px; padding: 10px; font-size: 1rem; border: 1px solid #d5b29a; background-color: #f9f9f9;" />
+    <!-- Nút chuyển slide -->
+    <button onclick="prevSlide()" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; color: white; font-size: 32px; padding: 8px 12px; border-radius: 8px; cursor: pointer;">&#8249;</button>
+    <button onclick="nextSlide()" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.3); border: none; color: white; font-size: 32px; padding: 8px 12px; border-radius: 8px; cursor: pointer;">&#8250;</button>
+
+    <!-- Chấm nhỏ dưới slider -->
+    <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+        <div class="dot" onclick="showSlide(0)"></div>
+        <div class="dot" onclick="showSlide(1)"></div>
+        <div class="dot" onclick="showSlide(2)"></div>
+        <div class="dot" onclick="showSlide(3)"></div>
+    </div>
+</div>
+<!-- Sách nổi bật -->
+<div class="mb-4" style="background-color: #fff8f0; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <h5 style="color: #8b4513; font-weight: bold;">Sách nổi bật</h5>
+    <p style="color: #777;">Chưa có sách nổi bật</p>
+</div>
+
+<!-- === PHẦN BÊN DƯỚI: 2 CỘT === -->
+<div class="row" style="margin-bottom: 20px;">
+    <!-- Cột trái: Thể loại -->
+    <div class="col-md-2" style="padding: 0px;">
+        <div style="background-color: #2f855a; border-radius: 8px; overflow: hidden;">
+            <h4 style="color: #ffffff; font-size: 1.2rem; font-weight: bold; padding: 10px 12px; margin: 0;">
+                Thể loại
+            </h4>
+            <ul style="padding-left: 0; margin: 0;">
+                <li style="padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1e6f4a;">
+                    <a asp-action="Index" asp-route-theLoaiId="" title="Hiển thị tất cả các sách" data-bs-toggle="tooltip" style="color: white; text-decoration: none; font-size: 1rem;">
+                        Tất cả
+                    </a>
+                </li>
+                @foreach (var theLoai in ViewBag.DanhSachTheLoai)
+                {
+                    <li style="padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1e6f4a;">
+                        <a asp-action="Index" asp-route-theLoaiId="@theLoai.MaTheLoai" title="@theLoai.MoTa" data-bs-toggle="tooltip" style="color: white; text-decoration: none; font-size: 1rem;">
+                            @theLoai.TenTheLoai
+                        </a>
+                    </li>
+                }
+            </ul>
         </div>
 
-        <!-- Đây là chỗ sẽ được load lại nguyên vẹn _ListWrapper -->
-        @await Html.PartialAsync("_ListWrapper", Model)
+        <!-- Sách bán chạy -->
+        <div class="mt-4" style="padding: 10px;">
+            <h5 style="font-weight: bold;">Sách bán chạy</h5>
+            @if (ViewBag.SachBanChay != null && ViewBag.SachBanChay.Count > 0)
+            {
+                @foreach (var sach in ViewBag.SachBanChay)
+                {
+                    <div style="display: flex; align-items: center; border: 1px solid #2f855a; border-radius: 10px; padding: 10px; margin-bottom: 10px; background-color: #f9f9f9;">
+                        <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết">
+                            <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/")
+                                     ? sach.HinhAnh
+                                     : "~/images/sach/default.jpg")"
+                                 alt="@sach.TieuDe"
+                                 style="width: 80px; height: 100px; object-fit: cover; border-radius: 5px; margin-right: 15px;" />
+                        </a>
+                        <div>
+                            <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết"
+                               style="font-weight: bold; color: #2f855a; font-size: 1rem; text-decoration: none;">
+                                @sach.TieuDe
+                            </a>
+                            <div style="font-size: 0.9rem; color: #555;">@sach.TacGia</div>
+                            <div style="color: #4a90e2; font-weight: bold;">@string.Format("{0:N0}đ", sach.Gia)</div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Chưa có sách bán chạy</p>
+            }
+        </div>
 
-        <!-- Form duy nhất để submit đặt thuê -->
+    </div>
+
+    <!-- Cột phải -->
+    <div id="rightColumn" class="col-md-9" style="padding-left: 15px;">
+
+        <!-- Thanh tìm kiếm -->
+        <div class="d-flex justify-content-between align-items-center mb-4" style="width: 100%; padding-top: 10px;">
+            <img src="~/images/default.jpg" alt="Ảnh trái" style="height: 50px; object-fit: contain;" />
+
+            <div style="flex: 1; max-width: 700px; margin: 0 15px;">
+                <input type="text"
+                       id="searchBox"
+                       class="form-control"
+                       placeholder="Tìm kiếm sách..."
+                       value="@ViewBag.SearchString"
+                       style="width: 100%; border-radius: 8px; padding: 10px; font-size: 1rem; border: 1px solid #d5b29a; background-color: #f9f9f9;" />
+            </div>
+
+            <img src="~/images/default.jpg" alt="Ảnh phải" style="height: 50px; object-fit: contain;" />
+        </div>
+
+        <!-- Danh sách sách -->
+        <div class="mt-4">
+            @await Html.PartialAsync("_ListWrapper", Model)
+        </div>
+    </div>
+</div>
+
+    
+
+        <!-- Form đặt thuê -->
         <form id="datThueForm" asp-controller="PhieuDatTruoc" asp-action="TaoPhieu" method="post" style="display:none;">
             <input type="hidden" id="modalMaSach" name="maSach" value="" />
             <input type="hidden" name="maTaiKhoan" value="@ViewBag.MaTaiKhoan" />
         </form>
 
-        <!-- Modal duy nhất -->
+        <!-- Modal xác nhận -->
         <div class="modal fade" id="xacNhanModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content" style="background-color: #fff8f0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
@@ -74,8 +167,64 @@ else
             </div>
         </div>
 
-    </div>
-</div>
+<!-- JavaScript chung -->
+<script>
+    function scrollLeftHandler(id) {
+      const c = document.getElementById(id);
+      if (!c) return;
+      // Nếu đang ở đầu, cuộn tới cuối; còn không, cuộn trái
+      if (c.scrollLeft <= 1) {
+        c.scrollTo({ left: c.scrollWidth, behavior: 'smooth' });
+      } else {
+        c.scrollBy({ left: -220, behavior: 'smooth' });
+      }
+    }
+    function scrollRightHandler(id) {
+      const c = document.getElementById(id);
+      if (!c) return;
+      const max = c.scrollWidth - c.clientWidth;
+      // Nếu đang ở cuối, cuộn về đầu; còn không, cuộn phải
+      if (c.scrollLeft >= max - 1) {
+        c.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        c.scrollBy({ left: 220, behavior: 'smooth' });
+      }
+    }
+</script>
+
+
+
+<script>
+    let currentIndex = 0;
+    const slider = document.getElementById("slider");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+        const totalSlides = slider.children.length;
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        slider.style.transform = `translateX(-${index * 25}%)`;
+        currentIndex = index;
+        updateDots();
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === currentIndex);
+        });
+    }
+
+    // Khởi tạo chấm đầu tiên
+    updateDots();
+</script>
 
 <!-- Kích hoạt tooltip của Bootstrap -->
 <script>
@@ -154,3 +303,16 @@ else
     // Khởi tạo bind cho lần đầu
     document.addEventListener('DOMContentLoaded', bindPaginationLinks);
 </script>
+<script>
+    // Thêm hiệu ứng khi hover vào ảnh
+    document.querySelectorAll('.card-img-top').forEach(function(img) {
+        img.addEventListener('mouseenter', function() {
+            img.style.transform = 'scale(0.8)';
+        });
+
+        img.addEventListener('mouseleave', function() {
+            img.style.transform = 'scale(1)';
+        });
+    });
+</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">

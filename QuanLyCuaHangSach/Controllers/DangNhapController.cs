@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using QuanLyCuaHangSach.Context;
 using QuanLyCuaHangSach.Models;
 using System.Security.Claims;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace QuanLyCuaHangSach.Controllers
 {
@@ -15,6 +17,19 @@ namespace QuanLyCuaHangSach.Controllers
         {
             _context = context;
         }
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2")); // Định dạng hex
+                }
+                return builder.ToString();
+            }
+        }
 
         // Hiển thị form đăng nhập
         [HttpGet]
@@ -24,24 +39,30 @@ namespace QuanLyCuaHangSach.Controllers
         }
 
         // Xử lý đăng nhập
-        // Xử lý đăng nhập
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
         {
             var user = _context.TaiKhoanNguoiDung
-                .FirstOrDefault(u => u.TenDangNhap == email && u.MatKhau == password);
+                .FirstOrDefault(u => u.TenDangNhap == email);
 
             if (user == null)
             {
-                ViewBag.ErrorMessage = "Email hoặc mật khẩu không đúng.";
-                return View("Index");
+                // Trả về thông báo lỗi dạng JSON
+                return Json(new { success = false, message = "Email hoặc mật khẩu không đúng." });
             }
 
-            // Lấy thông tin người dùng dựa trên MaTaiKhoan
+            var hashedPassword = HashPassword(password);
+
+            if (user.MatKhau != hashedPassword)
+            {
+                // Trả về thông báo lỗi dạng JSON
+                return Json(new { success = false, message = "Email hoặc mật khẩu không đúng." });
+            }
+
+            // Tiếp tục như cũ nếu đăng nhập thành công...
             var userInfo = _context.ThongTinNguoiDung
                 .FirstOrDefault(t => t.MaTaiKhoan == user.MaTaiKhoan);
 
-            // Nếu thông tin người dùng chưa tồn tại, tạo mới thông tin trống
             if (userInfo == null)
             {
                 userInfo = new ThongTinNguoiDung
@@ -56,8 +77,7 @@ namespace QuanLyCuaHangSach.Controllers
                 _context.ThongTinNguoiDung.Add(userInfo);
                 _context.SaveChanges();
             }
-            // 📌 Tạo Claims để lưu thông tin người dùng
-            // Tạo danh sách claims
+
             var claims = new List<Claim>
     {
         new Claim(ClaimTypes.Name, user.TenDangNhap),
@@ -65,45 +85,45 @@ namespace QuanLyCuaHangSach.Controllers
         new Claim("MaTaiKhoan", user.MaTaiKhoan.ToString())
     };
 
-            // Tạo danh tính người dùng
             var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
 
-            // Đăng nhập bằng cookie
             var authProperties = new AuthenticationProperties
             {
-                IsPersistent = true // Ghi nhớ đăng nhập
+                IsPersistent = true
             };
 
             await HttpContext.SignInAsync("Cookies", new ClaimsPrincipal(claimsIdentity), authProperties);
-            // Lưu thông tin tài khoản vào session
+
             HttpContext.Session.SetString("UserEmail", user.TenDangNhap);
             HttpContext.Session.SetString("UserRole", user.VaiTro);
             HttpContext.Session.SetInt32("MaTaiKhoan", user.MaTaiKhoan);
-
-            // Lưu thông tin người dùng vào session
             HttpContext.Session.SetString("HoTen", userInfo.HoTen);
             HttpContext.Session.SetString("AnhDaiDien", userInfo.AnhDaiDien ?? "");
             HttpContext.Session.SetString("SoDienThoai", userInfo.SoDienThoai);
             HttpContext.Session.SetString("DiaChi", userInfo.DiaChi);
 
-            // Kiểm tra vai trò người dùng và chuyển hướng đến trang phù hợp
             if (user.VaiTro == "Admin")
             {
-                return RedirectToAction("Index", "Sach"); // Nếu là Admin, chuyển đến trang sách
+                return Json(new { success = true, redirectUrl = Url.Action("Admin", "TrangChu") });
             }
             else
             {
-                return RedirectToAction("Index", "TrangChu"); // Nếu là vai trò khác, chuyển đến trang chủ
+                return Json(new { success = true, redirectUrl = Url.Action("Index", "TrangChu") });
             }
         }
 
 
         // Đăng xuất
-        // Đăng xuất
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
+            // Xóa Session
             HttpContext.Session.Clear();
+
+            // Xóa Claims bằng cách SignOut khỏi hệ thống xác thực
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
             return RedirectToAction("Index", "TrangChu");
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class ChatbotController : Controller
     public async Task<IActionResult> GetResponse(string userMessage)
     {
         // Đường dẫn đến file credentials JSON
-        string jsonPath = Path.Combine(_env.WebRootPath, "chatbox-mrob-b9773ec4f7cf.json");
+        string jsonPath = Path.Combine(_env.WebRootPath, "chatbox-mrob-457727cec1a7.json");
 
         var builder = new SessionsClientBuilder
         {

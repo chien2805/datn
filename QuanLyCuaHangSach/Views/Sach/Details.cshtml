@@ -1,63 +1,171 @@
 ﻿@model Sach
 
-<h2>Chi tiết sách</h2>
-
-<div>
-    <dl class="row">
-        <dt class="col-sm-2">Tiêu đề:</dt>
-        <dd class="col-sm-10">@Model.TieuDe</dd>
-
-        <dt class="col-sm-2">Tác giả:</dt>
-        <dd class="col-sm-10">@Model.TacGia</dd>
-
-        <dt class="col-sm-2">Thể loại:</dt>
-        <dd class="col-sm-10">@Model.TheLoai?.TenTheLoai</dd>
-
-        <dt class="col-sm-2">Nhà cung cấp:</dt>
-        <dd class="col-sm-10">@Model.NhaCungCap?.TenNhaCungCap</dd>
-
-        <dt class="col-sm-2">Nhà xuất bản:</dt>
-        <dd class="col-sm-10">@Model.NhaXuatBan</dd>
-
-        <dt class="col-sm-2">Năm xuất bản:</dt>
-        <dd class="col-sm-10">@Model.NamXuatBan</dd>
-
-        <dt class="col-sm-2">Số lượng tồn kho:</dt>
-        <dd class="col-sm-10">@Model.SoLuongTon</dd>
-
-        <dt class="col-sm-2">Số lượng hỏng:</dt>
-        <dd class="col-sm-10">@Model.SoLuongHong</dd>
-
-        <dt class="col-sm-2">Số lượng mất:</dt>
-        <dd class="col-sm-10">@Model.SoLuongMat</dd>
-
-        <dt class="col-sm-2">Số lượng bán:</dt>
-        <dd class="col-sm-10">@Model.SoLuongBan</dd>
-
-        <dt class="col-sm-2">Số lượng mượn:</dt>
-        <dd class="col-sm-10">@Model.SoLuongMuon</dd>
-
-        <dt class="col-sm-2">Giá:</dt>
-        <dd class="col-sm-10">@Model.Gia.ToString("N0") đ</dd>
-
-        <dt class="col-sm-2">Trạng thái:</dt>
-        <dd class="col-sm-10">@Model.TrangThai</dd>
-
-        <dt class="col-sm-2">Hình ảnh:</dt>
-        <dd class="col-sm-10">
-            @if (!string.IsNullOrEmpty(Model.HinhAnh))
+<!-- Sách nổi bật -->
+<div class="mb-4" style="background-color: #fff8f0; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <h5 style="color: #8b4513; font-weight: bold;">Sách nổi bật</h5>
+    @if (ViewBag.SachNoiBat != null && ViewBag.SachNoiBat.Count > 0)
+    {
+        <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+            @foreach (var sach in ViewBag.SachNoiBat)
             {
-                <img src="@Model.HinhAnh" alt="Hình ảnh sách" style="max-width: 200px; max-height: 200px;" />
+                <div style="flex: 0 0 auto; display: flex; border: 1px solid #2f855a; border-radius: 10px; padding: 10px; background-color: #f9f9f9; box-sizing: border-box; width: 243px;">
+                    <!-- Ảnh bên trái -->
+                    <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết">
+                        <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/") ? sach.HinhAnh : "~/images/sach/default.jpg")"
+                             alt="@sach.TieuDe"
+                             style="width: 80px; height: 100px; object-fit: cover; border-radius: 5px; margin-right: 15px;" />
+                    </a>
+                    <!-- Nội dung bên phải -->
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; width: 100%;">
+                        <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết"
+                           style="font-weight: bold; color: #2f855a; font-size: 1rem; text-decoration: none;">
+                            @sach.TieuDe
+                        </a>
+                        <div style="font-size: 0.9rem; color: #555;">@sach.TacGia</div>
+                        <div style="color: #4a90e2; font-weight: bold;">@string.Format("{0:N0}đ", sach.Gia)</div>
+                    </div>
+                </div>
             }
-            else
-            {
-                <span>Không có hình ảnh</span>
-            }
-        </dd>
-    </dl>
+        </div>
+    }
+    else
+    {
+        <p>Chưa có sách nổi bật</p>
+    }
 </div>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.MaSach" class="btn btn-primary">Sửa</a>
-    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+
+
+<div style="display: flex; gap: 20px;">
+    <!-- Ảnh bên trái -->
+    <div style="flex-shrink: 0; border: 2px solid #ddd; padding: 10px; border-right: 2px solid #ddd;width: 500px">
+        @if (!string.IsNullOrEmpty(Model.HinhAnh))
+        {
+            <img src="@Model.HinhAnh" alt="Hình ảnh sách" style="width: 500px; max-height: 500px; display: block;" />
+        }
+        else
+        {
+            <span>Không có hình ảnh</span>
+        }
+    </div>
+
+    <!-- Nội dung sách và phần "Chỉ có ở Vinabook" bên phải -->
+    <div style="flex-grow: 1; padding-left: 10px; display: flex; flex-direction: column; gap: 20px;">
+        <!-- Nội dung sách -->
+        <div style="width:400px">
+            <dl class="row">
+                <div class="row" style="margin-bottom: 10px;">
+                    <dt class="col-sm-4" style="font-weight: bold;">Tiêu đề:</dt>
+                    <dd class="col-sm-8">@Model.TieuDe</dd>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <dt class="col-sm-4" style="font-weight: bold;">Tác giả:</dt>
+                    <dd class="col-sm-8">@Model.TacGia</dd>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <dt class="col-sm-4" style="font-weight: bold;">Thể loại:</dt>
+                    <dd class="col-sm-8">@Model.TheLoai?.TenTheLoai</dd>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <dt class="col-sm-4" style="font-weight: bold;">Năm xuất bản:</dt>
+                    <dd class="col-sm-8">@Model.NamXuatBan</dd>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <dt class="col-sm-4" style="font-weight: bold;">Giá:</dt>
+                    <dd class="col-sm-8">@Model.Gia.ToString("N0") đ</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- Nút Thêm vào giỏ và Quay lại -->
+        <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <!-- Nút Thêm vào giỏ -->
+            <a href="javascript:void(0)"
+               title="Thêm vào giỏ"
+               onclick="themVaoGio(@Model.MaSach)"
+               style="color: white; background-color: #2f855a; padding: 10px 20px; border-radius: 5px; font-size: 14px; text-decoration: none; display: inline-block;">
+                Thêm vào giỏ
+            </a>
+            <!-- Nút Quay lại -->
+            <a asp-controller="TrangChu" asp-action="Index" class="btn btn-secondary" style="padding: 10px 20px; font-size: 14px; text-decoration: none; border-radius: 5px; background-color: #6c757d; color: white;">
+                Quay lại
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Phần "Chỉ có ở Vinabook" bên phải -->
+    <div style="background-color: #fff; padding: 0px; max-width: 500px; width: 100%; border-radius: 10px;">
+        <div style="background-color: #e0e0e0; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: #e0e0e0; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <h2 style="font-weight: bold;">Chỉ có ở Vinabook</h2>
+            </div>
+            <div style="padding: 20px;">
+                <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                    <img alt="Icon of a certificate" style="width: 24px; height: 24px; margin-right: 8px;" src="https://placehold.co/24x24" />
+                    <span>Sản phẩm 100% chính hãng</span>
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                    <img alt="Icon of a customer service representative" style="width: 24px; height: 24px; margin-right: 8px;" src="https://placehold.co/24x24" />
+                    <span>Tư vấn mua sách trong giờ hành chính</span>
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                    <img alt="Icon of a delivery truck with 'Free' text" style="width: 24px; height: 24px; margin-right: 8px;" src="https://placehold.co/24x24" />
+                    <span>Miễn phí vận chuyển cho Đơn hàng từ 250.000đ</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img alt="Icon of a phone" style="width: 24px; height: 24px; margin-right: 8px;" src="https://placehold.co/24x24" />
+                    <span>Hotline: 1900 6401</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+
+<!-- Giới thiệu sách dưới cùng -->
+<div style="margin-top: 20px;">
+    <h3>Giới thiệu sách</h3>
+    <p style="text-align: justify;">
+        @Html.Raw(Model.GioiThieu)
+    </p>
+</div>
+
+<!-- Sách bán chạy -->
+<div class="mt-4" style="padding: 10px;">
+    <h5 style="font-weight: bold;">Sách bán chạy</h5>
+    @if (ViewBag.SachBanChay != null && ViewBag.SachBanChay.Count > 0)
+    {
+        <div style="display: flex; flex-wrap: wrap; gap: 37px;">
+            @foreach (var sach in ViewBag.SachBanChay)
+            {
+                <div style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #2f855a; border-radius: 10px; padding: 10px; background-color: #f9f9f9; width: 180px; height: 100%; box-sizing: border-box;">
+                    <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết">
+                        <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/") ? sach.HinhAnh : "~/images/sach/default.jpg")"
+                             alt="@sach.TieuDe"
+                             style="width: 80px; height: 100px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;" />
+                    </a>
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                        <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết"
+                           style="font-weight: bold; color: #2f855a; font-size: 1rem; text-decoration: none;">
+                            @sach.TieuDe
+                        </a>
+                        <div style="font-size: 0.9rem; color: #555;">@sach.TacGia</div>
+                        <div style="color: #4a90e2; font-weight: bold;">@string.Format("{0:N0}đ", sach.Gia)</div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Chưa có sách bán chạy</p>
+    }
+</div>
+

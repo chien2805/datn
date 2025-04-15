@@ -7,10 +7,12 @@
     <div id="chatbox" style="height: 300px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
         <!-- Tin nhắn sẽ hiển thị ở đây -->
     </div>
-    <div style="display: flex; gap: 10px;">
+    <div style="display: flex; gap: 10px; align-items: center;">
         <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." class="form-control" />
         <button onclick="sendMessage()" class="btn btn-primary">Gửi</button>
+        <button onclick="startListening()" class="btn btn-outline-secondary" title="Nhấn để nói">🎤</button>
     </div>
+
 </div>
 
 <script>
@@ -42,5 +44,28 @@
                 appendMessage("Bot", "Xin lỗi, có lỗi xảy ra.");
                 console.error(error);
             });
+    }
+        function startListening() {
+        if (!('webkitSpeechRecognition' in window)) {
+            alert("Trình duyệt của bạn không hỗ trợ nhận diện giọng nói.");
+            return;
+        }
+
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'vi-VN';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.start();
+
+        recognition.onresult = function (event) {
+            const text = event.results[0][0].transcript;
+            document.getElementById("messageInput").value = text;
+            sendMessage(); // Tự động gửi luôn sau khi nói
+        };
+
+        recognition.onerror = function (event) {
+            alert("Lỗi nhận diện giọng nói: " + event.error);
+        };
     }
 </script>

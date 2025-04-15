@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\controllers\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:controllers\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\sach\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\sach\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\chatbot\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\chatbot\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\controllers\\sachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:controllers\\sachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -32,36 +32,36 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAUwFEAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAF0AAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T13:23:46.78Z",
+              "WhenOpened": "2025-04-15T10:42:43.036Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Chatbot\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Chatbot\\Index.cshtml",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Chatbot\\Index.cshtml",
-              "RelativeToolTip": "Views\\Chatbot\\Index.cshtml",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAkwCcAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T14:20:16.165Z",
+              "Title": "SachController.cs",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\SachController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SachController.cs",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\SachController.cs",
+              "RelativeToolTip": "Controllers\\SachController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAwDIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T14:02:02.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ChatbotController.cs",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\ChatbotController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ChatbotController.cs",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\ChatbotController.cs",
-              "RelativeToolTip": "Controllers\\ChatbotController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEwAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T14:15:10.863Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Sach\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sach\\Details.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Sach\\Details.cshtml",
+              "RelativeToolTip": "Views\\Sach\\Details.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAQwIgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T13:07:20.047Z",
               "EditorCaption": ""
             }
           ]

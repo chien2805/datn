@@ -1,7 +1,13 @@
 ﻿@model IEnumerable<NhaCungCap>
 <h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Nhà Cung Cấp</h2>
 
-<a asp-action="Create" class="btn" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;">Thêm nhà cung cấp</a>
+<!-- Nút mở modal Thêm NCC -->
+<button type="button"
+        class="btn"
+        style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;"
+        onclick="openAddModal()">
+    Thêm nhà cung cấp
+</button>
 
 <table class="table" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
     <thead style="background-color: #4a90e2; color: #fff;">
@@ -18,8 +24,8 @@
                 <td style="padding: 10px; text-align: center;">@ncc.TenNhaCungCap</td>
                 <td style="padding: 10px; text-align: center;">@ncc.ThongTinLienHe</td>
                 <td style="padding: 10px; text-align: center;">
-                    <a asp-action="Edit" asp-route-id="@ncc.MaNhaCungCap" class="btn" style="padding: 5px 15px; margin-right: 10px; background-color: #27ae60; color: white; border-radius: 5px;">Sửa</a>
-                    <a asp-action="Details" asp-route-id="@ncc.MaNhaCungCap" class="btn" style="padding: 5px 15px; margin-right: 10px; background-color: #3498db; color: white; border-radius: 5px;">Chi tiết</a>
+                    @* <a href="javascript:void(0);" class="btn" style="padding: 5px 15px; margin-right: 10px; background-color: #27ae60; color: white; border-radius: 5px;" onclick="openEditModal(@ncc.MaNhaCungCap)">Sửa</a> *@
+                    <a href="javascript:void(0);" class="btn" style="padding: 5px 15px; margin-right: 10px; background-color: #3498db; color: white; border-radius: 5px;" onclick="openDetailModal(@ncc.MaNhaCungCap)">Chi tiết</a>
                     <a href="#" class="btn" onclick="confirmDelete(@ncc.MaNhaCungCap)" style="padding: 5px 15px; background-color: #e74c3c; color: white; border-radius: 5px;">Xóa</a>
                 </td>
             </tr>
@@ -33,7 +39,7 @@
         <div class="modal-content" style="border-radius: 10px;">
             <div class="modal-header" style="background-color: #e74c3c;">
                 <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xoá</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;" onclick="closeDeleteModal()">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -42,7 +48,7 @@
             </div>
             <div class="modal-footer">
                 <form id="deleteForm" method="post">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #7ed6df; color: white; border-radius: 5px;">Huỷ</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #7ed6df; color: white; border-radius: 5px;" onclick="closeDeleteModal()">Huỷ</button>
                     <button type="submit" class="btn btn-danger" style="background-color: #e74c3c; color: white; border-radius: 5px;">Xoá</button>
                 </form>
             </div>
@@ -50,10 +56,113 @@
     </div>
 </div>
 
+<!-- Modal Thêm Nhà Cung Cấp -->
+<div class="modal fade" id="addSupplierModal" tabindex="-1" role="dialog" aria-labelledby="addSupplierModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius:10px;">
+            <div class="modal-header" style="background-color:#4a90e2; color:white;">
+                <h5 class="modal-title" id="addSupplierModalLabel">Thêm Nhà Cung Cấp</h5>
+                <button type="button" class="close" aria-label="Close" style="color:white;" onclick="closeAddModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addSupplierForm" method="post" action="@Url.Action("Create","NhaCungCap")">
+                    @Html.AntiForgeryToken()
+                    <div class="form-group mb-3">
+                        <label for="TenNhaCungCap">Tên nhà cung cấp</label>
+                        <input type="text" class="form-control" id="TenNhaCungCap" name="TenNhaCungCap" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="ThongTinLienHe">Thông tin liên hệ</label>
+                        <textarea class="form-control" id="ThongTinLienHe" name="ThongTinLienHe" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="closeAddModal()">Huỷ</button>
+                        <button type="submit" class="btn btn-primary">Lưu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Chi Tiết Nhà Cung Cấp -->
+<div class="modal fade" id="detailSupplierModal" tabindex="-1" role="dialog" aria-labelledby="detailSupplierModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius:10px;">
+            <div class="modal-header" style="background-color:#3498db; color:white;">
+                <h5 class="modal-title" id="detailSupplierModalLabel">Chi Tiết Nhà Cung Cấp</h5>
+                <button type="button" class="close" aria-label="Close" style="color:white;" onclick="closeDetailModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="TenNhaCungCapDetail">Tên nhà cung cấp</label>
+                    <p id="TenNhaCungCapDetail"></p>
+                </div>
+                <div class="form-group">
+                    <label for="ThongTinLienHeDetail">Thông tin liên hệ</label>
+                    <p id="ThongTinLienHeDetail"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeDetailModal()">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <script>
     function confirmDelete(id) {
         const form = document.getElementById('deleteForm');
         form.action = `/NhaCungCap/Delete/${id}`;
         $('#confirmDeleteModal').modal('show');
     }
+        // Tắt modal Xoá sau khi nhấn Huỷ hoặc Xoá
+    function closeDeleteModal() {
+        $('#confirmDeleteModal').modal('hide');
+    }
 </script>
+<script>
+    function openAddModal() {
+      $('#addSupplierModal').modal('show');
+    }
+    function closeAddModal() {
+      $('#addSupplierModal').modal('hide');
+    }
+
+    // Chuyển form submit về trang Index sau khi tạo xong
+    $('#addSupplierForm').on('submit', function () {
+      closeAddModal();
+      // có thể thêm logic reload trang hoặc AJAX ở đây
+    });
+</script>
+<script>
+    function openDetailModal(id) {
+        // Lấy dữ liệu từ nhà cung cấp qua AJAX
+        $.ajax({
+            url: '/NhaCungCap/Details/' + id,  // Gọi đến API để lấy dữ liệu
+            type: 'GET',
+            success: function (data) {
+                // Điền dữ liệu vào modal
+                $('#TenNhaCungCapDetail').text(data.tenNhaCungCap);
+                $('#ThongTinLienHeDetail').text(data.thongTinLienHe);
+
+                // Mở modal
+                $('#detailSupplierModal').modal('show');
+            },
+            error: function () {
+                alert("Có lỗi xảy ra khi tải dữ liệu.");
+            }
+        });
+    }
+
+    function closeDetailModal() {
+        $('#detailSupplierModal').modal('hide');
+    }
+</script>
+
+

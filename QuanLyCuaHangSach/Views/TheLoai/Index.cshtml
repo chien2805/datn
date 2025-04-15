@@ -3,7 +3,10 @@
 
 <h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Thể Loại</h2>
 
-<a asp-action="Create" class="btn btn-primary" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;">Thêm thể loại</a>
+@* <a asp-action="Create" class="btn btn-primary" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;">Thêm thể loại</a> *@
+<!-- Nút mở modal Thêm -->
+<button class="btn btn-primary mb-2" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;" onclick="openCreateModal()">+ Thêm thể loại</button>
+
 
 <table class="table" style="width: 100%; border-collapse: collapse;">
     <thead  style="background-color: #4a90e2; color: #fff;">
@@ -20,13 +23,78 @@
                 <td style="padding: 10px; text-align: center;">@theLoai.TenTheLoai</td>
                 <td style="padding: 10px; text-align: center;">@theLoai.MoTa</td>
                 <td style="padding: 10px; text-align: center;">
-                    <a asp-action="Edit" asp-route-id="@theLoai.MaTheLoai" class="btn btn-warning" style="padding: 5px 15px; margin-right: 10px;">Sửa</a>
+                    @* <a asp-action="Edit" asp-route-id="@theLoai.MaTheLoai" class="btn btn-warning" style="padding: 5px 15px; margin-right: 10px;">Sửa</a> *@
+                    <button type="button" class="btn btn-warning" style="padding: 5px 15px; margin-right: 10px;" onclick="showEditModal(@theLoai.MaTheLoai, '@theLoai.TenTheLoai.Replace("'", "\\'")', '@theLoai.MoTa?.Replace("'", "\\'")')">Sửa</button>
+
                     <a href="#" onclick="confirmDelete(@theLoai.MaTheLoai)" class="btn btn-danger" style="padding: 5px 15px;">Xóa</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<!-- Modal Thêm Thể Loại -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form asp-action="Create" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thêm thể loại</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <label for="TenTheLoai">Tên thể loại</label>
+                        <input type="text" name="TenTheLoai" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="MoTa">Mô tả</label>
+                        <textarea name="MoTa" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal Sửa Thể Loại -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form id="editForm" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa thể loại</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" id="edit_MaTheLoai" name="MaTheLoai" />
+                    <div class="form-group">
+                        <label for="edit_TenTheLoai">Tên thể loại</label>
+                        <input type="text" id="edit_TenTheLoai" name="TenTheLoai" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit_MoTa">Mô tả</label>
+                        <textarea id="edit_MoTa" name="MoTa" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Huỷ</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <!-- Modal Xác nhận Xóa -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
@@ -34,7 +102,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xoá</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" onclick="closeDeleteModal()" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -43,7 +111,7 @@
             </div>
             <div class="modal-footer">
                 <form id="deleteForm" method="post">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeDeleteModal()">Huỷ</button>
                     <button type="submit" class="btn btn-danger">Xoá</button>
                 </form>
             </div>
@@ -57,7 +125,30 @@
         form.action = `/TheLoai/Delete/${id}`;
         $('#confirmDeleteModal').modal('show');
     }
+
+    function closeDeleteModal() {
+        $('#confirmDeleteModal').modal('hide');
+    }
 </script>
 
+<script>
+    function showEditModal(id, tenTheLoai, moTa) {
+        document.getElementById('edit_MaTheLoai').value = id;
+        document.getElementById('edit_TenTheLoai').value = tenTheLoai;
+        document.getElementById('edit_MoTa').value = moTa;
+        document.getElementById('editForm').action = `/TheLoai/Edit/${id}`;
+        $('#editModal').modal('show');
+    }
 
+    // Khi bấm nút đóng (x) hoặc nút huỷ
+    function closeEditModal() {
+        $('#editModal').modal('hide');
+    }
+</script>
+
+<script>
+    function openCreateModal() {
+        $('#createModal').modal('show');
+    }
+</script>
 

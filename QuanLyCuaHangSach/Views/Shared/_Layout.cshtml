@@ -22,76 +22,68 @@
             @TempData["SuccessMessage"]
         </div>
     }
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark custom-navbar border-bottom box-shadow mb-3">
+    <header style="background-color: #2f855a; height: 50px;" class="text-white">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark h-100 p-0">
+            <div class="container-fluid d-flex justify-content-between align-items-center h-100 flex-nowrap">
+                <!-- Bên trái: Logo + Menu -->
+                <div class="d-flex align-items-center gap-4 h-100">
+                    <a class="navbar-brand text-white mb-0 h-100 d-flex align-items-center" asp-area="" asp-controller="Sach" asp-action="Index">
+                        QuanLyCuaHangSach
+                    </a>
 
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Sach" asp-action="Index">QuanLyCuaHangSach</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    @if (userRole != "Admin")
+                    {
+                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="Index">🏠 Trang chủ</a>
+                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="GioiThieu">Giới thiệu</a>
+                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="LienHe">Liên hệ</a>
+                    }
+                </div>
 
+                <!-- Bên phải: Giỏ hàng + Đăng nhập/Đăng ký hoặc Xin chào -->
                 @if (userRole != "Admin")
                 {
-                    <!-- Navbar ngang dành cho khách hàng -->
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="TrangChu" asp-action="Index">🏠 Trang chủ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="TrangChu" asp-action="Index">Giới thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="TrangChu" asp-action="Index">Liên hệ</a>
-                            </li>
-                        </ul>
-
-                        <button type="button" class="btn btn-outline-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#gioHangModal">
+                    <div class="d-flex align-items-center gap-3 h-100">
+                        <button type="button" class="btn btn-outline-light position-relative d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#gioHangModal">
                             🛒
                             <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">0</span>
                         </button>
 
-                        <ul class="navbar-nav">
-                            @if (!isLoggedIn)
-                            {
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link text-dark" onclick="showRegisterModal()">
-                                        <i class="fa-solid fa-user-plus"></i> Đăng ký
+                        @if (!isLoggedIn)
+                        {
+                            <a href="#" class="text-white text-decoration-none d-flex align-items-center h-100" onclick="showRegisterModal()">
+                                <i class="fa-solid fa-user-plus me-1"></i> Đăng ký
+                            </a>
+                            <a href="#" class="text-white text-decoration-none d-flex align-items-center h-100" onclick="showLoginModal()">
+                                <i class="fa-solid fa-sign-in-alt me-1"></i> Đăng nhập
+                            </a>
+                        }
+                        else
+                        {
+                            <div class="position-relative d-flex align-items-center h-100" onmouseover="showUserOptions()" onmouseout="hideUserOptions()">
+                                <span class="text-white" style="cursor: pointer;">
+                                    <i class="fa-solid fa-user"></i> Xin chào, @(string.IsNullOrEmpty(Context.Session.GetString("HoTen")) ? Context.Session.GetString("UserEmail") : Context.Session.GetString("HoTen"))
+                                </span>
+                                <div id="userOptions" style="display: none; position: absolute; top: 100%; right: 0; background: white; color: black; border: 1px solid #ccc; border-radius: 5px; z-index: 1000;">
+                                    <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal">
+                                        <i class="fa-solid fa-id-card"></i> Thông tin tài khoản
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link text-dark" onclick="showLoginModal()">
-                                        <i class="fa-solid fa-sign-in-alt"></i> Đăng nhập
+                                    <a asp-controller="LichSu" asp-action="Index" class="nav-link text-dark">
+                                        <i class="fa-solid fa-clock-rotate-left"></i> Lịch sử giao dịch
                                     </a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="nav-item d-flex align-items-center position-relative" onmouseover="showUserOptions()" onmouseout="hideUserOptions()">
-                                    <span class="nav-link text-dark" style="cursor: pointer;">
-                                        <i class="fa-solid fa-user"></i> Xin chào, @(string.IsNullOrEmpty(Context.Session.GetString("HoTen")) ? Context.Session.GetString("UserEmail") : Context.Session.GetString("HoTen"))
-                                    </span>
-                                    <div id="userOptions" style="display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #ccc; border-radius: 5px; z-index: 1000;">
-                                        <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal">
-                                            <i class="fa-solid fa-id-card"></i> Thông tin tài khoản
-                                        </a>
-                                        <a asp-controller="LichSu" asp-action="Index" class="nav-link text-dark">
-                                            <i class="fa-solid fa-clock-rotate-left"></i> Lịch sử giao dịch
-                                        </a>
-                                        <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post">
-                                            <button type="submit" class="btn btn-danger btn-sm w-100">🚪 Đăng xuất</button>
-                                        </form>
-                                    </div>
-                                </li>
-                            }
-                        </ul>
+                                    <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post" class="m-2">
+                                        <button type="submit" class="btn btn-danger btn-sm w-100">🚪 Đăng xuất</button>
+                                    </form>
+                                </div>
+                            </div>
+                        }
                     </div>
                 }
             </div>
         </nav>
     </header>
+
+
+
 
     @if (userRole == "Admin")
     {
@@ -99,6 +91,7 @@
             <div class="admin-sidebar p-3 vh-100">
                 <h4 class="text-center admin-title">📋 Quản lý</h4>
                 <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" asp-controller="TrangChu" asp-action="Admin">Tổng quan</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="Sach" asp-action="Index">📖 Sách</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a></li>
@@ -151,7 +144,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="loginForm" method="post" action="/DangNhap/Login">
+                    <form id="loginForm" method="post">
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" name="email" required>
@@ -160,6 +153,7 @@
                             <label for="password">Mật khẩu:</label>
                             <input type="password" class="form-control" name="password" required>
                         </div>
+                        <div id="errorMessage" class="text-danger"></div> <!-- Hiển thị lỗi ở đây -->
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeLoginModal()">Huỷ</button>
                             <button type="submit" class="btn btn-primary">Đăng nhập</button>
@@ -190,6 +184,11 @@
                         <div class="form-group">
                             <label for="MatKhau">Mật khẩu:</label>
                             <input type="password" class="form-control" name="MatKhau" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="XacNhanMatKhau">Xác nhận mật khẩu:</label>
+                            <input type="password" class="form-control" name="XacNhanMatKhau" id="XacNhanMatKhau" required />
+                            <span id="xacNhanMatKhauError" class="text-danger"></span>
                         </div>
                         <div class="modal-footer">
                             <!-- Nút huỷ (đóng modal đăng ký) -->
@@ -245,30 +244,39 @@
             $('#registerSuccessModal').modal('hide');
         }
 
-        // Hàm xử lý form đăng ký
+            // ✅ Hàm xử lý form đăng ký
         $(document).ready(function () {
-            // Khi form đăng ký được gửi, thực hiện AJAX
             $('#registerForm').submit(function (event) {
-                event.preventDefault(); // Ngừng gửi form theo cách mặc định
+                event.preventDefault(); // Ngăn form submit truyền thống
 
-                // Gửi AJAX request để đăng ký
+                // 🚫 Xóa các lỗi cũ trước khi gửi mới
+                $('#emailError').text('');
+                $('#xacNhanMatKhauError').text('');
+
                 $.ajax({
                     url: '/DangKi/DangKy',
                     type: 'POST',
                     data: $(this).serialize(),
                     success: function (response) {
-                    if (response.success) {
-                        // Mở modal đăng ký thành công
-                        showRegisterSuccessModal();
-                        closeRegisterModal(); // Đóng modal đăng ký
-                    } else {
-                        // Hiển thị lỗi nếu email đã tồn tại
-                        if (response.message === "Email đã được sử dụng") {
-                            $('#emailError').text('Email đã được sử dụng');
+                        if (response.success) {
+                            showRegisterSuccessModal(); // ✅ Hiển thị modal đăng ký thành công
+                            closeRegisterModal();       // ✅ Đóng modal đăng ký
+                            $('#registerForm')[0].reset(); // ✅ Reset lại form
                         } else {
-                            $('#emailError').text('');
+                            // ❌ Trường hợp Email đã sử dụng
+                            if (response.message === "Email đã được sử dụng") {
+                                $('#emailError').text('Email đã được sử dụng');
+                            }
+
+                            // ❌ Hiển thị lỗi xác nhận mật khẩu không khớp (nếu có)
+                            if (response.errors) {
+                                response.errors.forEach(function (err) {
+                                    if (err.includes("xác nhận")) {
+                                        $('#xacNhanMatKhauError').text(err);
+                                    }
+                                });
+                            }
                         }
-                    }
                     },
                     error: function () {
                         alert('Có lỗi xảy ra khi đăng ký');
@@ -283,6 +291,31 @@
             // Mở modal Đăng nhập
             $('#loginModal').modal('show');
         }
+                // Kiểm tra nếu có lỗi và mở modal
+        $(document).ready(function () {
+            $('#loginForm').submit(function (event) {
+                event.preventDefault(); // Ngừng gửi form theo cách mặc định
+
+                // Gửi AJAX request để đăng nhập
+                $.ajax({
+                    url: '/DangNhap/Login',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            // Nếu đăng nhập thành công, chuyển hướng người dùng
+                            window.location.href = response.redirectUrl;
+                        } else {
+                            // Nếu có lỗi, hiển thị thông báo lỗi trong modal
+                            $('#errorMessage').text(response.message); // Hiển thị lỗi trong modal
+                        }
+                    },
+                    error: function () {
+                        $('#errorMessage').text('Có lỗi xảy ra khi đăng nhập.');
+                    }
+                });
+            });
+        });
     </script>
 
 
@@ -531,9 +564,6 @@
             window.location.href = "/ThanhToan/Index";
         }
 
-
-
-
         function xoaKhoiGio(maSach) {
             $.post("/GioHang/XoaKhoiGio", { maSach: maSach }, function (response) {
                 if (response.success) {
@@ -554,9 +584,133 @@
     </script>
 
 
+    <!-- 💬 Bong bóng chat -->
+    <div id="chat-bubble" onclick="toggleChat()" title="Trợ lý ảo">
+        💬
+    </div>
+
+    <!-- 🗨️ Khung Chatbot -->
+    <div id="chat-widget">
+        <div id="chat-container">
+            <div id="chat-header">
+                <span>💬 Trợ Lý Ảo</span>
+                <button id="close-chat" onclick="toggleChat()">×</button>
+            </div>
+            <div id="chatbox"></div>
+            <div id="chat-input">
+                <button id="micBtn" title="Nhấn giữ để nói">🎤</button>
+                <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." />
+                <button onclick="sendMessage()">Gửi</button>
+            </div>
+        </div>
+    </div>
 
 
+    <script>
+        let recognition;
 
+        function toggleChat() {
+            const widget = document.getElementById("chat-widget");
+            const bubble = document.getElementById("chat-bubble");
+
+            if (widget.style.display === "none" || widget.style.display === "") {
+                widget.style.display = "flex";
+                bubble.style.display = "none";
+            } else {
+                widget.style.display = "none";
+                bubble.style.display = "flex";
+            }
+        }
+
+        function appendMessage(sender, text) {
+            const chat = document.getElementById("chatbox");
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add("message");
+            messageDiv.classList.add(sender === "Bạn" ? "user" : "bot");
+            messageDiv.innerHTML = text.replace(/\n/g, "<br>");
+            chat.appendChild(messageDiv);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("messageInput");
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendMessage("Bạn", text);
+            input.value = "";
+
+            fetch(`/Chatbot/GetResponse?userMessage=${encodeURIComponent(text)}`)
+                .then(response => response.text())
+                .then(reply => {
+                    appendMessage("Bot", reply);
+                })
+                .catch(error => {
+                    appendMessage("Bot", "Xin lỗi, có lỗi xảy ra.");
+                    console.error(error);
+                });
+        }
+
+        // Khởi tạo nhận diện giọng nói
+        if ('webkitSpeechRecognition' in window) {
+            recognition = new webkitSpeechRecognition();
+            recognition.lang = 'vi-VN';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById("messageInput").value = transcript;
+                sendMessage();
+            };
+
+            recognition.onerror = function(event) {
+                console.error("Speech recognition error:", event.error);
+            };
+        } else {
+            alert("Trình duyệt không hỗ trợ nhận diện giọng nói.");
+        }
+
+        // Gán sự kiện nhấn giữ mic
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("chat-bubble").style.display = "flex";
+            document.getElementById("chat-widget").style.display = "none";
+
+        const micBtn = document.getElementById("micBtn");
+
+        micBtn.addEventListener("mousedown", () => {
+            if (recognition) {
+                recognition.start();
+                micBtn.classList.add("listening");
+                micBtn.textContent = "🎙️";
+            }
+        });
+
+        micBtn.addEventListener("mouseup", () => {
+            if (recognition) {
+                recognition.stop();
+                micBtn.classList.remove("listening");
+                micBtn.textContent = "🎤";
+            }
+        });
+
+        micBtn.addEventListener("mouseleave", () => {
+            if (recognition) {
+                recognition.stop();
+                micBtn.classList.remove("listening");
+                micBtn.textContent = "🎤";
+            }
+        });
+
+
+            // Gửi tin nhắn khi nhấn Enter
+            document.getElementById("messageInput").addEventListener("keydown", function (e) {
+                if (e.key === "Enter") {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -564,10 +718,6 @@
     <!-- jQuery UI -->
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-    <!-- Thêm các thư viện JavaScript ở cuối trang -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

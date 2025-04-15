@@ -17,6 +17,10 @@ namespace QuanLyCuaHangSach.Controllers
         {
             return View();
         }
+        public IActionResult IndexTest()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

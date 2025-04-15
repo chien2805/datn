@@ -22,6 +22,9 @@ namespace QuanLyCuaHangSach.Controllers
         public async Task<IActionResult> Index()
         {
             var sachList = await _context.Sach.Include(s => s.TheLoai).Include(s => s.NhaCungCap).ToListAsync();
+            // CHỈNH: khởi tạo ViewBag cho modal ngay cả khi xem danh sách
+            ViewBag.TheLoaiList = new SelectList(_context.TheLoai, "MaTheLoai", "TenTheLoai");
+            ViewBag.NhaCungCapList = new SelectList(_context.NhaCungCap, "MaNhaCungCap", "TenNhaCungCap");
             return View(sachList);
         }
 
@@ -35,6 +38,18 @@ namespace QuanLyCuaHangSach.Controllers
                                           .FirstOrDefaultAsync(m => m.MaSach == id);
             if (sach == null)
                 return NotFound();
+            var sachBanChay = _context.Sach
+                .OrderByDescending(s => s.SoLuongBan)
+                .Take(6)
+                .ToList();
+            var allBooks = _context.Sach.ToList();  // Lấy tất cả sách từ database
+
+            // Lấy ngẫu nhiên 5 sách
+            var randomBooks = allBooks.OrderBy(x => Guid.NewGuid()).Take(5).ToList();
+
+            // Gửi vào ViewBag hoặc Model
+            ViewBag.SachNoiBat = randomBooks;
+            ViewBag.SachBanChay = sachBanChay;
 
             return View(sach);
         }
@@ -105,7 +120,11 @@ namespace QuanLyCuaHangSach.Controllers
             var sach = await _context.Sach.FindAsync(id);
             if (sach == null)
                 return NotFound();
-
+            // Nếu đây là yêu cầu AJAX, trả về JSON
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return Json(sach);
+            }
             ViewBag.TheLoaiList = new SelectList(_context.TheLoai, "MaTheLoai", "TenTheLoai", sach.MaTheLoai);
             ViewBag.NhaCungCapList = new SelectList(_context.NhaCungCap, "MaNhaCungCap", "TenNhaCungCap", sach.MaNhaCungCap);
 

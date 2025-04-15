@@ -1,5 +1,23 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\chatbox-mrob-457727cec1a7.json'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>chatbox-mrob-457727cec1a7.json</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pek7n8g2mb</Fingerprint>
+      <Integrity>EXrXCeWEdTx43P2Sw5c5p3GXSd0xmXawoN1PXomp1U8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\chatbox-mrob-457727cec1a7.json'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\chatbox-mrob-b9773ec4f7cf.json'))">
       <SourceType>Package</SourceType>
       <SourceId>QuanLyCuaHangSach</SourceId>
@@ -30,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>u64n2fuxfp</Fingerprint>
-      <Integrity>Co2PLYiN7lDVhUhKA5Ct8kaClac0Rn7vSPpheH6T7CA=</Integrity>
+      <Fingerprint>w4merxesc2</Fingerprint>
+      <Integrity>cJlsA557h4WsOCrgweC7PgWLtc19eys8Yo81iosjvWs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -90,6 +108,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>images/13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p9424qab08</Fingerprint>
+      <Integrity>HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>QuanLyCuaHangSach</SourceId>
@@ -108,6 +144,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1c89a927-8435-4d61-a778-418d880ea115_1.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>images/1c89a927-8435-4d61-a778-418d880ea115_1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p9424qab08</Fingerprint>
+      <Integrity>HQ6QHZLUJR14q4F910emjZvxzU4Q+fi2IVCoNs/kTDo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1c89a927-8435-4d61-a778-418d880ea115_1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>QuanLyCuaHangSach</SourceId>
@@ -125,6 +179,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h74l835b0d</Fingerprint>
+      <Integrity>c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg'))">
       <SourceType>Package</SourceType>
@@ -216,6 +288,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\default.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>images/default.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gh670zlc5w</Fingerprint>
+      <Integrity>bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\default.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>QuanLyCuaHangSach</SourceId>
@@ -251,6 +341,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\home_slider_image_2.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>images/home_slider_image_2.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4uhwzto5on</Fingerprint>
+      <Integrity>THlxbx0O0P5HfsayMa2WVS8YaUGcHnZcWSso4y6VMkI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\home_slider_image_2.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\home_slider_image_4.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuanLyCuaHangSach</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuanLyCuaHangSach</BasePath>
+      <RelativePath>images/home_slider_image_4.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0749kw82ih</Fingerprint>
+      <Integrity>fJEGCOGUGTZv9AH23JeFawcyluqwOW7A6dT11DNOJp0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\home_slider_image_4.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\sach\default.jpg'))">
       <SourceType>Package</SourceType>

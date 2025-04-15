@@ -15,111 +15,63 @@
     <div id="danhSachSach" class="row">
         @foreach (var sach in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm"
-                     style="border-radius: 8px;
-                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                            overflow: hidden;
-                            background-color: #fff8f0;
-                            display: flex;
-                            flex-direction: column;">
-                    <div class="row g-0">
-                        <div class="col-4 d-flex align-items-center">
-                            <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/")
-                                             ? sach.HinhAnh
-                                             : "~/images/sach/default.jpg")"
-                                 class="img-fluid rounded-start"
-                                 alt="@sach.TieuDe"
-                                 style="height: 100%; object-fit: cover; border-radius: 8px 0 0 8px;" />
-                        </div>
-                        <div class="col-8 d-flex flex-column">
-                            <div class="card-body" style="padding: 15px; flex-grow: 1;">
-                                <h5 class="card-title"
-                                    style="font-size: 1.1rem;
-                                           font-weight: bold;
-                                           color: #8b4513;
-                                           white-space: nowrap;
-                                           overflow: hidden;
-                                           text-overflow: ellipsis;">
-                                    @sach.TieuDe
-                                </h5>
-                                <p class="card-text"
-                                   style="font-size: 1rem;
-                                          color: #6e4b3b;
-                                          overflow: hidden;
-                                          text-overflow: ellipsis;
-                                          white-space: nowrap;">
-                                    <strong>Giá:</strong> @sach.Gia.ToString("N0") VNĐ
-                                </p>
-                                <p class="card-text"
-                                   style="font-size: 1rem;
-                                          color: #6e4b3b;
-                                          overflow: hidden;
-                                          text-overflow: ellipsis;
-                                          white-space: nowrap;">
-                                    <strong>Thể loại:</strong> @sach.TheLoai?.TenTheLoai
-                                </p>
-                                <p class="card-text"
-                                   style="font-size: 1rem;
-                                          color: #6e4b3b;
-                                          overflow: hidden;
-                                          text-overflow: ellipsis;
-                                          white-space: nowrap;">
-                                    <strong>Đã mượn:</strong> @sach.SoLuongMuon cuốn
-                                </p>
-                                <p class="card-text"
-                                   style="font-size: 1rem;
-                                          color: #6e4b3b;
-                                          overflow: hidden;
-                                          text-overflow: ellipsis;
-                                          white-space: nowrap;">
-                                    <strong>Đã bán:</strong> @sach.SoLuongBan cuốn
-                                </p>
-                            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card position-relative" style="width: 200px; height: 325px; display: flex; flex-direction: column; overflow: hidden; border-radius: 10px; border: 1px solid #2f855a;">
+                    <div style="position: relative; flex-grow: 1;">
+                        <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/")
+                                   ? sach.HinhAnh
+                                   : "~/images/sach/default.jpg")"
+                             class="card-img-top"
+                             alt="@sach.TieuDe"
+                             style="width: 100%; height: 160px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px; transition: transform 0.3s ease;" />
+
+                        <!-- Icon overlay -->
+                        <div style="position: absolute; bottom: 8px; right: 8px; display: flex; gap: 8px;">
+                            <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })"
+                               title="Xem chi tiết"
+                               style="color: white; background-color: #2f855a; border-radius: 50%; padding: 6px;">
+                                <i class="bi bi-eye"></i>
+                            </a>
+
+                            @if (isLoggedIn)
+                            {
+                                <button type="button"
+                                        title="Đặt thuê"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#xacNhanModal"
+                                        onclick="prepareDatThue(@sach.MaSach)"
+                                        style="background-color: #2f855a; color: white; border: none; border-radius: 50%; padding: 6px; cursor: pointer;">
+                                    <i class="bi bi-book"></i>
+                                </button>
+                            }
+
+                            <a href="javascript:void(0)"
+                               title="Thêm vào giỏ"
+                               onclick="themVaoGio(@sach.MaSach)"
+                               style="color: white; background-color: #2f855a; border-radius: 50%; padding: 6px;">
+                                <i class="bi bi-cart-plus"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-3 mt-3"
-                         style="display: flex; gap: 10px;">
-                        <button type="button"
-                                class="btn"
-                                onclick="themVaoGio(@sach.MaSach)"
-                                style="border-radius: 5px;
-                                       padding: 8px 16px;
-                                       font-size: 1rem;
-                                       font-weight: bold;
-                                       background-color: #8b4513;
-                                       color: white;
-                                       border: none;">
-                            Thêm vào giỏ
-                        </button>
-                        <span>
-                            <button type="button"
-                            @(isLoggedIn ? "" : "disabled")
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#xacNhanModal"
-                                    onclick="prepareDatThue(@sach.MaSach)"
-                                    style="border-radius:5px; padding:8px 16px; font-size:1rem; font-weight:bold;
-                   background-color:@(isLoggedIn ? "#8b4513" : "#ccc");
-                   color:white; border:none;
-                   cursor:@(isLoggedIn ? "pointer" : "not-allowed");">
-                                📚 Đặt thuê
-                            </button>
-                        </span>
 
+                    <div class="card-body" style="padding: 10px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <h6 class="card-title" style="font-size: 1rem; font-weight: bold; color: #8b4513; margin-bottom: 5px;">
+                            @sach.TieuDe
+                        </h6>
+                        <p class="card-text text-muted" style="font-size: 0.9rem; color: #6e4b3b; margin-bottom: 5px;">
+                            @sach.TacGia
+                        </p>
+                        <p class="card-text fw-bold text-primary" style="font-size: 1rem; color: #4a90e2;">
+                            @string.Format("{0:N0}đ", sach.Gia)
+                        </p>
                     </div>
                 </div>
             </div>
         }
     </div>
-    <script>
-        // Khởi tạo tooltip sau khi tải trang xong
-        document.addEventListener('DOMContentLoaded', function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-                new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-        });
-    </script>
+
+
+
 
     <!-- Phân trang -->
     <div id="pagination" class="d-flex justify-content-center mt-4">
@@ -152,6 +104,15 @@
             </ul>
         </nav>
     </div>
+    <script>
+        // Khởi tạo tooltip sau khi tải trang xong
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
 </div>
 
 
