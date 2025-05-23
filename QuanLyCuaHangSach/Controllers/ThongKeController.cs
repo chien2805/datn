@@ -28,7 +28,7 @@ namespace QuanLyCuaHangSach.Controllers
 
             // Lấy dữ liệu doanh thu theo ngày từ 3 model
             var banOnlineData = _context.HoaDonBanOnline
-                .Where(h => h.NgayTao.Month == selectedMonth && h.NgayTao.Year == selectedYear)
+                .Where(h => h.NgayTao.Month == selectedMonth && h.NgayTao.Year == selectedYear && h.TrangThai == "Đã giao hàng") 
                 .GroupBy(h => h.NgayTao.Date)
                 .Select(g => new
                 {
@@ -38,7 +38,7 @@ namespace QuanLyCuaHangSach.Controllers
                 .ToList();
 
             var banQuayData = _context.HoaDonBan
-                .Where(h => h.NgayLap.Month == selectedMonth && h.NgayLap.Year == selectedYear)
+                .Where(h => h.NgayLap.Month == selectedMonth && h.NgayLap.Year == selectedYear )
                 .GroupBy(h => h.NgayLap.Date)
                 .Select(g => new
                 {
@@ -48,14 +48,15 @@ namespace QuanLyCuaHangSach.Controllers
                 .ToList();
 
             var muonSachData = _context.PhieuDatTruoc
-                .Where(p => p.TrangThai == "Đã trả" && p.NgayTra.Month == selectedMonth && p.NgayTra.Year == selectedYear)
-                .GroupBy(p => p.NgayTra.Date)
+                .Where(p => p.TrangThai == "Đã trả" && p.NgayTraThucTe.HasValue && p.NgayTraThucTe.Value.Month == selectedMonth && p.NgayTraThucTe.Value.Year == selectedYear)
+                .GroupBy(p => p.NgayTraThucTe.Value.Date)
                 .Select(g => new
                 {
                     ngay = g.Key,
                     tongTien = g.Sum(x => x.ThanhTien ?? 0)
                 })
                 .ToList();
+
 
             // Tạo danh sách tất cả các ngày trong tháng đã chọn
             var startDate = new DateTime(selectedYear, selectedMonth, 1);

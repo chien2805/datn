@@ -105,8 +105,5 @@ namespace QuanLyCuaHangSach.Context
                 .HasForeignKey(ct => ct.MaSach);
         }
 
-
-
-
     }
 }

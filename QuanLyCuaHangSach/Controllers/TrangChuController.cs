@@ -1,17 +1,20 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuanLyCuaHangSach.Context;
+using System.Globalization;
 
 namespace QuanLyCuaHangSach.Controllers
 {
     public class TrangChuController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private const int PageSize = 12;
+        private const int PageSize = 16;
 
         public TrangChuController(ApplicationDbContext context)
         {
@@ -29,9 +32,14 @@ namespace QuanLyCuaHangSach.Controllers
             ViewBag.SearchString = searchString;
             var sachBanChay = _context.Sach
                 .OrderByDescending(s => s.SoLuongBan)
-                .Take(3)
+                .Take(5)
                 .ToList();
+            var allBooks = _context.Sach.ToList();  // Lấy tất cả sách từ database
+            // Lấy ngẫu nhiên 5 sách
+            var randomBooks = allBooks.OrderBy(x => Guid.NewGuid()).Take(5).ToList();
 
+            // Gửi vào ViewBag hoặc Model
+            ViewBag.SachNoiBat = randomBooks;
             ViewBag.SachBanChay = sachBanChay;
 
             // Xây dựng query cơ bản
@@ -60,19 +68,34 @@ namespace QuanLyCuaHangSach.Controllers
 
             return View(items);
         }
+        // Hàm bỏ dấu
+        public static string RemoveDiacritics(string text)
+        {
+            var normalizedString = text.Normalize(NormalizationForm.FormD);
+            var stringBuilder = new StringBuilder();
+
+            foreach (var c in normalizedString)
+            {
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(c);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC).ToLower();
+        }
 
         // AJAX: tìm + phân trang, trả về PartialView chứa cả danh sách sách và pagination
         [HttpGet]
         public async Task<IActionResult> TimKiemPhanTrang(int pageNumber = 1,
-                                                          string searchString = "",
-                                                          int? theLoaiId = null)
+                                                  string searchString = "",
+                                                  int? theLoaiId = null)
         {
-            // Giữ lại các ViewBag cần thiết cho PartialView
             ViewBag.MaTaiKhoan = User.FindFirstValue("MaTaiKhoan");
             ViewBag.CurrentTheLoaiId = theLoaiId;
             ViewBag.SearchString = searchString;
 
-            // Query giống như Index
             var query = _context.Sach
                 .Include(s => s.TheLoai)
                 .Where(s => s.TrangThai == "Con Hang");
@@ -80,23 +103,30 @@ namespace QuanLyCuaHangSach.Controllers
             if (theLoaiId.HasValue)
                 query = query.Where(s => s.MaTheLoai == theLoaiId.Value);
 
+            var list = await query.ToListAsync();
             if (!string.IsNullOrWhiteSpace(searchString))
-                query = query.Where(s => s.TieuDe.Contains(searchString));
+            {
+                string searchNoAccent = RemoveDiacritics(searchString.ToLower());
+                var keywords = searchNoAccent.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            // Tính tổng trang
-            var totalItems = await query.CountAsync();
+                list = list.Where(s =>
+                {
+                    var combined = RemoveDiacritics((s.TieuDe + " " + s.TacGia).ToLower());
+                    return keywords.All(k => combined.Contains(k));
+                }).ToList();
+            }
+
+            var totalItems = list.Count;
             var totalPages = (int)Math.Ceiling(totalItems / (double)PageSize);
 
             ViewBag.PageNumber = pageNumber;
             ViewBag.TotalPages = totalPages;
 
-            // Lấy dữ liệu cho trang được request
-            var items = await query
+            var items = list
                 .Skip((pageNumber - 1) * PageSize)
                 .Take(PageSize)
-                .ToListAsync();
+                .ToList();
 
-            // Trả về PartialView _ListWrapper (chứa #danhSachSach và #pagination)
             return PartialView("_ListWrapper", items);
         }
 
@@ -127,6 +157,23 @@ namespace QuanLyCuaHangSach.Controllers
             ViewBag.TongHoaDon = tongHoaDon;
             ViewBag.SachBanChay = sachBanChay;
 
+            return View();
+        }
+        // Action Giới thiệu
+        public IActionResult GioiThieu()
+        {
+            return View();
+        }
+
+        // Action Liên hệ
+        public IActionResult LienHe()
+        {
+            return View();
+        }
+
+        // Action Hướng dẫn
+        public IActionResult HuongDan()
+        {
             return View();
         }
     }

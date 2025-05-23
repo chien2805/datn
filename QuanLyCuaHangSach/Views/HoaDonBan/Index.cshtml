@@ -1,5 +1,39 @@
 ﻿@model IEnumerable<dynamic>
+@{
+    Layout = "_Layout";
 
+}
+@* <audio id="newOrderSound" src="~/sounds/ting.mp3" preload="auto"></audio> *@
+@* <script> *@
+@*     async function checkNewOrders() { *@
+@*         try { *@
+@*             const response = await fetch('/HoaDonBan/GetSoLuongDonOnlineCho'); *@
+@*             const currentCount = await response.json(); *@
+
+@*             // Lấy số đơn trước đó đã lưu trong localStorage (hoặc 0 nếu chưa có) *@
+@*             const storedCount = parseInt(localStorage.getItem('lastKnownOrderCount')) || 0; *@
+
+@*             if (currentCount > storedCount) { *@
+@*                 document.getElementById('newOrderSound').play(); *@
+
+@*                 // Lưu lại số mới nhất để không kêu lại lần nữa sau reload *@
+@*                 localStorage.setItem('lastKnownOrderCount', currentCount); *@
+@*             } *@
+
+@*         } catch (error) { *@
+@*             console.error("Lỗi khi kiểm tra đơn hàng:", error); *@
+@*         } *@
+@*     } *@
+
+@*     setInterval(checkNewOrders, 10000); *@
+@*     checkNewOrders(); *@
+@* </script> *@
+<style>
+
+    footer {
+        display: none;
+    }
+</style>
 
 <h2 style="color: #4a90e2; font-weight: bold; margin-bottom: 20px;">📄 Danh sách hóa đơn bán</h2>
 
@@ -18,31 +52,192 @@
             <th style="padding: 12px; text-align: center;">Ngày Lập</th>
             <th style="padding: 12px; text-align: center;">Tổng Tiền</th>
             <th style="padding: 12px; text-align: center;">Loại Hóa Đơn</th>
+            <th style="padding: 12px; text-align: center;">Trạng Thái</th> <!-- Cột Trạng Thái -->
+            <th style="padding: 12px; text-align: center;">Xác nhận</th> <!-- Cột Trạng Thái -->
+
             <th style="padding: 12px; text-align: center;">Thao Tác</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var hoaDon in Model)
         {
-            <tr style="text-align: center; background-color: #f9f9f9;">
+            <tr id="tr_@hoaDon.MaHoaDon" style="text-align: center; background-color: #f9f9f9;">
                 <td style="padding: 10px;">@hoaDon.MaHoaDon</td>
                 <td style="padding: 10px;">@hoaDon.TenKhachHang</td>
                 <td style="padding: 10px;">@hoaDon.SoDienThoai</td>
                 <td style="padding: 10px;">@(hoaDon.TenNhanVien ?? "Không có")</td>
                 <td style="padding: 10px;">@hoaDon.NgayLap.ToString("dd/MM/yyyy")</td>
                 <td style="padding: 10px;">@hoaDon.TongTien.ToString("N0") VNĐ</td>
-                <td style="padding: 10px;">@(hoaDon.LoaiHoaDon == "quay" ? "Tại quầy" : "Online")</td>
+                <td style="padding: 10px;">@(hoaDon.LoaiHoaDon == "quay" ? "Tại quầy" : "Online"), @hoaDon.LoaiThanhToan</td>
+                <td class="status" style="padding:10px;">@hoaDon.TrangThai</td>
                 <td style="padding: 10px;">
+                    @if (hoaDon.TrangThai == "Chờ xác nhận")
+                    {
+                        <button type="button"
+                                class="btn btn-sm xacnhan-btn"
+                                style="background-color: #27ae60; color: #fff; border-radius: 4px; padding: 6px 12px; width: 100px; border: none;"
+                                onclick="return xacNhan(@hoaDon.MaHoaDon);">
+                            Xác Nhận
+                        </button>
+                        <button type="button"
+                                class="btn btn-sm huy-btn"
+                                style="background-color: #e74c3c; color: #fff; border-radius: 4px; padding: 6px 12px; width: 100px; border: none; margin-top:5px"
+                                onclick="return huyDon(@hoaDon.MaHoaDon);">
+                            Hủy
+                        </button>
+                    }
+                    else if (hoaDon.TrangThai == "Chờ giao hàng")
+                    {
+                        <button type="button"
+                                class="btn btn-sm giaohang-btn"
+                                style="background-color: #4a90e2; color: #fff; border-radius: 4px; padding: 6px 12px; width: 100px; border: none;"
+                                onclick="return giaoHang(@hoaDon.MaHoaDon);">
+                            Đã Giao
+                        </button>
+                        <button type="button"
+                                class="btn btn-sm huy-btn"
+                                style="background-color: #e74c3c; color: #fff; border-radius: 4px; padding: 6px 12px; width: 100px; border: none; margin-top:5px"
+                                onclick="return huyDon(@hoaDon.MaHoaDon);">
+                            Hủy
+                        </button>
+                    }
+                    else
+                    {
+                        <span>@hoaDon.TrangThai</span>
+                    }
+                </td>
+
+        
+                <td class="d-flex"style="padding: 10px;">
                     <button class="btn btn-sm" style="background-color: #7ed6df; color: #333333; border-radius: 4px;"
                             onclick="xemHoaDon('@hoaDon.MaHoaDon', '@hoaDon.LoaiHoaDon')">
                         Xem
+                    </button>
+                    <button class="btn btn-sm"
+                            style="background-color: #4a90e2; color: #ffffff; border-radius: 4px; margin-left: 5px;"
+                            onclick="inHoaDon(@hoaDon.MaHoaDon, '@hoaDon.LoaiHoaDon')">
+                        In
                     </button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function inHoaDon(maHoaDon, loai) {
+        // build URL với cả maHoaDon và loai
+        const url = `/HoaDonBan/InHoaDon?maHoaDon=${maHoaDon}&loai=${loai}`;
+        fetch(url)
+            .then(res => res.text())
+            .then(html => {
+                // mở cửa sổ mới in
+                const win = window.open('', '', 'width=800,height=600');
+                win.document.write(html);
+                win.document.close();
+                win.focus();
+                win.print();
+                win.close();
+            })
+            .catch(err => {
+                console.error('Lỗi khi lấy nội dung hoá đơn:', err);
+                alert('Không thể in hoá đơn. Vui lòng thử lại.');
+            });
+    }
+</script>
+<script>
+        function xacNhan(maHoaDon) {
+        if (!confirm("Bạn có chắc chắn muốn xác nhận đơn #" + maHoaDon + "?")) return false;
+        $.ajax({
+            url: '@Url.Action("XacNhan", "HoaDonBan")',
+            type: 'POST',
+            data: { maHoaDon },
+            success: function (res) {
+                if (res.success) {
+                    location.reload(); // ✅ Reload lại trang sau khi xác nhận thành công
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function () {
+                alert("Lỗi kết nối.");
+            }
+        });
+        return false;
+    }
 
+    function giaoHang(maHoaDon) {
+        if (!confirm("Xác nhận đơn #" + maHoaDon + " đã giao hàng?")) return false;
+        $.ajax({
+            url: '@Url.Action("XacNhanGiaoHang", "HoaDonBan")',
+            type: 'POST',
+            data: { maHoaDon },
+            success: function (res) {
+                if (res.success) {
+                    var $tr = $('#tr_' + maHoaDon);
+                    $tr.find('.status').text(res.newStatus);
+                    $tr.find('.giaohang-btn').replaceWith('<span>' + res.newStatus + '</span>');
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function () {
+                alert("Lỗi kết nối.");
+            }
+        });
+        return false;
+    }
+    function huyDon(maHoaDon) {
+        if (!confirm("Bạn có chắc chắn muốn hủy đơn #" + maHoaDon + "?")) return false;
+        $.ajax({
+            url: '@Url.Action("HuyDon", "HoaDonBan")',
+            type: 'POST',
+            data: { maHoaDon },
+            success: function(res) {
+                if (res.success) {
+                    var $tr = $('#tr_' + maHoaDon); // Giả sử mỗi đơn hàng có một ID dòng tr riêng
+                    $tr.find('.status').text("Đã hủy"); // Cập nhật trạng thái
+                    $tr.find('.xacnhan-btn').remove(); // Ẩn nút Xác Nhận
+                    $tr.find('.giaohang-btn').remove(); // Ẩn nút Đã Giao
+                    $tr.find('.huy-btn').replaceWith('<span>Đã hủy</span>'); // Thay thế nút Hủy bằng "Đã hủy"
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function() {
+                alert("Lỗi kết nối.");
+            }
+        });
+        return false;
+    }
+
+</script>
+
+<!-- Phân trang -->
+<div class="text-center" style="margin-top: 20px;">
+    <ul class="pagination" style="justify-content: center; margin-top: 20px; padding-left: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang trước</a>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@i" style="padding: 10px 15px; background-color: #f0ebe3; color: #4a90e2; border-radius: 5px; text-decoration: none; @(i == ViewBag.CurrentPage ? "font-weight: bold; background-color: #4a90e2; color: #fff;" : "")">@i</a>
+            </li>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang sau</a>
+            </li>
+        }
+    </ul>
+</div>
 
 
 <!-- Modal xem hóa đơn -->
@@ -126,6 +321,7 @@
         </div>
     </div>
 </div>
+
 
 
 @section Scripts {

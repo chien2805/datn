@@ -30,11 +30,25 @@ namespace QuanLyCuaHangSach.Controllers
 
         // Hiển thị danh sách tất cả tài khoản người dùng
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var taiKhoans = _context.TaiKhoanNguoiDung.ToList();
+            int pageSize = 10; // Số lượng items hiển thị trên mỗi trang
+            var totalItems = await _context.TaiKhoanNguoiDung.CountAsync(); // Đếm tổng số items
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize); // Tính tổng số trang
+
+            // Lấy dữ liệu cho trang hiện tại
+            var taiKhoans = await _context.TaiKhoanNguoiDung
+                .Skip((page - 1) * pageSize) // Bỏ qua số lượng items của các trang trước
+                .Take(pageSize) // Lấy số lượng items theo pageSize
+                .ToListAsync();
+
+            // Cập nhật ViewBag để truyền dữ liệu phân trang vào view
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
             return View(taiKhoans);
         }
+
 
         // Hiển thị form tạo mới tài khoản người dùng
         [HttpGet]

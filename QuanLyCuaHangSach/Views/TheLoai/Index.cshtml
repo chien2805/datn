@@ -1,6 +1,15 @@
 ﻿
 @model IEnumerable<TheLoai>
+@{
 
+    Layout = "_Layout";
+}
+<style>
+
+    footer {
+        display: none;
+    }
+</style>
 <h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Thể Loại</h2>
 
 @* <a asp-action="Create" class="btn btn-primary" style="padding: 10px 20px; margin-bottom: 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;">Thêm thể loại</a> *@
@@ -13,7 +22,7 @@
         <tr>
             <th style="padding: 10px; text-align: center;">Tên thể loại</th>
             <th style="padding: 10px; text-align: center;">Mô tả</th>
-            <th style="padding: 10px; text-align: center;">Thao tác</th>
+            <th style="padding: 10px; text-align: center;width:200px">Thao tác</th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +41,31 @@
         }
     </tbody>
 </table>
+<!-- Phân trang -->
+<div class="text-center" style="margin-top: 20px;">
+    <ul class="pagination" style="justify-content: center; margin-top: 20px; padding-left: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang trước</a>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@i" style="padding: 10px 15px; background-color: #f0ebe3; color: #4a90e2; border-radius: 5px; text-decoration: none; @(i == ViewBag.CurrentPage ? "font-weight: bold; background-color: #4a90e2; color: #fff;" : "")">@i</a>
+            </li>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang sau</a>
+            </li>
+        }
+    </ul>
+</div>
 <!-- Modal Thêm Thể Loại -->
 <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -47,7 +81,9 @@
                     @Html.AntiForgeryToken()
                     <div class="form-group">
                         <label for="TenTheLoai">Tên thể loại</label>
-                        <input type="text" name="TenTheLoai" class="form-control" required />
+                        <input type="text" id="TenTheLoai" name="TenTheLoai" class="form-control" required onblur="kiemTraTenTheLoai()" />
+                        <small id="baoLoiTenTheLoai" class="text-danger" style="display:none;">Tên thể loại đã tồn tại.</small>
+
                     </div>
                     <div class="form-group">
                         <label for="MoTa">Mô tả</label>
@@ -62,6 +98,29 @@
         </form>
     </div>
 </div>
+
+<script>
+    function kiemTraTenTheLoai() {
+        var ten = $('#TenTheLoai').val();
+        if (ten.trim() === '') return;
+
+        $.ajax({
+            url: '/TheLoai/KiemTraTenTheLoai',
+            type: 'POST',
+            data: { tenTheLoai: ten },
+            success: function (isValid) {
+                if (!isValid) {
+                    $('#baoLoiTenTheLoai').show();
+                    $('button[type="submit"]').prop('disabled', true);
+                } else {
+                    $('#baoLoiTenTheLoai').hide();
+                    $('button[type="submit"]').prop('disabled', false);
+                }
+            }
+        });
+    }
+</script>
+
 
 <!-- Modal Sửa Thể Loại -->
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">

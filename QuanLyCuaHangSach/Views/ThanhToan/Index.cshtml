@@ -2,77 +2,160 @@
 
 @{
     ViewData["Title"] = "Thanh toán";
+    Layout = "_Layout";
+
 }
+
+<style>
+
+    footer {
+        display: none;
+    }
+</style>
 
 <h2 class="text-center">Xác nhận thanh toán</h2>
 
 @if (Model.ChiTietGioHangs.Any())
 {
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Hình ảnh</th>
-                <th>Tên sách</th>
-                <th>Đơn giá</th>
-                <th>Số lượng</th>
-                <th>Thành tiền</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.ChiTietGioHangs)
+    <div class="row">
+        <!-- Cột bên trái: Danh sách sách -->
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Hình ảnh</th>
+                        <th>Tên sách</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ChiTietGioHangs)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@(item.Sach.HinhAnh ?? "/images/sach/default.jpg")" alt="@item.Sach.TieuDe" style="width: 50px; height: 50px; object-fit: cover;" />
+                            </td>
+                            <td>@item.Sach.TieuDe</td>
+                            <td>@item.Sach.Gia.ToString("N0") đ</td>
+                            <td>@item.SoLuong</td>
+                            <td>@(item.SoLuong * item.Sach.Gia) đ</td>
+                        </tr>
+                    }
+
+                    <!-- Dòng tổng tiền -->
+                    <tr>
+                        <td colspan="4" class="text-end"><b>Tổng tiền:</b></td>
+                        <td><b>@ViewBag.TongTien.ToString("N0") đ</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Cột bên phải: Phương thức thanh toán -->
+        <div class="col-md-4">
+            <!-- 🔹 Phương thức thanh toán -->
+            <div class="text-center mb-3">
+                <h4>Phương thức thanh toán</h4> <!-- Dòng chữ "Phương thức thanh toán" -->
+                <div class="mb-2">
+                    <button type="button" id="momoButton" class="btn btn-info" onclick="showPaymentMethod('momo')" style="width: 100%; font-size: 16px;">Thanh toán qua MoMo</button>
+                </div>
+                <div class="mb-2">
+                    <button type="button" id="cashButton" class="btn btn-info" onclick="showPaymentMethod('cash')" style="width: 100%; font-size: 16px;">Thanh toán khi nhận hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 🔹 Form nhập thông tin khách hàng MoMo (ẩn ban đầu) -->
+    <div id="momoForm" style="display: none;">
+        <h4>Thông tin khách hàng</h4>
+        <form action="/Payment/CreatePaymentUrl" id="frmCreateOrder" method="POST" class="col-md-8">
+            <div class="mb-3">
+                <label for="FullName" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Tên khách hàng</label>
+                <input type="text" class="form-control" id="FullName" name="FullName" required
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div class="mb-3">
+                <label for="DiaChi" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Địa chỉ</label>
+                <input type="text" class="form-control" id="DiaChi" name="DiaChi" required
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div class="mb-3">
+                <label for="SoDienThoai" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Số điện thoại</label>
+                <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" required
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; box-sizing: border-box;">
+            </div>
+
+            <!-- 🔹 Dữ liệu đơn hàng -->
+            <input type="hidden" name="Amount" value="@ViewBag.TongTien" />
+            <input type="hidden" name="OrderInfo" value="Thanh toán đơn hàng qua Momo" />
+            <input type="hidden" name="OrderId" value="@Guid.NewGuid().ToString()" />
+
+            <!-- 🔹 Danh sách sách đặt mua -->
+            @for (var i = 0; i < Model.ChiTietGioHangs.Count; i++)
             {
-                <tr>
-                    <td>
-                        <img src="@(item.Sach.HinhAnh ?? "/images/sach/default.jpg")" alt="@item.Sach.TieuDe" style="width: 50px; height: 50px; object-fit: cover;" />
-                    </td>
-                    <td>@item.Sach.TieuDe</td>
-                    <td>@item.Sach.Gia.ToString("N0") đ</td>
-                    <td>@item.SoLuong</td>
-                    <td>@(item.SoLuong * item.Sach.Gia) đ</td>
-                </tr>
+                <input type="hidden" name="DanhSachSach[@i].MaSach" value="@Model.ChiTietGioHangs[i].Sach.MaSach" />
+                <input type="hidden" name="DanhSachSach[@i].TieuDe" value="@Model.ChiTietGioHangs[i].Sach.TieuDe" />
+                <input type="hidden" name="DanhSachSach[@i].SoLuong" value="@Model.ChiTietGioHangs[i].SoLuong" />
+                <input type="hidden" name="DanhSachSach[@i].DonGia" value="@Model.ChiTietGioHangs[i].Sach.Gia" />
             }
 
-            <!-- Dòng tổng tiền -->
-            <tr>
-                <td colspan="4" class="text-end"><b>Tổng tiền:</b></td>
-                <td><b>@ViewBag.TongTien.ToString("N0") đ</b></td>
-            </tr>
-        </tbody>
-    </table>
-    <!-- 🔹 Form nhập thông tin khách hàng -->
-    <h4>Thông tin khách hàng</h4>
-    <form action="/Payment/CreatePaymentUrl" id="frmCreateOrder" method="POST">
-        <div class="mb-3">
-            <label for="FullName" class="form-label">Tên khách hàng</label>
-            <input type="text" class="form-control" id="FullName" name="FullName" required>
-        </div>
-        <div class="mb-3">
-            <label for="DiaChi" class="form-label">Địa chỉ</label>
-            <input type="text" class="form-control" id="DiaChi" name="DiaChi" required>
-        </div>
-        <div class="mb-3">
-            <label for="SoDienThoai" class="form-label">Số điện thoại</label>
-            <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" required>
-        </div>
+            <button type="submit" class="btn btn-danger" style="width: 100%; padding: 10px; border-radius: 5px; font-size: 16px; background-color: #e74c3c; color: white;">Thanh toán với MoMo</button>
+        </form>
+    </div>
 
-        <!-- 🔹 Dữ liệu đơn hàng -->
-        <input type="hidden" name="Amount" value="@ViewBag.TongTien" />
-        <input type="hidden" name="OrderInfo" value="Thanh toán đơn hàng qua Momo" />
-        <input type="hidden" name="OrderId" value="@Guid.NewGuid().ToString()" />
+    <!-- 🔹 Form nhập thông tin khách hàng Thanh toán khi nhận hàng (ẩn ban đầu) -->
+    <div id="cashForm" style="display: none;">
+        <h4>Thông tin khách hàng</h4>
+        <form asp-action="ThanhToan" method="post" class="col-md-8">
+            <div class="mb-3">
+                <label for="FullName" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Tên khách hàng</label>
+                <input type="text" name="FullName" placeholder="Họ tên" required
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div class="mb-3">
+                <label for="DiaChi" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Địa chỉ</label>
+                <input type="text" name="DiaChi" placeholder="Địa chỉ" required
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div class="mb-3">
+                <label for="SoDienThoai" class="form-label" style="font-weight: bold; margin-bottom: 5px;">Số điện thoại</label>
+                <input type="text" name="SoDienThoai" placeholder="Số điện thoại" required
+                       style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; box-sizing: border-box;">
+            </div>
 
-        <!-- 🔹 Danh sách sách đặt mua -->
-        @for (var i = 0; i < Model.ChiTietGioHangs.Count; i++)
-        {
-            <input type="hidden" name="DanhSachSach[@i].MaSach" value="@Model.ChiTietGioHangs[i].Sach.MaSach" />
-            <input type="hidden" name="DanhSachSach[@i].TieuDe" value="@Model.ChiTietGioHangs[i].Sach.TieuDe" />
-            <input type="hidden" name="DanhSachSach[@i].SoLuong" value="@Model.ChiTietGioHangs[i].SoLuong" />
-            <input type="hidden" name="DanhSachSach[@i].DonGia" value="@Model.ChiTietGioHangs[i].Sach.Gia" />
+            <input type="hidden" name="TongTien" value="@ViewBag.TongTien" />
+
+            @for (var i = 0; i < Model.ChiTietGioHangs.Count; i++)
+            {
+                var ct = Model.ChiTietGioHangs[i];
+                <input type="hidden" name="DanhSachSach[@i].MaSach" value="@ct.Sach.MaSach" />
+                <input type="hidden" name="DanhSachSach[@i].TenSach" value="@ct.Sach.TieuDe" />
+                <input type="hidden" name="DanhSachSach[@i].SoLuong" value="@ct.SoLuong" />
+                <input type="hidden" name="DanhSachSach[@i].Gia" value="@ct.Sach.Gia" />
+            }
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px; border-radius: 5px; font-size: 16px; background-color: #3498db; color: white;">Thanh toán khi nhận hàng</button>
+        </form>
+    </div>
+    <!-- 🔹 JavaScript để hiển thị form tương ứng -->
+    <script>
+        function showPaymentMethod(method) {
+            // Ẩn cả hai form trước
+            document.getElementById('momoForm').style.display = 'none';
+            document.getElementById('cashForm').style.display = 'none';
+
+            // Hiển thị form tương ứng với phương thức thanh toán
+            if (method === 'momo') {
+                document.getElementById('momoForm').style.display = 'block';
+            } else if (method === 'cash') {
+                document.getElementById('cashForm').style.display = 'block';
+            }
         }
-
-        <button type="submit" class="btn btn-danger">Thanh toán với MoMo</button>
-    </form>
-
-
+    </script>
 }
 else
 {

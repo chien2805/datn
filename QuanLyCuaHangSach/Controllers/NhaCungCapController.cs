@@ -15,11 +15,25 @@ namespace QuanLyCuaHangSach.Controllers
         }
 
         // GET: NhaCungCap
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var nhaCungCapList = await _context.NhaCungCap.ToListAsync();
+            int pageSize = 10; // Số lượng items hiển thị trên mỗi trang
+            var totalItems = await _context.NhaCungCap.CountAsync(); // Đếm tổng số items
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize); // Tính tổng số trang
+
+            // Lấy dữ liệu cho trang hiện tại
+            var nhaCungCapList = await _context.NhaCungCap
+                .Skip((page - 1) * pageSize) // Bỏ qua số lượng items của các trang trước
+                .Take(pageSize) // Lấy số lượng items theo pageSize
+                .ToListAsync();
+
+            // Cập nhật ViewBag để truyền dữ liệu phân trang vào view
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
             return View(nhaCungCapList);
         }
+
 
         // GET: NhaCungCap/Create
         public IActionResult Create()

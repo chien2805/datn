@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var postUrl = "tich-hop-thanh-toan-momo-voi-asp-net-core-7d5e4hP";
+    Layout = "_Layout";
+}
+
+
+
+<div style="text-align: center; padding: 40px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+    <h1 style="font-size: 2.5rem; color: #4a90e2; margin-bottom: 30px;">
+        Bạn đã đặt hàng thành công tại cửa hàng sách Trảng Dài
+    </h1>
+
+    <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 30px;">
+        Đơn hàng của bạn sẽ đến trong vòng 24 tiếng.
+    </p>
+    <p style="font-size: 1.2rem; color: #333;">
+        Xin cảm ơn quý khách đã mua hàng!
+    </p>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="@Url.Action("Index", "TrangChu")"
+           style="display: inline-block; padding: 10px 20px; background-color: #4a90e2; color: white;
+              border-radius: 5px; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            Quay lại trang chủ
+        </a>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+    });
+</script>
+<style>
+    footer {
+        display: none;
+    }
+</style>

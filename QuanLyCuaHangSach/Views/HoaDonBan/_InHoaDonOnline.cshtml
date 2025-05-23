@@ -1,0 +1,62 @@
+﻿@model QuanLyCuaHangSach.Models.HoaDonBanOnline
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hóa đơn</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4a90e2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0ebe3;
+        }
+    </style>
+</head>
+<div>
+    <h2>HÓA ĐƠN ONLINE</h2>
+    <p><strong>Mã HĐ:</strong> @Model.MaHoaDon</p>
+    <p><strong>Khách hàng:</strong> @Model.TenKhachHang</p>
+    <p><strong>SĐT:</strong> @Model.SoDienThoai</p>
+    <p><strong>Ngày lập:</strong> @Model.NgayTao.ToString("dd/MM/yyyy")</p>
+    <p><strong>Hình thức thanh toán:</strong> @Model.LoaiThanhToan</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Sách</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ct in Model.ChiTietHoaDon)
+            {
+                <tr>
+                    <td>@ct.Sach.TieuDe</td>
+                    <td>@ct.Sach.Gia.ToString("N0") VNĐ</td>
+                    <td>@ct.SoLuong</td>
+                    <td>@ct.ThanhTien.ToString("N0") VNĐ</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3>Tổng tiền: @Model.TongTien.ToString("N0") VNĐ</h3>
+</div>

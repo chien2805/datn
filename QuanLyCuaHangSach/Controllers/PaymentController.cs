@@ -62,7 +62,7 @@ namespace QuanLyCuaHangSach.Controllers
                     SoDienThoai = soDienThoai,
                     NgayTao = DateTime.Now,
                     TongTien = decimal.Parse(response.Amount),
-                    TrangThai = "Đã thanh toán", // ✅ Thêm trạng thái đơn hàng
+                    TrangThai = "Chờ xác nhận", // ✅ Thêm trạng thái đơn hàng
                     LoaiThanhToan = "Momo",
                     MaTaiKhoan = maTaiKhoan.Value,
 
@@ -104,7 +104,7 @@ namespace QuanLyCuaHangSach.Controllers
                         var sach = _context.Sach.FirstOrDefault(s => s.MaSach == maSach);
                         if (sach != null)
                         {
-                            sach.SoLuongTon -= soLuong;
+                            
                             if (sach.SoLuongTon < 0) sach.SoLuongTon = 0; // Đảm bảo không âm
                         }
                     }
@@ -117,7 +117,6 @@ namespace QuanLyCuaHangSach.Controllers
 
             return View(response);
         }
-
 
 
 

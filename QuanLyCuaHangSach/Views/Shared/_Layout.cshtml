@@ -14,6 +14,7 @@
     @{
         var userRole = Context.Session.GetString("UserRole"); // Vai trò: "Admin" hoặc "KhachHang"
         var isLoggedIn = Context.Session.GetString("UserEmail") != null; // Kiểm tra đã đăng nhập chưa
+        var daDangNhap = Context.Session.GetString("MaTaiKhoan") != null;
     }
     <!-- Hiển thị thông báo từ TempData -->
     @if (TempData["SuccessMessage"] != null)
@@ -22,25 +23,25 @@
             @TempData["SuccessMessage"]
         </div>
     }
-    <header style="background-color: #2f855a; height: 50px;" class="text-white">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark h-100 p-0">
-            <div class="container-fluid d-flex justify-content-between align-items-center h-100 flex-nowrap">
+    <header style="background-color: #4a90e2; height: 50px;" class="text-white">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark h-100 p-0" style="margin: 0 100px;">
+            <div class="container-fluid d-flex justify-content-between align-items-center h-100 flex-nowrap" >
                 <!-- Bên trái: Logo + Menu -->
                 <div class="d-flex align-items-center gap-4 h-100">
-                    <a class="navbar-brand text-white mb-0 h-100 d-flex align-items-center" asp-area="" asp-controller="Sach" asp-action="Index">
-                        QuanLyCuaHangSach
-                    </a>
 
-                    @if (userRole != "Admin")
+                    @if (userRole != "Admin" && userRole != "NhanVien")
                     {
                         <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="Index">🏠 Trang chủ</a>
-                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="GioiThieu">Giới thiệu</a>
-                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="LienHe">Liên hệ</a>
+                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="GioiThieu">ℹ️ Giới thiệu</a>
+                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="LienHe">📞 Liên hệ</a>
+                        <a class="text-white text-decoration-none d-flex align-items-center h-100" asp-controller="TrangChu" asp-action="HuongDan">📚 Hướng dẫn</a>
                     }
                 </div>
-
+                <a class="navbar-brand text-white mb-0 h-100 d-flex align-items-center" asp-area="" asp-controller="TrangChu" asp-action="Index" style="font-weight: bold; font-size: 1.25rem;">
+                    Cừa Hàng Sách Trảng Dài
+                </a>
                 <!-- Bên phải: Giỏ hàng + Đăng nhập/Đăng ký hoặc Xin chào -->
-                @if (userRole != "Admin")
+                @if (userRole != "Admin" && userRole != "NhanVien")
                 {
                     <div class="d-flex align-items-center gap-3 h-100">
                         <button type="button" class="btn btn-outline-light position-relative d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#gioHangModal">
@@ -63,7 +64,7 @@
                                 <span class="text-white" style="cursor: pointer;">
                                     <i class="fa-solid fa-user"></i> Xin chào, @(string.IsNullOrEmpty(Context.Session.GetString("HoTen")) ? Context.Session.GetString("UserEmail") : Context.Session.GetString("HoTen"))
                                 </span>
-                                <div id="userOptions" style="display: none; position: absolute; top: 100%; right: 0; background: white; color: black; border: 1px solid #ccc; border-radius: 5px; z-index: 1000;">
+                                <div id="userOptions" style="display: none; position: absolute; top: 100%; right: 0; background: white; color: black; border: 1px solid #ccc; border-radius: 5px; z-index: 1000;width:200px">
                                     <a href="#" class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#thongTinTaiKhoanModal">
                                         <i class="fa-solid fa-id-card"></i> Thông tin tài khoản
                                     </a>
@@ -82,23 +83,26 @@
         </nav>
     </header>
 
-
-
-
-    @if (userRole == "Admin")
+    @if (userRole == "Admin" || userRole == "NhanVien")
     {
         <div class="d-flex">
             <div class="admin-sidebar p-3 vh-100">
                 <h4 class="text-center admin-title">📋 Quản lý</h4>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" asp-controller="TrangChu" asp-action="Admin">Tổng quan</a></li>
+                    @* Các mục chung cho Admin và Nhân viên *@
                     <li class="nav-item"><a class="nav-link" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="Sach" asp-action="Index">📖 Sách</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="NhaCungCap" asp-action="Index">🏢 Nhà cung cấp</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="TaiKhoanNguoiDung" asp-action="Index">👤 Tài khoản</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="HoaDonBan" asp-action="Index">📜 Hóa đơn</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="ThongKe" asp-action="Index"><i class="fas fa-chart-pie me-2"></i> Thống kê</a></li>
+
+                    @* Các mục chỉ dành riêng cho Admin *@
+                    @if (userRole == "Admin")
+                    {
+                        <li class="nav-item"><a class="nav-link" asp-controller="TrangChu" asp-action="Admin">📊 Tổng quan</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="NhaCungCap" asp-action="Index">🏢 Nhà cung cấp</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="TaiKhoanNguoiDung" asp-action="Index">👤 Tài khoản</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="ThongKe" asp-action="Index"><i class="fas fa-chart-pie me-2"></i> Thống kê</a></li>
+                    }
                 </ul>
                 <form id="logoutForm" asp-controller="DangNhap" asp-action="Logout" method="post">
                     <button type="submit" class="btn btn-logout mt-4">🚪 Đăng xuất</button>
@@ -123,12 +127,82 @@
         </div>
     }
 
+    @if (userRole == "Admin")
+{
+    <audio id="newOrderSound" src="~/sounds/ting.mp3" preload="auto"></audio>
+    <script>
+        async function checkNewOrders() {
+            try {
+                const response = await fetch('/HoaDonBan/GetSoLuongDonOnlineCho');
+                const currentCount = await response.json();
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - QuanLyCuaHangSach - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                // Lấy số đơn trước đó đã lưu trong localStorage (hoặc 0 nếu chưa có)
+                const storedCount = parseInt(localStorage.getItem('lastKnownOrderCount')) || 0;
+
+                if (currentCount > storedCount) {
+                    document.getElementById('newOrderSound').play();
+
+                    // Lưu lại số mới nhất để không kêu lại lần nữa sau reload
+                    localStorage.setItem('lastKnownOrderCount', currentCount);
+                }
+
+            } catch (error) {
+                console.error("Lỗi khi kiểm tra đơn hàng:", error);
+            }
+        }
+
+        setInterval(checkNewOrders, 10000);
+        checkNewOrders();
+    </script>
+}
+
+    <footer style="background-color: #fff8f0; color: #333333; padding: 40px 20px 20px; font-family: Arial, sans-serif; margin-top: 40px; border-top: 3px solid #2f855a;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+
+            <!-- Logo & giới thiệu -->
+            <div style="flex: 1 1 220px; margin: 10px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #ffffff;">
+                <h2 style="font-size: 24px; color: #4a90e2; margin-bottom: 10px;">📚 BookStore</h2>
+                <p style="font-size: 14px; color: #777777;">Khám phá kho tàng sách đa dạng, dành cho mọi lứa tuổi và sở thích.</p>
+            </div>
+
+            <!-- Liên kết nhanh -->
+            <div style="flex: 1 1 220px; margin: 10px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #ffffff;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; color: #4a90e2;">Liên kết</h3>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Trang chủ</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/sach" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Tất cả sách</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/the-loai" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Thể loại</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/lien-he" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- Hỗ trợ khách hàng -->
+            <div style="flex: 1 1 220px; margin: 10px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #ffffff;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; color: #4a90e2;">Hỗ trợ</h3>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li style="margin-bottom: 6px;"><a href="/huong-dan-mua-hang" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Hướng dẫn mua hàng</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/chinh-sach-doi-tra" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Chính sách đổi trả</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/cau-hoi-thuong-gap" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+
+            <!-- Liên hệ -->
+            <div style="flex: 1 1 220px; margin: 10px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #ffffff;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; color: #4a90e2;">Liên hệ</h3>
+                <p style="font-size: 14px; color: #777;">📍 123 Đường Sách, Quận 1, TP.HCM</p>
+                <p style="font-size: 14px; color: #777;">📧 support@bookstore.vn</p>
+                <p style="font-size: 14px; color: #777;">📞 0123 456 789</p>
+            </div>
+
+        </div>
+
+        <div style="border-top: 1px solid #e0e0e0; text-align: center; font-size: 14px; color: #777777; margin-top: 30px; padding-top: 10px;">
+            &copy; 2025 <span style="color: #4a90e2;">BookStore</span>. All rights reserved.
         </div>
     </footer>
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -154,6 +228,9 @@
                             <input type="password" class="form-control" name="password" required>
                         </div>
                         <div id="errorMessage" class="text-danger"></div> <!-- Hiển thị lỗi ở đây -->
+                        <div class="text-center mt-2">
+                            <a href="#" onclick="showForgotPasswordModal()">Quên mật khẩu?</a>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeLoginModal()">Huỷ</button>
                             <button type="submit" class="btn btn-primary">Đăng nhập</button>
@@ -163,6 +240,56 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Quên mật khẩu -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quên mật khẩu</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Đóng">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgotPasswordForm">
+                        <div class="form-group">
+                            <label for="forgotEmail">Nhập email:</label>
+                            <input type="email" class="form-control" id="forgotEmail" name="email" required>
+                        </div>
+                        <div id="forgotError" class="text-danger mt-2"></div>
+                        <div id="forgotSuccess" class="text-success mt-2"></div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Gửi liên kết</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showForgotPasswordModal() {
+            $('#loginModal').modal('hide');
+            $('#forgotPasswordModal').modal('show');
+        }
+
+        $('#forgotPasswordForm').submit(function (e) {
+            e.preventDefault();
+            const email = $('#forgotEmail').val();
+
+            $.post('/DangNhap/SendResetLink', { email }, function (res) {
+                if (res.success) {
+                    $('#forgotSuccess').text("Liên kết đặt lại mật khẩu đã được gửi đến email của bạn.");
+                    $('#forgotError').text("");
+                } else {
+                    $('#forgotError').text(res.message);
+                    $('#forgotSuccess').text("");
+                }
+            });
+        });
+    </script>
     <!-- Modal Đăng ký -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -465,7 +592,7 @@
 
     <!-- Modal Giỏ Hàng -->
     <!-- Offcanvas giỏ hàng -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="gioHangModal" aria-labelledby="gioHangModalLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="gioHangModal" aria-labelledby="gioHangModalLabel" >
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="gioHangModalLabel">Giỏ hàng</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -480,7 +607,7 @@
 
             <!-- Nút Xóa giỏ hàng & Thanh toán -->
             <button class="btn btn-danger mt-2 w-100" onclick="xoaGioHang()">Xóa giỏ hàng</button>
-            <button class="btn btn-success mt-2 w-100" onclick="thanhToan()">Thanh toán</button>
+            <button class="btn btn-success mt-2 w-100" onclick="thanhToan()" @(daDangNhap ? "" : "disabled data-bs-toggle='tooltip' title='Yêu cầu đăng nhập' style='cursor: not-allowed;'")>Thanh toán</button>
         </div>
     </div>
     <!-- Toast thông báo -->
@@ -494,6 +621,41 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal thông báo thuê thành công -->
+    <div class="modal fade" id="thanhCongModal" tabindex="-1" aria-labelledby="thanhCongModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="thanhCongModalLabel">Thuê thành công</h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="font-size: 1rem; margin-bottom: 10px;">
+                    <p style="font-size: 1.1rem; color: #333333; margin-bottom: 10px;">
+                        Bạn đã đặt thuê trước thành công!
+                    </p>
+                    <p style="font-size: 1.1rem; color: #333333; margin-bottom: 10px;">
+                        <strong>Mã phiếu của bạn là:</strong> <span id="maPhieuSpan"></span>
+                    </p>
+                    <p style="font-size: 1.1rem; font-weight: bold; color: #e74c3c; background-color: #f8d7da; padding: 10px; border-radius: 5px; border: 1px solid #e74c3c;">
+                        Bạn có 24 tiếng để đến quầy nhận sách.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var maPhieu = '@TempData["MaPhieuThanhCong"]';
+            if (maPhieu) {
+                $('#maPhieuSpan').text(maPhieu);
+                $('#thanhCongModal').modal('show');
+            }
+        });
+    </script>
 
     <script>
         function themVaoGio(maSach) {
@@ -711,6 +873,14 @@
             });
         });
     </script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

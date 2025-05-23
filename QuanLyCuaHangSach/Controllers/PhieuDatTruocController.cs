@@ -15,7 +15,7 @@ namespace QuanLyCuaHangSach.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
             // Thử lấy MaTaiKhoan từ Claims
             var maTaiKhoanClaim = User.FindFirst("MaTaiKhoan")?.Value;
@@ -35,15 +35,28 @@ namespace QuanLyCuaHangSach.Controllers
 
             int maTaiKhoan = int.Parse(maTaiKhoanClaim);
 
+            // Lấy danh sách phiếu và sắp xếp từ mới đến cũ
             var danhSachPhieu = _context.PhieuDatTruoc
-           .Include(p => p.TaiKhoanNguoiDung)
-             .ThenInclude(n => n.ThongTinNguoiDung)
-         .Include(p => p.ChiTietPhieuDatTruoc)
-         .ThenInclude(ct => ct.Sach)
-         .ToList();
+                .Include(p => p.TaiKhoanNguoiDung)
+                    .ThenInclude(n => n.ThongTinNguoiDung)
+                .Include(p => p.ChiTietPhieuDatTruoc)
+                    .ThenInclude(ct => ct.Sach)
+                .OrderByDescending(p => p.NgayDat) // Sắp xếp từ mới đến cũ
+                .ToList();
 
-            return View(danhSachPhieu);
+            // Lấy 10 bản ghi trên mỗi trang
+            int pageSize = 10;
+            var pagedData = danhSachPhieu.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            // Lấy tổng số trang
+            var totalPages = (int)Math.Ceiling(danhSachPhieu.Count / (double)pageSize);
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
+            return View(pagedData);
         }
+
 
         //
         [HttpPost]
@@ -144,6 +157,7 @@ namespace QuanLyCuaHangSach.Controllers
                 MaTaiKhoan = maTaiKhoan,
                 NgayDat = DateTime.Now,
                 NgayTra = DateTime.Now.AddDays(7), // Mặc định trả sau 7 ngày
+                NgayTraThucTe = null,              // Chưa trả, nên để null
                 ThanhTien = 7000,
                 TrangThai = "Đang xử lý"
             };
@@ -166,7 +180,7 @@ namespace QuanLyCuaHangSach.Controllers
             sach.SoLuongTon -= 1;
             _context.SaveChanges();
 
-            TempData["Success"] = "Đặt sách thành công!";
+            TempData["MaPhieuThanhCong"] = phieu.MaPhieuDatTruoc;
             return RedirectToAction("Index", "TrangChu");
         }
 
@@ -247,6 +261,9 @@ namespace QuanLyCuaHangSach.Controllers
             }
 
             // Cập nhật trạng thái
+
+            // Ghi lại ngày trả thực tế và cập nhật trạng thái
+            phieu.NgayTraThucTe = DateTime.Now;
             phieu.TrangThai = "Đã trả";
             _context.SaveChanges();
 

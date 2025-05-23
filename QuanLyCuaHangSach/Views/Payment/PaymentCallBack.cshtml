@@ -2,22 +2,39 @@
 @{
     ViewData["Title"] = "Home Page";
     var postUrl = "tich-hop-thanh-toan-momo-voi-asp-net-core-7d5e4hP";
+    Layout = "_Layout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bạn đã thanh toán thành công tại cổng Momo</h1>
+<div style="text-align: center; padding: 40px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+    <h1 style="font-size: 2.5rem; color: #4a90e2; margin-bottom: 30px;">
+        Bạn đã thanh toán thành công tại cổng Momo
+    </h1>
 
-
-    <div class="container">
-        <h1 class="text-success">Thanh Toán Thành Công</h1>
-        <p>Mã hóa đơn: <strong>@Model.OrderId</strong></p>
-        <p>Số tiền: <strong>@Model.Amount</strong> VND</p>
-        <p>Nội dung: <strong>@Model.OrderInfo</strong></p>
+    <div style="display: inline-block; text-align: left; background-color: #fff; padding: 30px 40px; border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15); min-width: 300px;">
+        <h1 style="color: #27ae60; margin-bottom: 20px;">Thanh Toán Thành Công</h1>
+        <p style="margin: 10px 0;">Mã hóa đơn: <strong>@Model.OrderId</strong></p>
+        <p style="margin: 10px 0;">Số tiền: <strong>@Model.Amount</strong> VND</p>
+        <p style="margin: 10px 0;">Nội dung: <strong>@Model.OrderInfo</strong></p>
+    </div>
+    <!-- Nút quay lại nằm ngoài thẻ div -->
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="@Url.Action("Index", "TrangChu")"
+           style="display: inline-block; padding: 10px 20px; background-color: #4a90e2; color: white;
+              border-radius: 5px; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            Quay lại trang chủ
+        </a>
     </div>
 </div>
+
 
 <script>
     $(document).ready(function () {
 
     });
 </script>
+<style>
+    footer {
+        display: none;
+    }
+</style>

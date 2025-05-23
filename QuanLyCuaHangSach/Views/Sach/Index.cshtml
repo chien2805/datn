@@ -1,5 +1,15 @@
 ﻿@model IEnumerable<Sach>
 <h2 style="font-size: 2rem; color: #333333; margin-bottom: 20px;">Danh sách sách</h2>
+@{
+    Layout = "_Layout";
+}
+<style>
+
+    footer {
+        display: none;
+    }
+</style>
+
 @* <a asp-action="Create" class="btn btn-primary" style="background-color: #4a90e2; color: #fff; padding: 10px 20px; border-radius: 5px; text-align: center;">Thêm sách</a> *@
 <button class="btn btn-primary " style="padding: 10px 20px; background-color: #4a90e2; color: white; font-size: 1rem; border-radius: 5px;"  type="button" onclick="openAddBookModal()">➕ Thêm sách mới</button>
 <form id="importForm" asp-action="ImportExcel" asp-controller="Sach" enctype="multipart/form-data" method="post" style="display: inline;">
@@ -31,14 +41,43 @@
                 <td style="padding: 10px;">@sach.Gia</td>
                 <td style="padding: 10px;">@sach.SoLuongTon</td>
                 <td style="padding: 10px; display: flex; justify-content: center; align-items: center; gap: 10px;">
-                    <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-warning" style="background-color: #f39c12; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;">Sửa</a>
-                    <a asp-action="Details" asp-route-id="@sach.MaSach" class="btn btn-info" style="background-color: #3498db; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;">Chi tiết</a>
+                    @* <a asp-action="Edit" asp-route-id="@sach.MaSach" class="btn btn-warning" style="background-color: #f39c12; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;">Sửa</a> *@
+                    @* <a asp-action="Details" asp-route-id="@sach.MaSach" class="btn btn-info" style="background-color: #3498db; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;">Chi tiết</a> *@
+                    <!-- Ví dụ dùng trong danh sách -->
+                    <button class="btn btn-sm btn-warning" onclick="openEditBookModal(@sach.MaSach)">Sửa</button>
+
+                    <button type="button" class="btn btn-info btn-sm" style="background-color: #3498db; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;" onclick="loadBookDetail(@sach.MaSach)">Chi tiết</button>
                     <button type="button" class="btn btn-danger" style="background-color: #e74c3c; color: #fff; padding: 6px 12px; border-radius: 5px; font-size: 14px; height: 50px;" onclick="confirmDelete(@sach.MaSach)">Xóa</button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<!-- Phân trang -->
+<div class="text-center" style="margin-top: 20px;">
+    <ul class="pagination" style="justify-content: center; margin-top: 20px; padding-left: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang trước</a>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@i" style="padding: 10px 15px; background-color: #f0ebe3; color: #4a90e2; border-radius: 5px; text-decoration: none; @(i == ViewBag.CurrentPage ? "font-weight: bold; background-color: #4a90e2; color: #fff;" : "")">@i</a>
+            </li>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang sau</a>
+            </li>
+        }
+    </ul>
+</div>
 
 
 <!-- Modal Xác nhận Xoá -->
@@ -86,7 +125,8 @@
                     @Html.AntiForgeryToken()
                     <div class="form-group mb-3">
                         <label for="TieuDe">Tiêu đề</label>
-                        <input id="TieuDe" name="TieuDe" class="form-control" required />
+                        <input id="TieuDe" name="TieuDe" class="form-control" required onblur="kiemTraTieuDe()" />
+                        <small id="baoLoiTieuDe" class="text-danger" style="display:none;">Sách đã tồn tại.</small>
                     </div>
                     <div class="form-group mb-3">
                         <label for="HinhAnhFile">Hình ảnh</label>
@@ -94,11 +134,11 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="TacGia">Tác giả</label>
-                        <input id="TacGia" name="TacGia" class="form-control" />
+                        <input id="TacGia" name="TacGia" class="form-control" required />
                     </div>
                     <div class="form-group mb-3">
                         <label for="MaTheLoai">Thể loại</label>
-                        <select id="MaTheLoai" name="MaTheLoai" class="form-control">
+                        <select id="MaTheLoai" name="MaTheLoai" class="form-control" required>
                             <option value="">-- Chọn thể loại --</option>
                             @foreach (var item in (SelectList)ViewBag.TheLoaiList)
                             {
@@ -108,7 +148,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="MaNhaCungCap">Nhà cung cấp</label>
-                        <select id="MaNhaCungCap" name="MaNhaCungCap" class="form-control">
+                        <select id="MaNhaCungCap" name="MaNhaCungCap" class="form-control" required>
                             <option value="">-- Chọn nhà cung cấp --</option>
                             @foreach (var item in (SelectList)ViewBag.NhaCungCapList)
                             {
@@ -118,16 +158,16 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="NhaXuatBan">Nhà xuất bản</label>
-                        <input id="NhaXuatBan" name="NhaXuatBan" class="form-control" />
+                        <input id="NhaXuatBan" name="NhaXuatBan" class="form-control" required />
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="NamXuatBan">Năm xuất bản</label>
-                            <input id="NamXuatBan" name="NamXuatBan" type="number" class="form-control" />
+                            <input id="NamXuatBan" name="NamXuatBan" type="number" class="form-control" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="Gia">Giá</label>
-                            <input id="Gia" name="Gia" type="number" step="0.01" class="form-control" />
+                            <input id="Gia" name="Gia" type="number" step="0.01" class="form-control" required />
                         </div>
                     </div>
                     <div class="row">
@@ -146,7 +186,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="TrangThai">Trạng thái</label>
-                        <input id="TrangThai" name="TrangThai" class="form-control" />
+                        <input id="TrangThai" name="TrangThai" class="form-control" required />
                     </div>
                     <div class="form-group mb-3">
                         <label for="GioiThieu">Giới thiệu</label>
@@ -161,6 +201,45 @@
         </div>
     </div>
 </div>
+<script>
+        function kiemTraTieuDe() {
+        var tieuDe = document.getElementById("TieuDe").value.trim();
+        var btnLuu = document.querySelector("button[form='addBookForm']");
+        var baoLoi = document.getElementById("baoLoiTieuDe");
+
+        if (tieuDe === "") {
+            baoLoi.style.display = "none";
+            btnLuu.disabled = false;
+            return;
+        }
+
+        var formData = new FormData();
+        formData.append("tieuDe", tieuDe);
+
+        fetch('/Sach/KiemTraTieuDe', {
+            method: 'POST',
+            headers: {
+                'RequestVerificationToken': document.querySelector('[name="__RequestVerificationToken"]').value
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.tonTai) {
+                baoLoi.style.display = "inline";
+                btnLuu.disabled = true;
+            } else {
+                baoLoi.style.display = "none";
+                btnLuu.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error("Lỗi kiểm tra tiêu đề:", error);
+            baoLoi.style.display = "none";
+            btnLuu.disabled = false;
+        });
+    }
+</script>
 <script>
     let addBookModalInstance;
 
@@ -177,3 +256,204 @@
     }
 </script>
 
+<!-- Modal Chi Tiết Sách -->
+<div class="modal fade" id="bookDetailModal" tabindex="-1" aria-labelledby="bookDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="border-radius:10px;">
+            <div class="modal-header" style="background-color:#4a90e2; color:white;">
+                <h5 class="modal-title" id="bookDetailModalLabel">Chi tiết sách</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Tiêu đề:</strong> <span id="Detail_TieuDe"></span></p>
+                <div class="mb-3">
+                    <strong>Hình ảnh:</strong><br />
+                    <img id="Detail_HinhAnh" src="#" alt="Hình ảnh sách" class="img-fluid rounded" style="max-height: 300px;" />
+                </div>
+                <p><strong>Tác giả:</strong> <span id="Detail_TacGia"></span></p>
+                <p><strong>Thể loại:</strong> <span id="Detail_TheLoai"></span></p>
+                <p><strong>Nhà cung cấp:</strong> <span id="Detail_NhaCungCap"></span></p>
+                <p><strong>Nhà xuất bản:</strong> <span id="Detail_NhaXuatBan"></span></p>
+                <div class="row">
+                    <div class="col-md-6 mb-2">
+                        <strong>Năm xuất bản:</strong> <span id="Detail_NamXuatBan"></span>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <strong>Giá:</strong> <span id="Detail_Gia"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <strong>Số lượng tồn:</strong> <span id="Detail_SoLuongTon"></span>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <strong>Số lượng bán:</strong> <span id="Detail_SoLuongBan"></span>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <strong>Số lượng mượn:</strong> <span id="Detail_SoLuongMuon"></span>
+                    </div>
+                </div>
+                <p><strong>Trạng thái:</strong> <span id="Detail_TrangThai"></span></p>
+                <div class="mb-3">
+                    <strong>Giới thiệu:</strong>
+                    <p id="Detail_GioiThieu" style="white-space: pre-wrap;"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        function loadBookDetail(maSach) {
+        $.ajax({
+            url: '/Sach/GetChiTiet',
+            type: 'GET',
+            data: { id: maSach },
+            success: function (book) {
+                $('#Detail_TieuDe').text(book.tieuDe); // Thay đổi .val() thành .text() để hiển thị chuỗi văn bản
+                $('#Detail_HinhAnh').attr('src', book.hinhAnhUrl); // Đảm bảo hình ảnh hiển thị đúng
+                $('#Detail_TacGia').text(book.tacGia);
+                $('#Detail_TheLoai').text(book.tenTheLoai);
+                $('#Detail_NhaCungCap').text(book.tenNhaCungCap);
+                $('#Detail_NhaXuatBan').text(book.nhaXuatBan);
+                $('#Detail_NamXuatBan').text(book.namXuatBan);
+                $('#Detail_Gia').text(book.gia);
+                $('#Detail_SoLuongTon').text(book.soLuongTon);
+                $('#Detail_SoLuongBan').text(book.soLuongBan);
+                $('#Detail_SoLuongMuon').text(book.soLuongMuon);
+                $('#Detail_TrangThai').text(book.trangThai);
+                $('#Detail_GioiThieu').text(book.gioiThieu);
+
+                $('#bookDetailModal').modal('show');
+            },
+            error: function () {
+                alert('Không thể tải dữ liệu sách.');
+            }
+        });
+    }
+</script>
+
+<!-- Modal Chỉnh sửa Sách -->
+<!-- Modal Sửa Sách -->
+<div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="border-radius:10px;">
+            <div class="modal-header" style="background-color:#4a90e2; color:white;">
+                <h5 class="modal-title" id="editBookModalLabel">Sửa thông tin sách</h5>
+                <button type="button" class="btn-close" aria-label="Close" onclick="closeEditBookModal()"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editBookForm" asp-action="Edit" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" id="Edit_MaSach" name="MaSach" />
+                    <div class="form-group mb-3">
+                        <label for="Edit_TieuDe">Tiêu đề</label>
+                        <input id="Edit_TieuDe" name="TieuDe" class="form-control" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_HinhAnhFile">Hình ảnh</label>
+                        <input type="file" id="Edit_HinhAnhFile" name="HinhAnhFile" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_TacGia">Tác giả</label>
+                        <input id="Edit_TacGia" name="TacGia" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_MaTheLoai">Thể loại</label>
+                        <select id="Edit_MaTheLoai" name="MaTheLoai" class="form-control">
+                            <option value="">-- Chọn thể loại --</option>
+                            @foreach (var item in (SelectList)ViewBag.TheLoaiList)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_MaNhaCungCap">Nhà cung cấp</label>
+                        <select id="Edit_MaNhaCungCap" name="MaNhaCungCap" class="form-control">
+                            <option value="">-- Chọn nhà cung cấp --</option>
+                            @foreach (var item in (SelectList)ViewBag.NhaCungCapList)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_NhaXuatBan">Nhà xuất bản</label>
+                        <input id="Edit_NhaXuatBan" name="NhaXuatBan" class="form-control" />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="Edit_NamXuatBan">Năm xuất bản</label>
+                            <input id="Edit_NamXuatBan" name="NamXuatBan" type="number" class="form-control" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="Edit_Gia">Giá</label>
+                            <input id="Edit_Gia" name="Gia" type="number" step="0.01" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="Edit_SoLuongTon">Số lượng tồn</label>
+                            <input id="Edit_SoLuongTon" name="SoLuongTon" type="number" class="form-control" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Edit_SoLuongBan">Số lượng bán</label>
+                            <input id="Edit_SoLuongBan" name="SoLuongBan" type="number" class="form-control" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="Edit_SoLuongMuon">Số lượng mượn</label>
+                            <input id="Edit_SoLuongMuon" name="SoLuongMuon" type="number" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_TrangThai">Trạng thái</label>
+                        <input id="Edit_TrangThai" name="TrangThai" class="form-control" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="Edit_GioiThieu">Giới thiệu</label>
+                        <textarea id="Edit_GioiThieu" name="GioiThieu" class="form-control" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeEditBookModal()">Huỷ</button>
+                <button type="submit" form="editBookForm" class="btn btn-primary">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function openEditBookModal(maSach) {
+        // Gọi Ajax để lấy thông tin sách
+        fetch(`/Sach/GetById?id=${maSach}`)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("Edit_MaSach").value = data.maSach;
+                document.getElementById("Edit_TieuDe").value = data.tieuDe;
+                document.getElementById("Edit_TacGia").value = data.tacGia;
+                document.getElementById("Edit_MaTheLoai").value = data.maTheLoai;
+                document.getElementById("Edit_MaNhaCungCap").value = data.maNhaCungCap;
+                document.getElementById("Edit_NhaXuatBan").value = data.nhaXuatBan;
+                document.getElementById("Edit_NamXuatBan").value = data.namXuatBan;
+                document.getElementById("Edit_Gia").value = data.gia;
+                document.getElementById("Edit_SoLuongTon").value = data.soLuongTon;
+                document.getElementById("Edit_SoLuongBan").value = data.soLuongBan;
+                document.getElementById("Edit_SoLuongMuon").value = data.soLuongMuon;
+                document.getElementById("Edit_TrangThai").value = data.trangThai;
+                document.getElementById("Edit_GioiThieu").value = data.gioiThieu;
+
+                var editModal = new bootstrap.Modal(document.getElementById('editBookModal'));
+                editModal.show();
+            });
+    }
+
+    function closeEditBookModal() {
+        var modalEl = document.getElementById('editBookModal');
+        var modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+    }
+</script>

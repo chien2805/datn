@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\sach\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\sach\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\controllers\\sachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:controllers\\sachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\controllers\\dangnhapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:controllers\\dangnhapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\dangnhap\\resetpasswordsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\dangnhap\\resetpasswordsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|c:\\users\\chien\\desktop\\tot nghiep\\datn\\quanlycuahangsach\\views\\dangnhap\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69AD80-A1B1-47EC-BAAF-D0B02A7B618A}|QuanLyCuaHangSach.csproj|solutionrelative:views\\dangnhap\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAF0AAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAUwPEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-15T10:42:43.036Z",
               "IsPinned": true,
@@ -40,29 +44,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SachController.cs",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\SachController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SachController.cs",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\SachController.cs",
-              "RelativeToolTip": "Controllers\\SachController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAwDIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T14:02:02.397Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "ResetPasswordSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\DangNhap\\ResetPasswordSuccess.cshtml",
+              "RelativeDocumentMoniker": "Views\\DangNhap\\ResetPasswordSuccess.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\DangNhap\\ResetPasswordSuccess.cshtml",
+              "RelativeToolTip": "Views\\DangNhap\\ResetPasswordSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T14:07:55.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Sach\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Sach\\Details.cshtml",
-              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\Sach\\Details.cshtml",
-              "RelativeToolTip": "Views\\Sach\\Details.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAQwIgAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\DangNhap\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\DangNhap\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Views\\DangNhap\\ResetPassword.cshtml",
+              "RelativeToolTip": "Views\\DangNhap\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T13:07:20.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T13:47:57.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DangNhapController.cs",
+              "DocumentMoniker": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\DangNhapController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DangNhapController.cs",
+              "ToolTip": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\Controllers\\DangNhapController.cs",
+              "RelativeToolTip": "Controllers\\DangNhapController.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAwwLcAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T13:46:15.135Z"
             }
           ]
         }

@@ -19,14 +19,28 @@ namespace QuanLyCuaHangSach.Controllers
         }
 
         // GET: Sach
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var sachList = await _context.Sach.Include(s => s.TheLoai).Include(s => s.NhaCungCap).ToListAsync();
-            // CHỈNH: khởi tạo ViewBag cho modal ngay cả khi xem danh sách
+            int pageSize = 10; // Số sách mỗi trang
+            var sachList = await _context.Sach
+                .Include(s => s.TheLoai)
+                .Include(s => s.NhaCungCap)
+                .Skip((page - 1) * pageSize) // Bỏ qua những sách đã được hiển thị trước đó
+                .Take(pageSize) // Lấy số sách tương ứng với pageSize
+                .ToListAsync();
+
+            // Cập nhật ViewBag cho modal
             ViewBag.TheLoaiList = new SelectList(_context.TheLoai, "MaTheLoai", "TenTheLoai");
             ViewBag.NhaCungCapList = new SelectList(_context.NhaCungCap, "MaNhaCungCap", "TenNhaCungCap");
+
+            // Tính tổng số trang
+            var totalCount = await _context.Sach.CountAsync();
+            ViewBag.TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+            ViewBag.CurrentPage = page;
+
             return View(sachList);
         }
+
 
         // GET: Sach/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -54,6 +68,12 @@ namespace QuanLyCuaHangSach.Controllers
             return View(sach);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> KiemTraTieuDe(string tieuDe)
+        {
+            bool tonTai = await _context.Sach.AnyAsync(s => s.TieuDe.ToLower() == tieuDe.ToLower());
+            return Json(new { tonTai });
+        }
         // GET: Sach/Create
         public IActionResult Create()
         {
@@ -131,31 +151,102 @@ namespace QuanLyCuaHangSach.Controllers
             return View(sach);
         }
 
+        [HttpGet]
+        public IActionResult GetChiTiet(int id)
+        {
+            var sach = _context.Sach
+                .Include(s => s.TheLoai)
+                .Include(s => s.NhaCungCap)
+                .FirstOrDefault(s => s.MaSach == id);
+
+            if (sach == null)
+            {
+                return NotFound();
+            }
+
+            var bookDetail = new
+            {
+                tieuDe = sach.TieuDe,
+                hinhAnhUrl = sach.HinhAnh, // Đảm bảo đường dẫn đúng
+                tacGia = sach.TacGia,
+                tenTheLoai = sach.TheLoai.TenTheLoai,
+                tenNhaCungCap = sach.NhaCungCap.TenNhaCungCap,
+                nhaXuatBan = sach.NhaXuatBan,
+                namXuatBan = sach.NamXuatBan,
+                gia = sach.Gia,
+                soLuongTon = sach.SoLuongTon,
+                soLuongBan = sach.SoLuongBan,
+                soLuongMuon = sach.SoLuongMuon,
+                trangThai = sach.TrangThai,
+                gioiThieu = sach.GioiThieu
+            };
+
+            return Json(bookDetail); // Trả về dữ liệu sách dưới dạng JSON
+        }
+
+
         // POST: Sach/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaSach,TieuDe,TacGia,MaTheLoai,MaNhaCungCap,NhaXuatBan,NamXuatBan,SoLuongBan,SoLuongMuon,SoLuongTon,SoLuongHong,SoLuongMat,Gia,TrangThai")] Sach sach)
+        public async Task<IActionResult> Edit(Sach sach, IFormFile? HinhAnhFile)
         {
-            if (id != sach.MaSach)
-                return NotFound();
-
             if (!ModelState.IsValid)
             {
-                try
+                if (HinhAnhFile != null && HinhAnhFile.Length > 0)
                 {
-                    _context.Update(sach);
-                    await _context.SaveChangesAsync();
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+
+                    if (!Directory.Exists(uploadsFolder))
+                        Directory.CreateDirectory(uploadsFolder);
+
+                    var uniqueFileName = Guid.NewGuid() + "_" + Path.GetFileName(HinhAnhFile.FileName);
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    try
+                    {
+                        using var stream = new FileStream(filePath, FileMode.Create);
+                        await HinhAnhFile.CopyToAsync(stream);
+                        sach.HinhAnh = "/images/" + uniqueFileName;
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Lỗi khi lưu file: " + ex.Message);
+                        return View(sach);
+                    }
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SachExists(sach.MaSach))
-                        return NotFound();
-                    else
-                        throw;
-                }
+
+                _context.Update(sach);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewBag.TheLoaiList = new SelectList(_context.TheLoai, "MaTheLoai", "TenTheLoai", sach.MaTheLoai);
+            ViewBag.NhaCungCapList = new SelectList(_context.NhaCungCap, "MaNhaCungCap", "TenNhaCungCap", sach.MaNhaCungCap);
             return View(sach);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var sach = await _context.Sach.FindAsync(id);
+            if (sach == null) return NotFound();
+
+            return Json(new
+            {
+                maSach = sach.MaSach,
+                tieuDe = sach.TieuDe,
+                tacGia = sach.TacGia,
+                maTheLoai = sach.MaTheLoai,
+                maNhaCungCap = sach.MaNhaCungCap,
+                nhaXuatBan = sach.NhaXuatBan,
+                namXuatBan = sach.NamXuatBan,
+                gia = sach.Gia,
+                soLuongTon = sach.SoLuongTon,
+                soLuongBan = sach.SoLuongBan,
+                soLuongMuon = sach.SoLuongMuon,
+                trangThai = sach.TrangThai,
+                gioiThieu = sach.GioiThieu
+            });
         }
 
         [HttpPost]

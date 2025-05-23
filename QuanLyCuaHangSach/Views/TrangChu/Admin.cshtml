@@ -4,7 +4,9 @@
 
 @{
     var sachBanChay = ViewBag.SachBanChay as List<QuanLyCuaHangSach.Models.Sach>;
+    Layout = "_Layout";
 }
+
 
 <h2 style="text-align:center; font-size:2rem; color:#333; margin-bottom:30px;">
     Tổng quan
@@ -113,3 +115,8 @@
         </div>
     </div>
 </div>
+<style>
+    footer {
+        display: none;
+    }
+</style>

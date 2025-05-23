@@ -6,6 +6,8 @@ using QuanLyCuaHangSach.Models;
 using System.Security.Claims;
 using System.Text;
 using System.Security.Cryptography;
+using System.Net.Mail;
+using System.Net;
 
 namespace QuanLyCuaHangSach.Controllers
 {
@@ -106,6 +108,10 @@ namespace QuanLyCuaHangSach.Controllers
             {
                 return Json(new { success = true, redirectUrl = Url.Action("Admin", "TrangChu") });
             }
+            else if (user.VaiTro == "NhanVien")
+            {
+                return Json(new { success = true, redirectUrl = Url.Action("Index", "HoaDonBan") });
+            }
             else
             {
                 return Json(new { success = true, redirectUrl = Url.Action("Index", "TrangChu") });
@@ -125,5 +131,78 @@ namespace QuanLyCuaHangSach.Controllers
             return RedirectToAction("Index", "TrangChu");
         }
 
+        [HttpPost]
+        public IActionResult SendResetLink(string email)
+        {
+            var user = _context.TaiKhoanNguoiDung.FirstOrDefault(u => u.TenDangNhap == email);
+            if (user == null)
+            {
+                return Json(new { success = false, message = "Email không tồn tại trong hệ thống." });
+            }
+
+            // Tạo token (ví dụ: guid)
+            var token = Guid.NewGuid().ToString();
+            user.ResetToken = token;
+            user.ResetTokenExpiry = DateTime.Now.AddHours(1);
+            _context.SaveChanges();
+
+            var resetLink = Url.Action("ResetPassword", "DangNhap", new { token = token }, Request.Scheme);
+            var subject = "Đặt lại mật khẩu";
+            var body = $"Nhấn vào liên kết sau để đặt lại mật khẩu: <a href='{resetLink}'>Đặt lại mật khẩu</a>";
+
+            // Gửi email
+            SendEmail(email, subject, body); // Viết hàm này riêng
+
+            return Json(new { success = true });
+        }
+
+        public IActionResult ResetPassword(string token)
+        {
+            var user = _context.TaiKhoanNguoiDung.FirstOrDefault(u => u.ResetToken == token && u.ResetTokenExpiry > DateTime.Now);
+            if (user == null)
+            {
+                return Content("Liên kết không hợp lệ hoặc đã hết hạn.");
+            }
+
+            return View(model: token); // Truyền token vào view
+        }
+
+        [HttpPost]
+        public IActionResult ResetPassword(string token, string newPassword)
+        {
+            var user = _context.TaiKhoanNguoiDung.FirstOrDefault(u => u.ResetToken == token && u.ResetTokenExpiry > DateTime.Now);
+            if (user == null)
+            {
+                return Content("Liên kết không hợp lệ hoặc đã hết hạn.");
+            }
+
+            user.MatKhau = HashPassword(newPassword); // ✅ Hash lại mật khẩu
+            user.ResetToken = null;
+            user.ResetTokenExpiry = null;
+            _context.SaveChanges();
+
+            return View("ResetPasswordSuccess"); // ✅ Hiển thị trang sau khi đổi mật khẩu
+        }
+
+        public void SendEmail(string to, string subject, string body)
+        {
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential("vanchien280502@gmail.com", "jtqe zzua aani ygai"),
+                EnableSsl = true,
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress("vanchien280502@gmail.com"),
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true,
+            };
+            mailMessage.To.Add(to);
+
+            smtpClient.Send(mailMessage);
+        }
     }
 }

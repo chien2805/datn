@@ -14,12 +14,32 @@ namespace QuanLyCuaHangSach.Controllers
             _context = context;
         }
 
-        // GET: TheLoai
-        public async Task<IActionResult> Index()
+        [HttpPost]
+        public JsonResult KiemTraTenTheLoai(string tenTheLoai)
         {
-            var theLoaiList = await _context.TheLoai.ToListAsync();
+            bool daTonTai = _context.TheLoai.Any(t => t.TenTheLoai.ToLower() == tenTheLoai.ToLower());
+            return Json(!daTonTai); // Trả về true nếu không tồn tại (hợp lệ)
+        }
+        // GET: TheLoai
+        public async Task<IActionResult> Index(int page = 1)
+        {
+            int pageSize = 10; // Số lượng items hiển thị trên mỗi trang
+            var totalItems = await _context.TheLoai.CountAsync(); // Đếm tổng số items
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize); // Tính tổng số trang
+
+            // Lấy dữ liệu cho trang hiện tại
+            var theLoaiList = await _context.TheLoai
+                .Skip((page - 1) * pageSize) // Bỏ qua số lượng items của các trang trước
+                .Take(pageSize) // Lấy số lượng items theo pageSize
+                .ToListAsync();
+
+            // Cập nhật ViewBag để truyền dữ liệu phân trang vào view
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
             return View(theLoaiList);
         }
+
 
         // GET: TheLoai/Create
         public IActionResult Create()

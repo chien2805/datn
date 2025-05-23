@@ -2,7 +2,15 @@
 
 @{
     ViewData["Title"] = "Danh sách phiếu đặt trước";
+    Layout = "_Layout";
 }
+
+<style>
+
+    footer {
+        display: none;
+    }
+</style>
 
 <h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Phiếu Đặt Trước</h2>
 
@@ -14,6 +22,7 @@
                 <th style="text-align: center; padding: 10px;">#</th>
                 <th style ="text-align: center; padding: 10px;">Tên Khách Hàng</th>
                 <th style="text-align: center; padding: 10px;">Ngày Đặt</th>
+                <th style="text-align: center; padding: 10px;">Hạn Trả</th>
                 <th style="text-align: center; padding: 10px;">Ngày Trả</th>
                 <th style="text-align: center; padding: 10px;">Trạng Thái</th>
                 <th style="text-align: center; padding: 10px;">Sách Đặt Trước</th>
@@ -29,6 +38,17 @@
                     <td style="text-align: center; padding: 10px;">@phieu.TaiKhoanNguoiDung?.ThongTinNguoiDung?.HoTen</td>
                     <td style="text-align: center; padding: 10px;">@phieu.NgayDat.ToString("dd/MM/yyyy")</td>
                     <td style="text-align: center; padding: 10px;">@phieu.NgayTra.ToString("dd/MM/yyyy")</td>
+                    <!-- ✅ Cột Ngày Trả Thực Tế -->
+                    <td style="text-align: center; padding: 10px;">
+                        @if (phieu.NgayTraThucTe != null)
+                        {
+                            <span>@phieu.NgayTraThucTe?.ToString("dd/MM/yyyy")</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">Chưa trả</span>
+                        }
+                    </td>
                     <td style="text-align: center; padding: 10px;">
                         <span class="badge @(phieu.TrangThai == "Đã xử lý" ? "bg-success" : "bg-warning")" style="font-size: 0.9rem;">
                             @phieu.TrangThai
@@ -71,6 +91,31 @@
             }
         </tbody>
     </table>
+    <!-- Phân trang -->
+    <div class="text-center" style="margin-top: 20px;">
+        <ul class="pagination" style="justify-content: center; margin-top: 20px; padding-left: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <li class="page-item" style="margin: 0 5px;">
+                    <a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang trước</a>
+                </li>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="margin: 0 5px;">
+                    <a class="page-link" href="?page=@i" style="padding: 10px 15px; background-color: #f0ebe3; color: #4a90e2; border-radius: 5px; text-decoration: none; @(i == ViewBag.CurrentPage ? "font-weight: bold; background-color: #4a90e2; color: #fff;" : "")">@i</a>
+                </li>
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <li class="page-item" style="margin: 0 5px;">
+                    <a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang sau</a>
+                </li>
+            }
+        </ul>
+    </div>
 }
 else
 {

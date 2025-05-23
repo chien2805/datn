@@ -9,5 +9,11 @@
         public DateTime NgayLap { get; set; }
         public decimal TongTien { get; set; }
         public string LoaiHoaDon { get; set; } // "quay" hoặc "online"
+        public string? TrangThai { get; set; }
+        public string? LoaiThanhToan { get; set; }
+
     }
+
+
+
 }

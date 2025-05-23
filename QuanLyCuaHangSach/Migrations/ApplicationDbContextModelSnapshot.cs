@@ -312,6 +312,9 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Property<DateTime>("NgayTra")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("NgayTraThucTe")
+                        .HasColumnType("datetime2");
+
                     b.Property<decimal?>("ThanhTien")
                         .HasColumnType("decimal(18,2)");
 
@@ -450,6 +453,12 @@ namespace QuanLyCuaHangSach.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ResetToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ResetTokenExpiry")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("TenDangNhap")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -472,7 +481,6 @@ namespace QuanLyCuaHangSach.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaTheLoai"));
 
                     b.Property<string>("MoTa")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenTheLoai")

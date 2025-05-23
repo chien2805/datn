@@ -48,6 +48,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ0tpXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/DangNhap/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ05oYXBcUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/DangNhap/ResetPasswordSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ05oYXBcUmVzZXRQYXNzd29yZFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/GioHang/ThanhToanThanhCong.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xUaGFuaFRvYW5UaGFuaENvbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,6 +66,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/HoaDonBan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uQmFuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/HoaDonBan/_InHoaDon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uQmFuXF9JbkhvYURvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/HoaDonBan/_InHoaDonOnline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uQmFuXF9JbkhvYURvbk9ubGluZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/HoaDonBan/_InHoaDonQuay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uQmFuXF9JbkhvYURvblF1YXkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/Home/Index.cshtml]
@@ -164,6 +184,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/ThanhToan/ThanhToanThanhCong.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXFRoYW5oVG9hblRoYW5oQ29uZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/TheLoai/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlTG9haVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -184,8 +208,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmdDaHVcQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/TrangChu/GioiThieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmdDaHVcR2lvaVRoaWV1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/TrangChu/HuongDan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmdDaHVcSHVvbmdEYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/TrangChu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmdDaHVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/TrangChu/LienHe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmdDaHVcTGllbkhlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CHIEN/Desktop/Tot nghiep/datn/QuanLyCuaHangSach/Views/TrangChu/Test1.cshtml]

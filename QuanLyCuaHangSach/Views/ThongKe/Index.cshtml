@@ -3,8 +3,14 @@
     ViewData["Title"] = "Thống kê theo ngày";
     var selectedMonth = (int)(ViewBag.SelectedMonth ?? DateTime.Now.Month);
     var selectedYear = (int)(ViewBag.SelectedYear ?? DateTime.Now.Year);
+    Layout = "_Layout";
 }
+<style>
 
+    footer {
+        display: none;
+    }
+</style>
 <h2>Thống Kê Tổng Tiền Bán Sách</h2>
 
 <form method="get">

@@ -1,4 +1,15 @@
 ﻿@model IEnumerable<NhaCungCap>
+@{
+    Layout = "_Layout";
+
+}
+<style>
+
+    footer {
+        display: none;
+    }
+</style>
+
 <h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Nhà Cung Cấp</h2>
 
 <!-- Nút mở modal Thêm NCC -->
@@ -32,7 +43,31 @@
         }
     </tbody>
 </table>
+<!-- Phân trang -->
+<div class="text-center" style="margin-top: 20px;">
+    <ul class="pagination" style="justify-content: center; margin-top: 20px; padding-left: 0; list-style: none; display: flex; flex-wrap: wrap; justify-content: center;">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang trước</a>
+            </li>
+        }
 
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@i" style="padding: 10px 15px; background-color: #f0ebe3; color: #4a90e2; border-radius: 5px; text-decoration: none; @(i == ViewBag.CurrentPage ? "font-weight: bold; background-color: #4a90e2; color: #fff;" : "")">@i</a>
+            </li>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <li class="page-item" style="margin: 0 5px;">
+                <a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)" style="padding: 10px 15px; background-color: #4a90e2; color: #fff; border-radius: 5px; text-decoration: none;">Trang sau</a>
+            </li>
+        }
+    </ul>
+</div>
 <!-- Modal Xác nhận Xoá -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

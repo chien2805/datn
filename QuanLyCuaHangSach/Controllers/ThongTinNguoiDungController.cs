@@ -86,7 +86,7 @@ namespace QuanLyCuaHangSach.Controllers
             if (!string.IsNullOrEmpty(thongTin.AnhDaiDien)) HttpContext.Session.SetString("AnhDaiDien", thongTin.AnhDaiDien ?? "");
 
             // Chuyển hướng về trang chủ sau khi chỉnh sửa thành công
-            return RedirectToAction("Index", "Sach");
+            return RedirectToAction("Index", "TrangChu");
         }
 
 

@@ -10,7 +10,9 @@ namespace QuanLyCuaHangSach.Models
         public string MatKhau { get; set; }
         public string VaiTro { get; set; } // Admin, NhanVien, KhachHang
 
-       
+        // Thêm 2 trường sau để lưu token đặt lại mật khẩu và thời hạn hiệu lực token
+        public string? ResetToken { get; set; }
+        public DateTime? ResetTokenExpiry { get; set; }
 
         // Điều này không bắt buộc vì EF có thể tự suy ra
         public ThongTinNguoiDung ThongTinNguoiDung { get; set; }

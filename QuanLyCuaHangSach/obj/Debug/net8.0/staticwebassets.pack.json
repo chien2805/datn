@@ -1,332 +1,444 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuanLyCuaHangSach.bundle.scp.css",
       "PackagePath": "staticwebassets\\QuanLyCuaHangSach.gn4wilbgxb.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-457727cec1a7.json",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-457727cec1a7.json",
       "PackagePath": "staticwebassets\\chatbox-mrob-457727cec1a7.json"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-b9773ec4f7cf.json",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-b9773ec4f7cf.json",
       "PackagePath": "staticwebassets\\chatbox-mrob-b9773ec4f7cf.json"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\_AdminNavbar.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\_AdminNavbar.css",
       "PackagePath": "staticwebassets\\css\\_AdminNavbar.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\086f290c-13a4-46b7-829a-8931e33acbd5_Untitled.png",
+      "PackagePath": "staticwebassets\\images\\086f290c-13a4-46b7-829a-8931e33acbd5_Untitled.png"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg",
       "PackagePath": "staticwebassets\\images\\094dd204-19e1-4373-81e0-f19b6723bd13_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\0c67a78a-e237-44f7-af8e-4bd594745e82_11592-noi-em-quay-ve-co-toi-dung-doi-1.jpg",
+      "PackagePath": "staticwebassets\\images\\0c67a78a-e237-44f7-af8e-4bd594745e82_11592-noi-em-quay-ve-co-toi-dung-doi-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png",
       "PackagePath": "staticwebassets\\images\\13d2bf9a-d150-47f6-ba08-41bdc2ddd87c_1.png"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg",
       "PackagePath": "staticwebassets\\images\\17114bb7-7586-45d3-b27a-8252196e91ac_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png",
       "PackagePath": "staticwebassets\\images\\1c89a927-8435-4d61-a778-418d880ea115_1.png"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1e6f3673-272d-4b11-9a25-1bc6a2b69968_tuoi-tho.jpg",
+      "PackagePath": "staticwebassets\\images\\1e6f3673-272d-4b11-9a25-1bc6a2b69968_tuoi-tho.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\31f19527-4f1f-4e59-844a-ccbb194dc89f_dam-bi-ghet-3.jpg",
+      "PackagePath": "staticwebassets\\images\\31f19527-4f1f-4e59-844a-ccbb194dc89f_dam-bi-ghet-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\34f1df1b-aaa1-495c-a777-6d396f539a13_khongbaogiolathatbai-1.u4939.d20170911.t145453.737290.jpg",
+      "PackagePath": "staticwebassets\\images\\34f1df1b-aaa1-495c-a777-6d396f539a13_khongbaogiolathatbai-1.u4939.d20170911.t145453.737290.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\352757343_1879233049125660_4727560855644771929_n.jpg",
+      "PackagePath": "staticwebassets\\images\\352757343_1879233049125660_4727560855644771929_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg",
       "PackagePath": "staticwebassets\\images\\39143b20-ac26-4fab-9e8e-03ea2a762fef_anhcv.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\3a02daae-fa66-4b37-8c52-f52f5e892580_The Notebook.jpg",
+      "PackagePath": "staticwebassets\\images\\3a02daae-fa66-4b37-8c52-f52f5e892580_The Notebook.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
       "PackagePath": "staticwebassets\\images\\4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\557a4750-2c2a-46be-8a43-f9445b7006a3_nghi-giau.jpg",
+      "PackagePath": "staticwebassets\\images\\557a4750-2c2a-46be-8a43-f9445b7006a3_nghi-giau.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\57e94981-72a1-4438-aad6-f325ebdd1f18_bi-mat.jpg",
+      "PackagePath": "staticwebassets\\images\\57e94981-72a1-4438-aad6-f325ebdd1f18_bi-mat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5b2b450b-c49f-42d4-b622-72739a53464c_The-gioi-luong-tu-ky-bi.jpg",
+      "PackagePath": "staticwebassets\\images\\5b2b450b-c49f-42d4-b622-72739a53464c_The-gioi-luong-tu-ky-bi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg",
       "PackagePath": "staticwebassets\\images\\5f6f5691-fcb9-41c7-918b-22fab2ef6834_anhcv.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\60c603e6-894b-4ee9-aabe-25c7479962f5_Untitled.png",
+      "PackagePath": "staticwebassets\\images\\60c603e6-894b-4ee9-aabe-25c7479962f5_Untitled.png"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg",
+      "PackagePath": "staticwebassets\\images\\6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\81f6bf1a-6386-42aa-ba72-df50878a8a35_7thoi-quen.jpg",
+      "PackagePath": "staticwebassets\\images\\81f6bf1a-6386-42aa-ba72-df50878a8a35_7thoi-quen.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg",
       "PackagePath": "staticwebassets\\images\\841f5ad1-5a62-45e4-b2a3-8374d5589d45_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\86c200ad-7aa8-4136-b564-bae25fd493e2_toi-gioi-ban-cung-the.jpg",
+      "PackagePath": "staticwebassets\\images\\86c200ad-7aa8-4136-b564-bae25fd493e2_toi-gioi-ban-cung-the.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg",
       "PackagePath": "staticwebassets\\images\\8e1173fc-5bb5-475b-9ac5-1bbf66cc1438_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\913e3059-cfb4-4789-a7cc-ebfa37bbb332_dac-nhan-tam-bc.jpg",
+      "PackagePath": "staticwebassets\\images\\913e3059-cfb4-4789-a7cc-ebfa37bbb332_dac-nhan-tam-bc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\91ed7771-7f0a-4f6c-97cf-c5c047e41eb6_Nhà_giả_kim_(sách).jpg",
+      "PackagePath": "staticwebassets\\images\\91ed7771-7f0a-4f6c-97cf-c5c047e41eb6_Nhà_giả_kim_(sách).jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\992c71cf-5f2b-4336-90d4-96ea5b4d8f65_1.png",
+      "PackagePath": "staticwebassets\\images\\992c71cf-5f2b-4336-90d4-96ea5b4d8f65_1.png"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a3207e20-d05f-488a-80cb-fe9fd04e2f36_Đắc_nhân_tâm.jpg",
+      "PackagePath": "staticwebassets\\images\\a3207e20-d05f-488a-80cb-fe9fd04e2f36_Đắc_nhân_tâm.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg",
       "PackagePath": "staticwebassets\\images\\a81bd289-ffaf-4c5a-8727-af03479d0706_anhcv.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\aa4de507-8b4f-4d26-b40a-efdc67000345_tien-khong-phai-la-tat-ca.u335.d20160525.t093639.jpg",
+      "PackagePath": "staticwebassets\\images\\aa4de507-8b4f-4d26-b40a-efdc67000345_tien-khong-phai-la-tat-ca.u335.d20160525.t093639.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg",
       "PackagePath": "staticwebassets\\images\\ab601d0e-1a06-4d8e-8e59-8526d8418bca_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\b5c2a759-9934-4240-a5eb-9ab9745af07f_maimailabaoxa.jpg",
+      "PackagePath": "staticwebassets\\images\\b5c2a759-9934-4240-a5eb-9ab9745af07f_maimailabaoxa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\c7d1fa6f-96c5-4f88-8a65-5c440d1bc19f_luot-su.jpg",
+      "PackagePath": "staticwebassets\\images\\c7d1fa6f-96c5-4f88-8a65-5c440d1bc19f_luot-su.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\cafa96de-aa35-44ab-b58b-65a5146b7f4a_chi-pheo-tb-2022.jpg",
+      "PackagePath": "staticwebassets\\images\\cafa96de-aa35-44ab-b58b-65a5146b7f4a_chi-pheo-tb-2022.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\d73188a0-77a5-4b75-aad9-51806a71a9c5_so-do.jpg",
+      "PackagePath": "staticwebassets\\images\\d73188a0-77a5-4b75-aad9-51806a71a9c5_so-do.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
       "PackagePath": "staticwebassets\\images\\default.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\e1c4bc99-c74a-4bad-b6e9-3cddaf3cbc86_day-con.jpg",
+      "PackagePath": "staticwebassets\\images\\e1c4bc99-c74a-4bad-b6e9-3cddaf3cbc86_day-con.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\e8322e74-b7c2-4995-a962-c776926268fb_vu-tru-hat-de.jpg",
+      "PackagePath": "staticwebassets\\images\\e8322e74-b7c2-4995-a962-c776926268fb_vu-tru-hat-de.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg",
       "PackagePath": "staticwebassets\\images\\ed0fb006-dcb4-4a8b-8333-283afa18b45e_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg",
       "PackagePath": "staticwebassets\\images\\ee074bc8-1e33-4403-872c-d683d490d8f9_none.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_2.webp",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\f49aec10-f04e-484e-b22e-038726746c0b_cha-giau.jpg",
+      "PackagePath": "staticwebassets\\images\\f49aec10-f04e-484e-b22e-038726746c0b_cha-giau.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\fd352f68-950b-42db-9e27-961628588d49_none.jpg",
+      "PackagePath": "staticwebassets\\images\\fd352f68-950b-42db-9e27-961628588d49_none.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_2.webp",
       "PackagePath": "staticwebassets\\images\\home_slider_image_2.webp"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_4.webp",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\home_slider_image_4.webp",
       "PackagePath": "staticwebassets\\images\\home_slider_image_4.webp"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\sach\\default.jpg",
       "PackagePath": "staticwebassets\\images\\sach\\default.jpg"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\custom.min.js",
       "PackagePath": "staticwebassets\\js\\custom.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\OneDrive - hcmunre.edu.vn\\Máy tính\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\sounds\\ting.mp3",
+      "PackagePath": "staticwebassets\\sounds\\ting.mp3"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QuanLyCuaHangSach.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
