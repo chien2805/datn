@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/QuanLyCuaHangSach.styles.css" asp-append-version="true" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -38,7 +45,7 @@
                     }
                 </div>
                 <a class="navbar-brand text-white mb-0 h-100 d-flex align-items-center" asp-area="" asp-controller="TrangChu" asp-action="Index" style="font-weight: bold; font-size: 1.25rem;">
-                    Cừa Hàng Sách Trảng Dài
+                    Cửa Hàng Sách Trảng Dài
                 </a>
                 <!-- Bên phải: Giỏ hàng + Đăng nhập/Đăng ký hoặc Xin chào -->
                 @if (userRole != "Admin" && userRole != "NhanVien")
@@ -89,16 +96,21 @@
             <div class="admin-sidebar p-3 vh-100">
                 <h4 class="text-center admin-title">📋 Quản lý</h4>
                 <ul class="nav flex-column">
-                    @* Các mục chung cho Admin và Nhân viên *@
-                    <li class="nav-item"><a class="nav-link" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="Sach" asp-action="Index">📖 Sách</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="HoaDonBan" asp-action="Index">📜 Hóa đơn</a></li>
-
                     @* Các mục chỉ dành riêng cho Admin *@
                     @if (userRole == "Admin")
                     {
                         <li class="nav-item"><a class="nav-link" asp-controller="TrangChu" asp-action="Admin">📊 Tổng quan</a></li>
+
+                    }
+                    @* Các mục chung cho Admin và Nhân viên *@
+                    <li class="nav-item"><a class="nav-link" asp-controller="PhieuDatTruoc" asp-action="Index">📚 Danh sách mượn</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="HoaDonBan" asp-action="Index">📜 Hóa đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Sach" asp-action="Index">📖 Sách</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="TheLoai" asp-action="Index">🎭 Thể loại</a></li>
+                    @* Các mục chỉ dành riêng cho Admin *@
+                    @if (userRole == "Admin")
+                    {
+
                         <li class="nav-item"><a class="nav-link" asp-controller="NhaCungCap" asp-action="Index">🏢 Nhà cung cấp</a></li>
                         <li class="nav-item"><a class="nav-link" asp-controller="TaiKhoanNguoiDung" asp-action="Index">👤 Tài khoản</a></li>
                         <li class="nav-item"><a class="nav-link" asp-controller="ThongKe" asp-action="Index"><i class="fas fa-chart-pie me-2"></i> Thống kê</a></li>
@@ -170,9 +182,9 @@
                 <h3 style="font-size: 16px; margin-bottom: 10px; color: #4a90e2;">Liên kết</h3>
                 <ul style="list-style: none; padding: 0; font-size: 14px;">
                     <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Trang chủ</a></li>
-                    <li style="margin-bottom: 6px;"><a href="/sach" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Tất cả sách</a></li>
-                    <li style="margin-bottom: 6px;"><a href="/the-loai" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Thể loại</a></li>
-                    <li style="margin-bottom: 6px;"><a href="/lien-he" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Liên hệ</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Tất cả sách</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Thể loại</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Liên hệ</a></li>
                 </ul>
             </div>
 
@@ -180,9 +192,9 @@
             <div style="flex: 1 1 220px; margin: 10px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #ffffff;">
                 <h3 style="font-size: 16px; margin-bottom: 10px; color: #4a90e2;">Hỗ trợ</h3>
                 <ul style="list-style: none; padding: 0; font-size: 14px;">
-                    <li style="margin-bottom: 6px;"><a href="/huong-dan-mua-hang" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Hướng dẫn mua hàng</a></li>
-                    <li style="margin-bottom: 6px;"><a href="/chinh-sach-doi-tra" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Chính sách đổi trả</a></li>
-                    <li style="margin-bottom: 6px;"><a href="/cau-hoi-thuong-gap" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Câu hỏi thường gặp</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Hướng dẫn mua hàng</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Chính sách đổi trả</a></li>
+                    <li style="margin-bottom: 6px;"><a href="/" style="text-decoration: none; color: #333;" onmouseover="this.style.color='#7ed6df'" onmouseout="this.style.color='#333'">Câu hỏi thường gặp</a></li>
                 </ul>
             </div>
 
@@ -487,9 +499,9 @@
                     <p><strong>Email:</strong> @Context.Session.GetString("UserEmail")</p>
                     <p><strong>Số điện thoại:</strong> @Context.Session.GetString("SoDienThoai")</p>
                     <p><strong>Địa chỉ:</strong> @Context.Session.GetString("DiaChi")</p>
-                    <div class="text-center">
-                        <img src="@Context.Session.GetString("AnhDaiDien")" alt="Ảnh đại diện" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;">
-                    </div>
+                    @* <div class="text-center"> *@
+                    @*     <img src="@Context.Session.GetString("AnhDaiDien")" alt="Ảnh đại diện" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;"> *@
+                    @* </div> *@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="switchToEditModal()">Chỉnh sửa</button>
@@ -530,10 +542,10 @@
                             <label class="form-label">Địa chỉ:</label>
                             <input type="text" class="form-control" name="DiaChi" value="@Context.Session.GetString("DiaChi")">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Ảnh đại diện (URL):</label>
-                            <input type="text" class="form-control" name="AnhDaiDien" value="@Context.Session.GetString("AnhDaiDien")">
-                        </div>
+                        @* <div class="mb-3"> *@
+                        @*     <label class="form-label">Ảnh đại diện (URL):</label> *@
+                        @*     <input type="text" class="form-control" name="AnhDaiDien" value="@Context.Session.GetString("AnhDaiDien")"> *@
+                        @* </div> *@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Lưu thay đổi</button>
@@ -674,10 +686,43 @@
 
         }
         function capNhatSoLuong(maSach, soLuongThayDoi) {
+            let $quantityDisplay = $(`#quantity-display-${maSach}`);
+            let currentQuantity = parseInt($quantityDisplay.attr('data-current-quantity'));
+            let maxQuantity = parseInt($quantityDisplay.attr('data-max-quantity'));
+            let $errorMessage = $(`#error-message-${maSach}`);
+
+            let newQuantity = currentQuantity + soLuongThayDoi;
+
+            if (newQuantity <= 0) {
+                // Hỏi người dùng có muốn xóa không nếu giảm đến 0
+                if (confirm("Bạn có muốn xóa sách này khỏi giỏ hàng không?")) {
+                    xoaKhoiGio(maSach); // Gọi hàm xóa sách
+                }
+                return; // Dừng lại không gửi request
+            } else if (newQuantity > maxQuantity) {
+                $errorMessage.text(`Số lượng tối đa là ${maxQuantity}`).show();
+                // Không gửi request nếu vượt quá tồn kho
+                return;
+            } else {
+                $errorMessage.hide(); // Ẩn thông báo lỗi nếu có
+            }
+
+            // Nếu hợp lệ, gửi request AJAX
             $.post("/GioHang/CapNhatSoLuong", { maSach: maSach, soLuongThayDoi: soLuongThayDoi }, function (response) {
                 if (response.success) {
+                    // Cập nhật lại số lượng hiển thị trên UI ngay lập tức
+                    $quantityDisplay.text(newQuantity);
+                    $quantityDisplay.attr('data-current-quantity', newQuantity);
+                    capNhatSoLuongGioHang(); // Cập nhật toàn bộ giỏ hàng (tổng tiền, số lượng icon)
+                } else {
+                    // Hiển thị lỗi từ server nếu có vấn đề gì khác
+                    alert(response.message);
+                    // Có thể cần cập nhật lại UI về trạng thái cũ nếu server trả về lỗi
                     capNhatSoLuongGioHang();
                 }
+            }).fail(function(xhr, status, error) {
+                console.error("Lỗi AJAX:", error);
+                alert("Đã xảy ra lỗi khi cập nhật giỏ hàng. Vui lòng thử lại.");
             });
         }
 
@@ -703,17 +748,21 @@
                                 alt="${item.sach.tieuDe}"
                                 style="height: 50px; width: 50px; object-fit: cover;" />
 
-                            <div class="flex-grow-1">
-                                <b>${item.sach.tieuDe}</b><br>
-                                Đơn giá: ${item.sach.gia.toLocaleString()}đ<br>
-                                <div class="d-flex align-items-center mt-1">
-                                    <button class="btn btn-outline-secondary btn-sm me-2" onclick="capNhatSoLuong(${item.maSach}, -1)">−</button>
-                                    <span class="mx-2">${item.soLuong}</span>
-                                    <button class="btn btn-outline-secondary btn-sm ms-2" onclick="capNhatSoLuong(${item.maSach}, 1)">+</button>
-                                </div>
-                                <b>Thành tiền: ${thanhTien.toLocaleString()}đ</b>
-                            </div>
-                            <button class="btn btn-sm btn-danger ms-2" onclick="xoaKhoiGio(${item.maSach})">X</button>
+        <div class="flex-grow-1">
+            <b>${item.sach.tieuDe}</b><br>
+            Đơn giá: ${item.sach.gia.toLocaleString()}đ<br>
+            <div class="d-flex align-items-center mt-1">
+                <button class="btn btn-outline-secondary btn-sm me-2"
+                        onclick="capNhatSoLuong(${item.maSach}, -1)">−</button>
+                <span class="mx-2"
+                      data-current-quantity="${item.soLuong}"
+                      data-max-quantity="${item.sach.soLuongTonKho}"
+                      id="quantity-display-${item.maSach}">${item.soLuong}</span> <button class="btn btn-outline-secondary btn-sm ms-2"
+                        onclick="capNhatSoLuong(${item.maSach}, 1)">+</button>
+            </div>
+            <b>Thành tiền: ${thanhTien.toLocaleString()}đ</b>
+            <span class="text-danger small mt-1 d-block" id="error-message-${item.maSach}"></span> </div>
+        <button class="btn btn-sm btn-danger ms-2" onclick="xoaKhoiGio(${item.maSach})">X</button>
                         </li>`;
             });
 

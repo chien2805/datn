@@ -53,15 +53,39 @@ namespace QuanLyCuaHangSach.Controllers
             var gioHang = GetGioHang();
             var item = gioHang.ChiTietGioHangs.FirstOrDefault(c => c.MaSach == maSach);
 
-            if (item != null)
+            if (item == null)
             {
-                item.SoLuong += soLuongThayDoi;
-                if (item.SoLuong <= 0)
-                    gioHang.ChiTietGioHangs.Remove(item);
-
-                HttpContext.Session.SetObjectAsJson("GioHang", gioHang);
+                return Json(new { success = false, message = "Sản phẩm không có trong giỏ hàng." });
             }
-            return Json(new { success = true });
+
+            // Lấy thông tin sách từ database để kiểm tra số lượng tồn kho
+            var sach = _context.Sach.Find(maSach);
+            if (sach == null)
+            {
+                return Json(new { success = false, message = "Sách không tồn tại." });
+            }
+
+            int newQuantity = item.SoLuong + soLuongThayDoi;
+
+            if (newQuantity <= 0)
+            {
+                // Nếu số lượng mới là 0 hoặc âm, xóa khỏi giỏ hàng
+                gioHang.ChiTietGioHangs.Remove(item);
+                HttpContext.Session.SetObjectAsJson("GioHang", gioHang);
+                return Json(new { success = true, message = "Đã xóa sách khỏi giỏ hàng." });
+            }
+            else if (newQuantity > sach.SoLuongTon)
+            {
+                // Nếu số lượng mới vượt quá số lượng tồn kho
+                return Json(new { success = false, message = $"Hiện tại số lượng đang còn tại cửa hàng của sách '{sach.TieuDe}' là {sach.SoLuongTon}." });
+            }
+            else
+            {
+                // Cập nhật số lượng nếu hợp lệ
+                item.SoLuong = newQuantity;
+                HttpContext.Session.SetObjectAsJson("GioHang", gioHang);
+                return Json(new { success = true, message = "Cập nhật số lượng thành công." });
+            }
         }
 
         [HttpPost]

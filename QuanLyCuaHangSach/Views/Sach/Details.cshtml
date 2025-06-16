@@ -40,7 +40,7 @@
     <div style="flex-shrink: 0; border: 2px solid #ddd; padding: 10px; border-right: 2px solid #ddd;width: 500px">
         @if (!string.IsNullOrEmpty(Model.HinhAnh))
         {
-            <img src="@Model.HinhAnh" alt="Hình ảnh sách" style="width: 500px; max-height: 500px; object-fit: contain; display: block;" />
+            <img src="@Model.HinhAnh" alt="Hình ảnh sách" style="width: 470px; max-height: 500px; object-fit: contain; display: block;" />
         }
         else
         {
@@ -77,24 +77,41 @@
                     <dt class="col-sm-4" style="font-weight: bold;">Giá:</dt>
                     <dd class="col-sm-8">@Model.Gia.ToString("N0") đ</dd>
                 </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <dt class="col-sm-4" style="font-weight: bold;">Số lượng tồn:</dt>
+                    <dd class="col-sm-8">@Model.SoLuongTon</dd>
+                </div>
             </dl>
         </div>
 
         <!-- Nút Thêm vào giỏ và Quay lại -->
         <div style="margin-top: 20px; display: flex; gap: 10px;">
-            <!-- Nút Thêm vào giỏ -->
-            <a href="javascript:void(0)"
-               title="Thêm vào giỏ"
-               onclick="themVaoGio(@Model.MaSach)"
-               style="color: white; background-color: #2f855a; padding: 10px 20px; border-radius: 5px; font-size: 14px; text-decoration: none; display: inline-block;">
-                Thêm vào giỏ
-            </a>
+            <!-- Kiểm tra số lượng tồn -->
+            @if (Model.SoLuongTon > 0)
+            {
+                <a href="javascript:void(0)"
+                   title="Thêm vào giỏ"
+                   onclick="themVaoGio(@Model.MaSach)"
+                   style="color: white; background-color: #2f855a; padding: 10px 20px; border-radius: 5px; font-size: 14px; text-decoration: none; display: inline-block;">
+                    Thêm vào giỏ
+                </a>
+            }
+            else
+            {
+                <button disabled
+                        style="background-color: gray; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px;">
+                    Hết hàng
+                </button>
+            }
+
             <!-- Nút Quay lại -->
             <a asp-controller="TrangChu" asp-action="Index" class="btn btn-secondary" style="padding: 10px 20px; font-size: 14px; text-decoration: none; border-radius: 5px; background-color: #6c757d; color: white;">
                 Quay lại
             </a>
         </div>
     </div>
+
 
 
     <!-- Phần "Chỉ có ở Vinabook" bên phải -->

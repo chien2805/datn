@@ -220,30 +220,52 @@ namespace QuanLyCuaHangSach.Controllers
                 // Kiểm tra trước khi thêm vào CSDL
                 Console.WriteLine($"HoaDonBan MaHoaDon: {hoaDon.MaHoaDon}, NgayLap: {hoaDon.NgayLap}, TongTien: {hoaDon.TongTien}");
 
+                // Thêm hóa đơn bán vào CSDL
                 _context.HoaDonBan.Add(hoaDon);
                 _context.SaveChanges();
 
                 // Sau khi lưu vào CSDL, kiểm tra lại MaHoaDon
                 Console.WriteLine($"Sau khi SaveChanges - MaHoaDon: {hoaDon.MaHoaDon}");
 
-                // Thêm chi tiết hóa đơn vào cơ sở dữ liệu
+                // Thêm chi tiết hóa đơn vào cơ sở dữ liệu và cập nhật tồn kho
                 foreach (var item in chiTietHoaDon)
                 {
                     item.MaHoaDon = hoaDon.MaHoaDon;
 
-                    var existingDetail = _context.ChiTietHoaDon.FirstOrDefault(ct => ct.MaHoaDon == item.MaHoaDon && ct.MaSach == item.MaSach);
+                    // Cập nhật số lượng tồn kho sau khi bán
+                    var sach = _context.Sach.FirstOrDefault(s => s.MaSach == item.MaSach);
+
+                    // Trừ số lượng tồn kho sau khi bán
+                    sach.SoLuongTon -= item.SoLuong;
+
+                    _context.Sach.Update(sach);
+
+                    // Kiểm tra nếu chi tiết hóa đơn đã tồn tại, thì cập nhật; nếu chưa có thì thêm mới
+                    var existingDetail = _context.ChiTietHoaDon
+                        .FirstOrDefault(ct => ct.MaHoaDon == item.MaHoaDon && ct.MaSach == item.MaSach);
+
                     if (existingDetail == null)
                     {
-                        _context.ChiTietHoaDon.Add(item);
+                        _context.ChiTietHoaDon.Add(item); // Thêm chi tiết hóa đơn mới
+                    }
+                    else
+                    {
+                        // Cập nhật thông tin chi tiết hóa đơn nếu đã tồn tại
+                        existingDetail.SoLuong = item.SoLuong;
+                        existingDetail.ThanhTien = item.ThanhTien;
+                        _context.ChiTietHoaDon.Update(existingDetail);
                     }
                 }
 
+                // Lưu tất cả các thay đổi (chi tiết hóa đơn và cập nhật kho)
                 _context.SaveChanges();
+
                 return RedirectToAction("Index", "HoaDonBan");
             }
 
             return Json(new { success = false, message = "Có lỗi xảy ra" });
         }
+
 
 
         [HttpGet]

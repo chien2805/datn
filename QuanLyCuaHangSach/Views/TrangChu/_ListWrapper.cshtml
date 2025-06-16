@@ -15,23 +15,31 @@
     <div id="danhSachSach" class="row">
         @foreach (var sach in Model)
         {
-            <div class="col-md-3 mb-5">
+            <div style="flex: 0 0 20%; max-width: 20%; padding-left: 0; padding-right: 0; margin-bottom: 3rem;">
                 <div class="card position-relative" style="width: 200px; height: 325px; display: flex; flex-direction: column; overflow: hidden; border-radius: 10px; border: 1px solid #4a90e2; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <div style="position: relative; flex-grow: 1;">
                         @if (sach.SoLuongBan > 0)
                         {
                             <div style="position: absolute; top: 8px; left: 8px; background-color: #e74c3c; color: white; padding: 3px 8px; font-size: 0.75rem; border-radius: 4px; z-index: 2;">
-                                Đã bán  @sach.SoLuongBan
+                                Đã bán @sach.SoLuongBan
                             </div>
                         }
+                        @if (sach.SoLuongTon == 0)
+                        {
+                            <div style="position: absolute; top: 8px; right: 8px; background-color: gray; color: white; padding: 3px 8px; font-size: 0.75rem; border-radius: 4px; z-index: 2;">
+                                Hết hàng
+                            </div>
+                        }
+
                         <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })" title="Xem chi tiết">
-                        <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/")
+                            <img src="@Url.Content(!string.IsNullOrEmpty(sach.HinhAnh) && sach.HinhAnh.StartsWith("/images/")
                                    ? sach.HinhAnh
                                    : "~/images/sach/default.jpg")"
-                             class="card-img-top"
-                             alt="@sach.TieuDe"
-                                 style="width: 100%; height: 160px; object-fit: contain; padding: 5px;border-top-left-radius: 10px; border-top-right-radius: 10px; transition: transform 0.3s ease;" />
+                                 class="card-img-top"
+                                 alt="@sach.TieuDe"
+                                 style="width: 100%; height: 160px; object-fit: contain; padding: 5px; border-top-left-radius: 10px; border-top-right-radius: 10px; transition: transform 0.3s ease;" />
                         </a>
+
                         <!-- Icon overlay -->
                         <div style="position: absolute; bottom: 8px; right: 8px; display: flex; gap: 8px;">
                             <a href="@Url.Action("Details", "Sach", new { id = sach.MaSach })"
@@ -40,24 +48,35 @@
                                 <i class="bi bi-eye"></i>
                             </a>
 
-                            @if (isLoggedIn)
+                            @if (sach.SoLuongTon > 0)
                             {
-                                <button type="button"
-                                        title="Đặt thuê"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#xacNhanModal"
-                                        onclick="prepareDatThue(@sach.MaSach)"
-                                        style="background-color: #2f855a; color: white; border: none; border-radius: 50%; padding: 6px; cursor: pointer;">
-                                    <i class="bi bi-book"></i>
+                                @if (isLoggedIn)
+                                {
+                                    <button type="button"
+                                            title="Đặt thuê"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#xacNhanModal"
+                                            onclick="prepareDatThue(@sach.MaSach)"
+                                            style="background-color: #2f855a; color: white; border: none; border-radius: 50%; padding: 6px; cursor: pointer;">
+                                        <i class="bi bi-book"></i>
+                                    </button>
+                                }
+
+                                <a href="javascript:void(0)"
+                                   title="Thêm vào giỏ"
+                                   onclick="themVaoGio(@sach.MaSach)"
+                                   style="color: white; background-color: #2f855a; border-radius: 50%; padding: 6px;">
+                                    <i class="bi bi-cart-plus"></i>
+                                </a>
+                            }
+                            else
+                            {
+                                <button disabled
+                                        title="Hết hàng"
+                                        style="background-color: gray; color: white; border: none; border-radius: 50%; padding: 6px;">
+                                    <i class="bi bi-x-circle"></i>
                                 </button>
                             }
-
-                            <a href="javascript:void(0)"
-                               title="Thêm vào giỏ"
-                               onclick="themVaoGio(@sach.MaSach)"
-                               style="color: white; background-color: #2f855a; border-radius: 50%; padding: 6px;">
-                                <i class="bi bi-cart-plus"></i>
-                            </a>
                         </div>
                     </div>
 

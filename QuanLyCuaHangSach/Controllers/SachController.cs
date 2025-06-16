@@ -261,6 +261,28 @@ namespace QuanLyCuaHangSach.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+        // GET: Sach/GetSoLuongTon
+        public IActionResult GetSoLuongTon(int maSach)
+        {
+            var sach = _context.Sach.FirstOrDefault(s => s.MaSach == maSach);
+            if (sach != null)
+            {
+                return Json(new { soLuongTon = sach.SoLuongTon });
+            }
+
+            return Json(new { soLuongTon = 0 });
+        }
+
+        [HttpGet]
+        public IActionResult KiemTraTonKho(int maSach)
+        {
+            var sach = _context.Sach.FirstOrDefault(s => s.MaSach == maSach);
+            if (sach != null)
+            {
+                return Json(new { tonKho = sach.SoLuongTon });
+            }
+            return Json(new { tonKho = 0 });
+        }
 
         [HttpGet]
         public async Task<IActionResult> TimKiemSach(string term)

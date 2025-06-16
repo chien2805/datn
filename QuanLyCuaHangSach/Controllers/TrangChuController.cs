@@ -14,7 +14,7 @@ namespace QuanLyCuaHangSach.Controllers
     public class TrangChuController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private const int PageSize = 16;
+        private const int PageSize = 20;
 
         public TrangChuController(ApplicationDbContext context)
         {

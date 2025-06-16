@@ -412,7 +412,20 @@
             const gia = parseFloat(document.getElementById(`giaSach${index}`).value) || 0;
             const soLuong = parseInt(document.getElementById(`soLuong${index}`).value) || 1;
             const thanhTien = document.getElementById(`thanhTien${index}`);
+            const maSach = document.getElementById(`maSach${index}`).value;
+
             thanhTien.value = (gia * soLuong).toFixed(2);
+
+            // Gọi API kiểm tra tồn kho
+            if (maSach) {
+                $.get('@Url.Action("KiemTraTonKho", "Sach")', { maSach: maSach }, function (data) {
+                    if (data.tonKho !== undefined && soLuong > data.tonKho) {
+                        alert(`Số lượng vượt quá tồn kho! Tồn kho: ${data.tonKho}`);
+                        document.getElementById(`soLuong${index}`).value = data.tonKho;
+                        capNhatThanhTienIndex(index); // Gọi lại để cập nhật lại thành tiền đúng
+                    }
+                });
+            }
         }
 
         // Biến theo dõi chỉ số chi tiết hóa đơn mới (dòng tiếp theo)

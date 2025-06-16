@@ -495,6 +495,88 @@
       ]
     },
     {
+      "Route": "images/075c0365-fb90-4dc9-be45-8e4629230dcf_Đất Nước Hồi Sinh - Hành Trình Văn Hóa Nhật Bản.jpg",
+      "AssetFile": "images/075c0365-fb90-4dc9-be45-8e4629230dcf_Đất Nước Hồi Sinh - Hành Trình Văn Hóa Nhật Bản.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50995"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"udmQZWYM5Nk2t8ghqmGbJFFxmMFDOsnSSYWlmTSpZzg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 13:02:08 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-udmQZWYM5Nk2t8ghqmGbJFFxmMFDOsnSSYWlmTSpZzg="
+        }
+      ]
+    },
+    {
+      "Route": "images/075c0365-fb90-4dc9-be45-8e4629230dcf_Đất Nước Hồi Sinh - Hành Trình Văn Hóa Nhật Bản.xq3vdqaxsc.jpg",
+      "AssetFile": "images/075c0365-fb90-4dc9-be45-8e4629230dcf_Đất Nước Hồi Sinh - Hành Trình Văn Hóa Nhật Bản.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50995"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"udmQZWYM5Nk2t8ghqmGbJFFxmMFDOsnSSYWlmTSpZzg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 13:02:08 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xq3vdqaxsc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-udmQZWYM5Nk2t8ghqmGbJFFxmMFDOsnSSYWlmTSpZzg="
+        },
+        {
+          "Name": "label",
+          "Value": "images/075c0365-fb90-4dc9-be45-8e4629230dcf_Đất Nước Hồi Sinh - Hành Trình Văn Hóa Nhật Bản.jpg"
+        }
+      ]
+    },
+    {
       "Route": "images/086f290c-13a4-46b7-829a-8931e33acbd5_Untitled.h74l835b0d.png",
       "AssetFile": "images/086f290c-13a4-46b7-829a-8931e33acbd5_Untitled.png",
       "Selectors": [],
@@ -1479,6 +1561,88 @@
       ]
     },
     {
+      "Route": "images/3a43bd7c-a023-42ee-8fe2-d1f3057cdc71_bi-mat.jpg",
+      "AssetFile": "images/3a43bd7c-a023-42ee-8fe2-d1f3057cdc71_bi-mat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 14:27:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg="
+        }
+      ]
+    },
+    {
+      "Route": "images/3a43bd7c-a023-42ee-8fe2-d1f3057cdc71_bi-mat.wj752zxam7.jpg",
+      "AssetFile": "images/3a43bd7c-a023-42ee-8fe2-d1f3057cdc71_bi-mat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 14:27:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj752zxam7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg="
+        },
+        {
+          "Name": "label",
+          "Value": "images/3a43bd7c-a023-42ee-8fe2-d1f3057cdc71_bi-mat.jpg"
+        }
+      ]
+    },
+    {
       "Route": "images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.h74l835b0d.png",
       "AssetFile": "images/4309721c-c8be-4ea4-b926-7fdc3cb6ed0c_Untitled.png",
       "Selectors": [],
@@ -1557,6 +1721,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-c/N3rKrtf2/fyrWt2rLOIQQqdUkYuRQuap8T+4RTiyY="
+        }
+      ]
+    },
+    {
+      "Route": "images/4f5c2dd5-53fb-4705-8e1b-8383103f0172_Lịch Sử Văn Minh Thế Giới.jpg",
+      "AssetFile": "images/4f5c2dd5-53fb-4705-8e1b-8383103f0172_Lịch Sử Văn Minh Thế Giới.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "421614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vLCQ2KUhVN9TcGuK9RkfPB1E3cwwb3G2WnMbezBrkb4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 13:01:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vLCQ2KUhVN9TcGuK9RkfPB1E3cwwb3G2WnMbezBrkb4="
+        }
+      ]
+    },
+    {
+      "Route": "images/4f5c2dd5-53fb-4705-8e1b-8383103f0172_Lịch Sử Văn Minh Thế Giới.so4sagi8tt.jpg",
+      "AssetFile": "images/4f5c2dd5-53fb-4705-8e1b-8383103f0172_Lịch Sử Văn Minh Thế Giới.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "421614"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vLCQ2KUhVN9TcGuK9RkfPB1E3cwwb3G2WnMbezBrkb4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 13:01:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "so4sagi8tt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vLCQ2KUhVN9TcGuK9RkfPB1E3cwwb3G2WnMbezBrkb4="
+        },
+        {
+          "Name": "label",
+          "Value": "images/4f5c2dd5-53fb-4705-8e1b-8383103f0172_Lịch Sử Văn Minh Thế Giới.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/551db30d-a660-4927-8fb6-5b4fd30061e3_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "images/551db30d-a660-4927-8fb6-5b4fd30061e3_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 13:14:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        },
+        {
+          "Name": "label",
+          "Value": "images/551db30d-a660-4927-8fb6-5b4fd30061e3_Việt Nam Sử Lược.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/551db30d-a660-4927-8fb6-5b4fd30061e3_Việt Nam Sử Lược.jpg",
+      "AssetFile": "images/551db30d-a660-4927-8fb6-5b4fd30061e3_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 13:14:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },
@@ -2049,6 +2377,88 @@
         {
           "Name": "label",
           "Value": "images/6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.4f45gxoqt9.jpg",
+      "AssetFile": "images/772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oNnJ5Ik62u5KNntjFamC4TrEghYhdo3hfsqbk6oy16I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 13:18:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4f45gxoqt9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oNnJ5Ik62u5KNntjFamC4TrEghYhdo3hfsqbk6oy16I="
+        },
+        {
+          "Name": "label",
+          "Value": "images/772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.jpg",
+      "AssetFile": "images/772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oNnJ5Ik62u5KNntjFamC4TrEghYhdo3hfsqbk6oy16I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 13:18:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oNnJ5Ik62u5KNntjFamC4TrEghYhdo3hfsqbk6oy16I="
         }
       ]
     },
@@ -2627,6 +3037,88 @@
       ]
     },
     {
+      "Route": "images/9f8791e0-7bed-4c33-b17d-040d4755f827_bi-mat.jpg",
+      "AssetFile": "images/9f8791e0-7bed-4c33-b17d-040d4755f827_bi-mat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 14:34:09 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg="
+        }
+      ]
+    },
+    {
+      "Route": "images/9f8791e0-7bed-4c33-b17d-040d4755f827_bi-mat.wj752zxam7.jpg",
+      "AssetFile": "images/9f8791e0-7bed-4c33-b17d-040d4755f827_bi-mat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 14:34:09 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj752zxam7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg="
+        },
+        {
+          "Name": "label",
+          "Value": "images/9f8791e0-7bed-4c33-b17d-040d4755f827_bi-mat.jpg"
+        }
+      ]
+    },
+    {
       "Route": "images/a3207e20-d05f-488a-80cb-fe9fd04e2f36_Đắc_nhân_tâm.jpg",
       "AssetFile": "images/a3207e20-d05f-488a-80cb-fe9fd04e2f36_Đắc_nhân_tâm.jpg",
       "Selectors": [],
@@ -3119,6 +3611,88 @@
       ]
     },
     {
+      "Route": "images/c988a012-1604-496f-88e9-3f2b7a8fb485_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "images/c988a012-1604-496f-88e9-3f2b7a8fb485_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 13:00:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        },
+        {
+          "Name": "label",
+          "Value": "images/c988a012-1604-496f-88e9-3f2b7a8fb485_Việt Nam Sử Lược.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/c988a012-1604-496f-88e9-3f2b7a8fb485_Việt Nam Sử Lược.jpg",
+      "AssetFile": "images/c988a012-1604-496f-88e9-3f2b7a8fb485_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 13:00:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        }
+      ]
+    },
+    {
       "Route": "images/cafa96de-aa35-44ab-b58b-65a5146b7f4a_chi-pheo-tb-2022.4f45gxoqt9.jpg",
       "AssetFile": "images/cafa96de-aa35-44ab-b58b-65a5146b7f4a_chi-pheo-tb-2022.jpg",
       "Selectors": [],
@@ -3197,6 +3771,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-oNnJ5Ik62u5KNntjFamC4TrEghYhdo3hfsqbk6oy16I="
+        }
+      ]
+    },
+    {
+      "Route": "images/d5314d43-ab37-4240-9bd6-70833efbee0e_so-do.jpg",
+      "AssetFile": "images/d5314d43-ab37-4240-9bd6-70833efbee0e_so-do.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "142457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r9szXJci206mkR+KCrpXlipaQZJRjNylV+08gkxMZsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 13:14:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r9szXJci206mkR+KCrpXlipaQZJRjNylV+08gkxMZsA="
+        }
+      ]
+    },
+    {
+      "Route": "images/d5314d43-ab37-4240-9bd6-70833efbee0e_so-do.pa1n23hamx.jpg",
+      "AssetFile": "images/d5314d43-ab37-4240-9bd6-70833efbee0e_so-do.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "142457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r9szXJci206mkR+KCrpXlipaQZJRjNylV+08gkxMZsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 13:14:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pa1n23hamx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r9szXJci206mkR+KCrpXlipaQZJRjNylV+08gkxMZsA="
+        },
+        {
+          "Name": "label",
+          "Value": "images/d5314d43-ab37-4240-9bd6-70833efbee0e_so-do.jpg"
         }
       ]
     },
@@ -3689,6 +4345,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bCeabg5OQl7GmpY/GSm8YwP96x7/TGYD+KO3Vlx8R6w="
+        }
+      ]
+    },
+    {
+      "Route": "images/f4965ccc-03ab-4788-8b8f-311fc6391015_bi-mat.jpg",
+      "AssetFile": "images/f4965ccc-03ab-4788-8b8f-311fc6391015_bi-mat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 14:21:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg="
+        }
+      ]
+    },
+    {
+      "Route": "images/f4965ccc-03ab-4788-8b8f-311fc6391015_bi-mat.wj752zxam7.jpg",
+      "AssetFile": "images/f4965ccc-03ab-4788-8b8f-311fc6391015_bi-mat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 14:21:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj752zxam7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fPNs2tAO8ng/O6vI2Z/fTEi0pD44iaZlOv0VeHkmgjg="
+        },
+        {
+          "Name": "label",
+          "Value": "images/f4965ccc-03ab-4788-8b8f-311fc6391015_bi-mat.jpg"
         }
       ]
     },
