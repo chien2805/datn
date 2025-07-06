@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using QuanLyCuaHangSach.Context;
 using QuanLyCuaHangSach.Models;
 using System.Security.Claims;
@@ -301,6 +302,59 @@ namespace QuanLyCuaHangSach.Controllers
 
             // Cập nhật trạng thái thành "Huy"
             phieu.TrangThai = "Đã hủy";
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult TimKiemSach(string term)
+        {
+            var ketQua = _context.Sach
+                .Where(s => s.TieuDe.Contains(term))
+                .Select(s => new {
+                    label = s.TieuDe,
+                    maSach = s.MaSach
+                }).Take(10).ToList();
+
+            return Json(ketQua);
+        }
+
+        [HttpPost]
+        public IActionResult TaoTaiQuay(string TenKhachHang, string SoDienThoai, string JsonChiTiet, decimal ThanhTien)
+        {
+            var chiTietList = JsonConvert.DeserializeObject<List<ChiTietPhieuDatTruoc>>(JsonChiTiet);
+
+            // Trừ số lượng tồn
+            foreach (var ct in chiTietList)
+            {
+                var sach = _context.Sach.FirstOrDefault(s => s.MaSach == ct.MaSach);
+                if (sach != null)
+                {
+                    if (sach.SoLuongTon >= ct.SoLuongMuon)
+                    {
+                        sach.SoLuongTon -= ct.SoLuongMuon;
+                    }
+                    else
+                    {
+                        // Nếu không đủ tồn kho, có thể xử lý lỗi hoặc bỏ qua
+                        TempData["Error"] = $"Sách '{sach.TieuDe}' không đủ số lượng tồn.";
+                        return RedirectToAction("Index");
+                    }
+                }
+            }
+
+            var phieu = new PhieuDatTruoc
+            {
+                TenKhachHang = TenKhachHang,
+                SoDienThoai = SoDienThoai,
+                NgayDat = DateTime.Now,
+                NgayTra = DateTime.Now.AddDays(7),
+                TrangThai = "Đã xử lý",
+                ThanhTien = ThanhTien,
+                ChiTietPhieuDatTruoc = chiTietList
+            };
+
+            _context.PhieuDatTruoc.Add(phieu);
             _context.SaveChanges();
 
             return RedirectToAction("Index");

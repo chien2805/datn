@@ -63,6 +63,18 @@ namespace QuanLyCuaHangSach.Services
             var jsonRequest = JsonConvert.SerializeObject(requestData);
             Console.WriteLine($"Request Data: {jsonRequest}"); // Kiểm tra JSON gửi đi
 
+            // ✅ Ghi log gửi và nhận
+            var logDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Logs");
+            Directory.CreateDirectory(logDir);
+
+            System.IO.File.WriteAllText(Path.Combine(logDir, "momo_request.json"), jsonRequest);
+            System.IO.File.WriteAllText(Path.Combine(logDir, "momo_response.json"), response?.Content ?? "Không có nội dung phản hồi");
+
+            if (string.IsNullOrEmpty(response?.Content))
+            {
+                return null;
+            }
+
             return JsonConvert.DeserializeObject<MomoCreatePaymentResponseModel>(response.Content);
         }
 

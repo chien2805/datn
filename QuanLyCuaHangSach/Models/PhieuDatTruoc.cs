@@ -5,7 +5,7 @@
         public int MaPhieuDatTruoc { get; set; }
 
         // Liên kết với TaiKhoanNguoiDung
-        public int MaTaiKhoan { get; set; } // Nếu cho phép null: int? MaTaiKhoan { get; set; }
+        public int? MaTaiKhoan { get; set; } // Nếu cho phép null: int? MaTaiKhoan { get; set; }
 
         public DateTime NgayDat { get; set; }
         public DateTime NgayTra { get; set; }
@@ -13,8 +13,12 @@
         public decimal? ThanhTien { get; set; }
         public string TrangThai { get; set; }
 
+        // 👉 Thêm thông tin cho thuê tại quầy
+        public string? TenKhachHang { get; set; }
+        public string? SoDienThoai { get; set; }
+
         // Ràng buộc quan hệ
-        public TaiKhoanNguoiDung TaiKhoanNguoiDung { get; set; } // Nếu nullable: TaiKhoanNguoiDung? TaiKhoanNguoiDung { get; set; }
+        public TaiKhoanNguoiDung? TaiKhoanNguoiDung { get; set; } // Nếu nullable: TaiKhoanNguoiDung? TaiKhoanNguoiDung { get; set; }
 
         // Liên kết danh sách chi tiết phiếu đặt trước
         public ICollection<ChiTietPhieuDatTruoc> ChiTietPhieuDatTruoc { get; set; } = new List<ChiTietPhieuDatTruoc>();

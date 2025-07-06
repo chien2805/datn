@@ -48,8 +48,14 @@ namespace QuanLyCuaHangSach.Controllers
             if (id == null)
                 return NotFound();
 
-            var sach = await _context.Sach.Include(s => s.TheLoai).Include(s => s.NhaCungCap)
-                                          .FirstOrDefaultAsync(m => m.MaSach == id);
+            var sach = await _context.Sach
+                .Include(s => s.TheLoai)
+                .Include(s => s.NhaCungCap)
+                .Include(s => s.DanhGias)
+                    .ThenInclude(dg => dg.TaiKhoanNguoiDung)
+                        .ThenInclude(tk => tk.ThongTinNguoiDung)
+                .FirstOrDefaultAsync(m => m.MaSach == id);
+
             if (sach == null)
                 return NotFound();
             var sachBanChay = _context.Sach
@@ -368,6 +374,22 @@ namespace QuanLyCuaHangSach.Controllers
             string normalized = input.Normalize(NormalizationForm.FormD);
             var chars = normalized.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark).ToArray();
             return new string(chars).Normalize(NormalizationForm.FormC);
+        }
+
+        [HttpGet]
+        public IActionResult GoiY(string term)
+        {
+            var result = _context.Sach
+                .Where(s => s.TieuDe.Contains(term))
+                .Select(s => new
+                {
+                    maSach = s.MaSach,
+                    tieuDe = s.TieuDe
+                })
+                .Take(10)
+                .ToList();
+
+            return Json(result);
         }
     }
 }

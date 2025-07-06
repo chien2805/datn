@@ -150,6 +150,136 @@
     </p>
 </div>
 
+<!-- Form đánh giá -->
+<div style="margin-top: 40px;">
+    <h3>Đánh giá & Bình luận</h3>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+
+    @{
+        var maTaiKhoanSession = Context.Session.GetInt32("MaTaiKhoan");
+        var daDanhGia = Model.DanhGias.Any(x => x.MaTaiKhoan == maTaiKhoanSession);
+
+        var soDanhGia = Model.DanhGias.Count;
+        var trungBinhSao = soDanhGia > 0 ? Model.DanhGias.Average(x => x.SoSao) : 0;
+    }
+
+    <!-- Thống kê sao và lượt đánh giá -->
+    <div class="mb-3" style="background: #f4f6f9; padding: 15px; border-radius: 8px;">
+        <strong>⭐️ @trungBinhSao.ToString("0.0") / 5.0</strong> từ <strong>@soDanhGia</strong> đánh giá
+    </div>
+
+    @if (maTaiKhoanSession != null && !daDanhGia)
+    {
+        <form asp-controller="DanhGia" asp-action="ThemDanhGia" method="post">
+            <input type="hidden" name="MaSach" value="@Model.MaSach" />
+
+            <label>Số sao:</label>
+            <select name="SoSao" required class="form-select" style="width: 150px;">
+                <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                <option value="4">⭐️⭐️⭐️⭐️</option>
+                <option value="3">⭐️⭐️⭐️</option>
+                <option value="2">⭐️⭐️</option>
+                <option value="1">⭐️</option>
+            </select>
+
+            <br />
+            <label>Bình luận:</label><br />
+            <textarea name="BinhLuan" rows="3" cols="50" required class="form-control"></textarea><br />
+
+            <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
+        </form>
+    }
+    else if (maTaiKhoanSession == null)
+    {
+        <p>Vui lòng <strong>đăng nhập</strong> để đánh giá sách.</p>
+    }
+    else
+    {
+        <p>Bạn đã đánh giá sách này.</p>
+    }
+</div>
+
+<!-- Danh sách đánh giá -->
+@if (Model.DanhGias != null && Model.DanhGias.Count > 0)
+{
+    <div style="margin-top: 20px;">
+        <h4>Các đánh giá:</h4>
+        <div id="danhGiaContainer">
+            @for (int i = 0; i < Model.DanhGias.Count; i++)
+            {
+                var dg = Model.DanhGias.OrderByDescending(x => x.NgayTao).ToList()[i];
+                var visibleClass = i < 3 ? "" : "d-none"; // ẩn nếu vượt quá 3
+
+                <div class="danh-gia-item @visibleClass" style="border-bottom: 1px solid #ccc; padding: 10px 0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong>
+                                @(string.IsNullOrWhiteSpace(dg.TaiKhoanNguoiDung.ThongTinNguoiDung?.HoTen)
+                                    ? dg.TaiKhoanNguoiDung.TenDangNhap
+                                    : dg.TaiKhoanNguoiDung.ThongTinNguoiDung.HoTen)
+                            </strong>
+
+                            – @dg.SoSao ⭐
+                        </div>
+                        @if (maTaiKhoanSession == dg.MaTaiKhoan)
+                        {
+                            <form asp-controller="DanhGia" asp-action="XoaDanhGia" method="post" style="margin: 0;">
+                                <input type="hidden" name="id" value="@dg.Id" />
+                                <input type="hidden" name="maSach" value="@Model.MaSach" />
+                                <button type="submit" class="btn btn-outline-danger btn-sm" title="Xóa đánh giá" onclick="return confirm('Bạn có chắc muốn xóa bình luận này?')">
+                                    <i class="bi bi-trash3-fill">X</i>
+                                </button>
+                            </form>
+                        }
+                    </div>
+                    <div>@dg.BinhLuan</div>
+                    <small>@dg.NgayTao.ToString("dd/MM/yyyy HH:mm")</small>
+                </div>
+            }
+        </div>
+
+        @if (Model.DanhGias.Count > 3)
+        {
+            <div class="text-center mt-3">
+                <button id="xemThemBtn" class="btn btn-outline-primary">Xem thêm</button>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p style="margin-top: 10px;">Chưa có đánh giá nào cho sách này.</p>
+}
+
+<script>
+    let hienTai = 3;
+    const buocTang = 10;
+    const tong = document.querySelectorAll('.danh-gia-item').length;
+
+    document.getElementById("xemThemBtn")?.addEventListener("click", function () {
+        const items = document.querySelectorAll(".danh-gia-item");
+        for (let i = hienTai; i < hienTai + buocTang && i < tong; i++) {
+            items[i].classList.remove("d-none");
+        }
+        hienTai += buocTang;
+
+        // Ẩn nút nếu đã hiện hết
+        if (hienTai >= tong) {
+            this.style.display = "none";
+        }
+    });
+</script>
+
+
 <!-- Sách bán chạy -->
 <div class="mt-4" style="padding: 15px; background-color: #fff; border-radius: 10px;">
     <h5 style="font-weight: bold; color: #4a90e2; margin-bottom: 15px;">Sách bán chạy</h5>

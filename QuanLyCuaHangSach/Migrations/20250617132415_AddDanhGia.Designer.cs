@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyCuaHangSach.Context;
 
@@ -11,9 +12,11 @@ using QuanLyCuaHangSach.Context;
 namespace QuanLyCuaHangSach.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250617132415_AddDanhGia")]
+    partial class AddDanhGia
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -153,20 +156,27 @@ namespace QuanLyCuaHangSach.Migrations
                     b.Property<int>("MaSach")
                         .HasColumnType("int");
 
-                    b.Property<int>("MaTaiKhoan")
-                        .HasColumnType("int");
+                    b.Property<string>("MaTaiKhoan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("NgayTao")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("SachMaSach")
+                        .HasColumnType("int");
+
                     b.Property<int>("SoSao")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TaiKhoanNguoiDungMaTaiKhoan")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaSach");
+                    b.HasIndex("SachMaSach");
 
-                    b.HasIndex("MaTaiKhoan");
+                    b.HasIndex("TaiKhoanNguoiDungMaTaiKhoan");
 
                     b.ToTable("DanhGias");
                 });
@@ -336,7 +346,7 @@ namespace QuanLyCuaHangSach.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaPhieuDatTruoc"));
 
-                    b.Property<int?>("MaTaiKhoan")
+                    b.Property<int>("MaTaiKhoan")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("NgayDat")
@@ -347,12 +357,6 @@ namespace QuanLyCuaHangSach.Migrations
 
                     b.Property<DateTime?>("NgayTraThucTe")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("SoDienThoai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenKhachHang")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("ThanhTien")
                         .HasColumnType("decimal(18,2)");
@@ -644,14 +648,14 @@ namespace QuanLyCuaHangSach.Migrations
             modelBuilder.Entity("QuanLyCuaHangSach.Models.DanhGia", b =>
                 {
                     b.HasOne("QuanLyCuaHangSach.Models.Sach", "Sach")
-                        .WithMany("DanhGias")
-                        .HasForeignKey("MaSach")
+                        .WithMany()
+                        .HasForeignKey("SachMaSach")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", "TaiKhoanNguoiDung")
                         .WithMany()
-                        .HasForeignKey("MaTaiKhoan")
+                        .HasForeignKey("TaiKhoanNguoiDungMaTaiKhoan")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -696,7 +700,8 @@ namespace QuanLyCuaHangSach.Migrations
                     b.HasOne("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", "TaiKhoanNguoiDung")
                         .WithMany("PhieuDatTruoc")
                         .HasForeignKey("MaTaiKhoan")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("TaiKhoanNguoiDung");
                 });
@@ -781,11 +786,6 @@ namespace QuanLyCuaHangSach.Migrations
             modelBuilder.Entity("QuanLyCuaHangSach.Models.PhieuDatTruoc", b =>
                 {
                     b.Navigation("ChiTietPhieuDatTruoc");
-                });
-
-            modelBuilder.Entity("QuanLyCuaHangSach.Models.Sach", b =>
-                {
-                    b.Navigation("DanhGias");
                 });
 
             modelBuilder.Entity("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", b =>

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuanLyCuaHangSach.Context;
 
@@ -11,9 +12,11 @@ using QuanLyCuaHangSach.Context;
 namespace QuanLyCuaHangSach.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250617135008_AddDanhGiassintupdate")]
+    partial class AddDanhGiassintupdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -336,7 +339,7 @@ namespace QuanLyCuaHangSach.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaPhieuDatTruoc"));
 
-                    b.Property<int?>("MaTaiKhoan")
+                    b.Property<int>("MaTaiKhoan")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("NgayDat")
@@ -347,12 +350,6 @@ namespace QuanLyCuaHangSach.Migrations
 
                     b.Property<DateTime?>("NgayTraThucTe")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("SoDienThoai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenKhachHang")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("ThanhTien")
                         .HasColumnType("decimal(18,2)");
@@ -696,7 +693,8 @@ namespace QuanLyCuaHangSach.Migrations
                     b.HasOne("QuanLyCuaHangSach.Models.TaiKhoanNguoiDung", "TaiKhoanNguoiDung")
                         .WithMany("PhieuDatTruoc")
                         .HasForeignKey("MaTaiKhoan")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("TaiKhoanNguoiDung");
                 });

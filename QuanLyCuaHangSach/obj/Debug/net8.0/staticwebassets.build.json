@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YNqtuxcxkg3cjJ3zukRDkJ5L1xZCWmtBOhKJ10qu+Nc=",
+  "Hash": "iX9snT9WLs4bWgPZwOmL6VTDw4tsVzChXUKczjVgZcY=",
   "Source": "QuanLyCuaHangSach",
   "BasePath": "_content/QuanLyCuaHangSach",
   "Mode": "Default",
@@ -332,6 +332,27 @@
       "OriginalItemSpec": "wwwroot\\images\\1e6f3673-272d-4b11-9a25-1bc6a2b69968_tuoi-tho.jpg"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1g7p7mlqis",
+      "Integrity": "D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\31f19527-4f1f-4e59-844a-ccbb194dc89f_dam-bi-ghet-3.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -645,6 +666,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1g7p7mlqis",
+      "Integrity": "D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.jpg",
@@ -1046,6 +1088,27 @@
       "OriginalItemSpec": "wwwroot\\images\\d73188a0-77a5-4b75-aad9-51806a71a9c5_so-do.jpg"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hdsgveawir",
+      "Integrity": "W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -1191,6 +1254,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\f49aec10-f04e-484e-b22e-038726746c0b_cha-giau.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1g7p7mlqis",
+      "Integrity": "D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg"
     },
     {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\fd352f68-950b-42db-9e27-961628588d49_none.jpg",
@@ -2516,6 +2600,69 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\model_error.txt",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "Logs/model_error#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "03bmrtlkdo",
+      "Integrity": "ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Logs\\model_error.txt"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_request.json",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "Logs/momo_request#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vo9ppzmokd",
+      "Integrity": "T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Logs\\momo_request.json"
+    },
+    {
+      "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_response.json",
+      "SourceId": "QuanLyCuaHangSach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\",
+      "BasePath": "_content/QuanLyCuaHangSach",
+      "RelativePath": "Logs/momo_response#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v3ssuig588",
+      "Integrity": "SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Logs\\momo_response.json"
+    },
+    {
       "Identity": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\sounds\\ting.mp3",
       "SourceId": "QuanLyCuaHangSach",
       "SourceType": "Discovered",
@@ -3601,6 +3748,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU="
+        }
+      ]
+    },
+    {
+      "Route": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 13:38:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "label",
+          "Value": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        }
+      ]
+    },
+    {
+      "Route": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 13:38:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },
@@ -4831,6 +5060,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-tXTxOelWSkeVzT1nc924eo8JFaNh3MwNQdsOcCAfB+4="
+        }
+      ]
+    },
+    {
+      "Route": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Jun 2025 14:05:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "label",
+          "Value": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        }
+      ]
+    },
+    {
+      "Route": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Jun 2025 14:05:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },
@@ -6393,6 +6704,88 @@
       ]
     },
     {
+      "Route": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.hdsgveawir.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56682"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdsgveawir"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU="
+        }
+      ]
+    },
+    {
+      "Route": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56682"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU="
+        }
+      ]
+    },
+    {
       "Route": "images/default.gh670zlc5w.jpg",
       "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
       "Selectors": [],
@@ -6963,6 +7356,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-doC9Y/9VR4YJOKzW3hbNzwf7VF/tQ4HWAh2O7zBWBNI="
+        }
+      ]
+    },
+    {
+      "Route": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "label",
+          "Value": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        }
+      ]
+    },
+    {
+      "Route": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },
@@ -12129,6 +12604,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/model_error.03bmrtlkdo.txt",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\model_error.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 14:16:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03bmrtlkdo"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/model_error.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/model_error.txt",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\model_error.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 14:16:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_request.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_request.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_request.vo9ppzmokd.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_request.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vo9ppzmokd"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/momo_request.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_response.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_response.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_response.v3ssuig588.json",
+      "AssetFile": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_response.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3ssuig588"
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/momo_response.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ="
         }
       ]
     },

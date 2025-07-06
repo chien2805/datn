@@ -4,6 +4,7 @@
     ViewData["Title"] = "Danh sách phiếu đặt trước";
     Layout = "_Layout";
 }
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 
 <style>
 
@@ -13,6 +14,149 @@
 </style>
 
 <h2 class="mb-3" style="font-size: 2rem; color: #333333; font-weight: bold;">📌 Danh Sách Phiếu Đặt Trước</h2>
+<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#themPhieuModal">
+    ➕ Tạo phiếu đặt tại quầy
+</button>
+<div class="modal fade" id="themPhieuModal" tabindex="-1" aria-labelledby="themPhieuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="padding: 20px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="themPhieuModalLabel">📝 Tạo Phiếu Đặt Tại Quầy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form asp-action="TaoTaiQuay" asp-controller="PhieuDatTruoc" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Tên khách hàng</label>
+                        <input type="text" name="TenKhachHang" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="text" name="SoDienThoai" class="form-control" required />
+                    </div>
+                    <div class="mb-3" style="position: relative;">
+                        <label class="form-label">Sách</label>
+                        <input type="text" id="autocompleteSach" class="form-control" placeholder="Nhập tên sách..." />
+                        <div id="danhSachSachChon" class="mt-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Ngày đặt</label>
+                            <input type="date" name="NgayDat" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" readonly />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Hạn trả</label>
+                            <input type="date" name="NgayTra" class="form-control" value="@DateTime.Now.AddDays(7).ToString("yyyy-MM-dd")" readonly />
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label class="form-label">Thành tiền</label>
+                        <input type="text" id="tongThanhTien" class="form-control" readonly value="0 VND" />
+                    </div>
+                    <input type="hidden" name="ThanhTien" id="inputThanhTien" />
+                    <input type="hidden" name="JsonChiTiet" id="jsonChiTiet" />
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">💾 Lưu phiếu</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        let chiTietPhieu = [];
+
+        $(function () {
+            $("#autocompleteSach").autocomplete({
+                source: '@Url.Action("TimKiemSach", "PhieuDatTruoc")',
+                minLength: 2,
+                select: function (event, ui) {
+                    const sachDaTonTai = chiTietPhieu.find(s => s.MaSach === ui.item.maSach);
+                    if (!sachDaTonTai) {
+                        const chiTiet = {
+                            MaSach: ui.item.maSach,
+                            TieuDe: ui.item.label,
+                            SoLuongMuon: 1
+                        };
+                        chiTietPhieu.push(chiTiet);
+                        capNhatHienThi();
+                    }
+                    $(this).val('');
+                    return false;
+                }
+            });
+        });
+
+        function capNhatHienThi() {
+            const html = chiTietPhieu.map((sach, index) => `
+                <div class="d-flex justify-content-between align-items-center mb-2 border p-2 rounded">
+                    <div><strong>${sach.TieuDe}</strong> (SL: <input type="number" min="1" value="${sach.SoLuongMuon}" onchange="doiSoLuong(${index}, this.value)" style="width: 60px;" />)</div>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="xoaSach(${index})">Xóa</button>
+                </div>
+            `).join('');
+            $('#danhSachSachChon').html(html);
+            $('#jsonChiTiet').val(JSON.stringify(chiTietPhieu));
+        }
+
+        function xoaSach(index) {
+            chiTietPhieu.splice(index, 1);
+            capNhatHienThi();
+        }
+
+        function doiSoLuong(index, value) {
+            chiTietPhieu[index].SoLuongMuon = parseInt(value);
+            capNhatHienThi();
+        }
+                function capNhatHienThi() {
+            const html = chiTietPhieu.map((sach, index) => `
+                <div class="d-flex justify-content-between align-items-center mb-2 border p-2 rounded">
+                    <div>
+                        <strong>${sach.TieuDe}</strong>
+                        (SL: <input type="number" min="1" value="${sach.SoLuongMuon}" onchange="doiSoLuong(${index}, this.value)" style="width: 60px;" />)
+                    </div>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="xoaSach(${index})">Xóa</button>
+                </div>
+            `).join('');
+
+            $('#danhSachSachChon').html(html);
+            $('#jsonChiTiet').val(JSON.stringify(chiTietPhieu));
+
+            // 👉 Tính tổng tiền: 7.000 VNĐ x tổng số lượng
+            const tongTien = chiTietPhieu.reduce((sum, sach) => sum + sach.SoLuongMuon * 7000, 0);
+            $('#tongThanhTien').val(tongTien.toLocaleString() + " VND");
+            $('#inputThanhTien').val(tongTien); // gửi qua form
+        }
+    </script>
+
+    <!-- 💡 Fix autocomplete nằm dưới modal -->
+    <style>
+        .ui-autocomplete {
+            z-index: 1055 !important;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            max-height: 250px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .ui-menu-item-wrapper {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .ui-state-active {
+            background-color: #4a90e2 !important;
+            color: white !important;
+        }
+    </style>
+}
+
+
 
 @if (Model.Any())
 {
@@ -21,6 +165,7 @@
             <tr>
                 <th style="text-align: center; padding: 10px;">#</th>
                 <th style ="text-align: center; padding: 10px;">Tên Khách Hàng</th>
+                <th style="text-align: center; padding: 10px;">SĐT</th>
                 <th style="text-align: center; padding: 10px;">Ngày Đặt</th>
                 <th style="text-align: center; padding: 10px;">Hạn Trả</th>
                 <th style="text-align: center; padding: 10px;">Ngày Trả</th>
@@ -35,7 +180,16 @@
             {
                 <tr style="background-color: #f9f9f9; transition: background-color 0.3s ease;">
                     <td style="text-align: center; padding: 10px;">@phieu.MaPhieuDatTruoc</td>
-                    <td style="text-align: center; padding: 10px;">@phieu.TaiKhoanNguoiDung?.ThongTinNguoiDung?.HoTen</td>
+                    <td style="text-align: center; padding: 10px;">
+                        @(phieu.TaiKhoanNguoiDung != null
+                            ? phieu.TaiKhoanNguoiDung.ThongTinNguoiDung?.HoTen
+                            : phieu.TenKhachHang)
+                    </td>
+                    <td style="text-align: center; padding: 10px;">
+                        @(phieu.TaiKhoanNguoiDung != null
+                            ? phieu.TaiKhoanNguoiDung.ThongTinNguoiDung?.SoDienThoai
+                            : phieu.SoDienThoai)
+                    </td>
                     <td style="text-align: center; padding: 10px;">@phieu.NgayDat.ToString("dd/MM/yyyy")</td>
                     <td style="text-align: center; padding: 10px;">@phieu.NgayTra.ToString("dd/MM/yyyy")</td>
                     <!-- ✅ Cột Ngày Trả Thực Tế -->
@@ -67,15 +221,15 @@
                     </td>
 
 
-                    <td class="d-flex justify-content-center" style="padding: 10px;">
+                    <td class="d-flex justify-content-center" style="padding: 6px;">
                         @if(phieu.TrangThai == "Đang xử lý"){
                             <form asp-action="DuyetPhieu" asp-controller="PhieuDatTruoc" method="post">
                                 <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
-                                <button class="btn btn-success btn-sm" style="padding: 5px 15px; margin-right:5px">✅ Duyệt</button>
+                                <button class="btn btn-success btn-sm" style="padding: 3px 7px; margin-right:5px">✅ Duyệt</button>
                             </form>
                             <form asp-action="Huy" asp-controller="PhieuDatTruoc" method="post">
                                 <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
-                                <button class="btn btn-danger btn-sm" style="padding: 5px 15px;">❌ Hủy</button>
+                                <button class="btn btn-danger btn-sm" style="padding: 3px 7px;">❌ Hủy</button>
                             </form>
                            
                         }
@@ -83,7 +237,7 @@
                         {
                             <form asp-action="DaTra" asp-controller="PhieuDatTruoc" method="post" style="margin-right: 10px;">
                                 <input type="hidden" value="@phieu.MaPhieuDatTruoc" name="id" />
-                                <button class="btn btn-outline-success btn-sm" style="padding: 5px 15px;"> ✅ Đã trả</button>
+                                <button class="btn btn-outline-success btn-sm" style="padding: 3px 7px;"> ✅ Đã trả</button>
                             </form>
                         }                     
                     </td>

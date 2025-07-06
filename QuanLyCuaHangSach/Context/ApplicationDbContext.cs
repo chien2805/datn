@@ -30,7 +30,7 @@ namespace QuanLyCuaHangSach.Context
         public DbSet<HoaDonBanOnline> HoaDonBanOnline { get; set; }
         public DbSet<ChiTietHoaDonOnline> ChiTietHoaDonOnline { get; set; }
 
-
+        public DbSet<DanhGia> DanhGias { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -103,6 +103,12 @@ namespace QuanLyCuaHangSach.Context
                 .HasOne(ct => ct.Sach)
                 .WithMany()
                 .HasForeignKey(ct => ct.MaSach);
+
+            modelBuilder.Entity<DanhGia>()
+    .HasOne(d => d.Sach)
+    .WithMany(s => s.DanhGias)
+    .HasForeignKey(d => d.MaSach)
+    .OnDelete(DeleteBehavior.Cascade); // hoặc Restrict tùy ý
         }
 
     }

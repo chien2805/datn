@@ -3,6 +3,252 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "Logs/model_error.03bmrtlkdo.txt",
+      "AssetFile": "Logs/model_error.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 14:16:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "03bmrtlkdo"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/model_error.txt"
+        }
+      ]
+    },
+    {
+      "Route": "Logs/model_error.txt",
+      "AssetFile": "Logs/model_error.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 14:16:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZD8RBash6GG62g2h0LPNg2ECCdPPnvWfo/zoAojveQg="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_request.json",
+      "AssetFile": "Logs/momo_request.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_request.vo9ppzmokd.json",
+      "AssetFile": "Logs/momo_request.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vo9ppzmokd"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T4JAQwUHs5VfuNoqgfUs0IRDZn7bGrRUB+41lIaNG+w="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/momo_request.json"
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_response.json",
+      "AssetFile": "Logs/momo_response.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ="
+        }
+      ]
+    },
+    {
+      "Route": "Logs/momo_response.v3ssuig588.json",
+      "AssetFile": "Logs/momo_response.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "349"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 25 Jun 2025 14:31:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3ssuig588"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SyOFEpq0Ys5Ho4lV1D1QMEjdQy9QPO7iRGjYtSLOUrQ="
+        },
+        {
+          "Name": "label",
+          "Value": "Logs/momo_response.json"
+        }
+      ]
+    },
+    {
       "Route": "QuanLyCuaHangSach.gn4wilbgxb.styles.css",
       "AssetFile": "QuanLyCuaHangSach.styles.css",
       "Selectors": [],
@@ -1147,6 +1393,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU="
+        }
+      ]
+    },
+    {
+      "Route": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 13:38:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        },
+        {
+          "Name": "label",
+          "Value": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "AssetFile": "images/2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Jun 2025 13:38:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },
@@ -2377,6 +2705,88 @@
         {
           "Name": "label",
           "Value": "images/6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Jun 2025 14:05:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        },
+        {
+          "Name": "label",
+          "Value": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "AssetFile": "images/66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Jun 2025 14:05:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },
@@ -3939,6 +4349,88 @@
       ]
     },
     {
+      "Route": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.hdsgveawir.jpg",
+      "AssetFile": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56682"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdsgveawir"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU="
+        },
+        {
+          "Name": "label",
+          "Value": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "AssetFile": "images/ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56682"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/V3B42D587BddwmcCRfdAO6LHPR8BNb6y2c4vErEjU="
+        }
+      ]
+    },
+    {
       "Route": "images/default.gh670zlc5w.jpg",
       "AssetFile": "images/default.jpg",
       "Selectors": [],
@@ -4509,6 +5001,88 @@
         {
           "Name": "label",
           "Value": "images/f49aec10-f04e-484e-b22e-038726746c0b_cha-giau.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.1g7p7mlqis.jpg",
+      "AssetFile": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1g7p7mlqis"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
+        },
+        {
+          "Name": "label",
+          "Value": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "AssetFile": "images/f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194390"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 02:11:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D7/v7RShJeLIGh/LbYY9KPGGpNo2WjT33a1tBl6Jgws="
         }
       ]
     },

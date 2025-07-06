@@ -23,5 +23,8 @@
 
         // Cột mới: Giới thiệu về sách
         public string? GioiThieu { get; set; }
+
+        // ✅ Quan hệ với Đánh Giá
+        public ICollection<DanhGia> DanhGias { get; set; }
     }
 }

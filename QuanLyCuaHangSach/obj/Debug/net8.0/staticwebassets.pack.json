@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\QuanLyCuaHangSach.gn4wilbgxb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\model_error.txt",
+      "PackagePath": "staticwebassets\\Logs\\model_error.txt"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_request.json",
+      "PackagePath": "staticwebassets\\Logs\\momo_request.json"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\Logs\\momo_response.json",
+      "PackagePath": "staticwebassets\\Logs\\momo_response.json"
+    },
+    {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\chatbox-mrob-457727cec1a7.json",
       "PackagePath": "staticwebassets\\chatbox-mrob-457727cec1a7.json"
     },
@@ -55,6 +67,10 @@
     {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\1e6f3673-272d-4b11-9a25-1bc6a2b69968_tuoi-tho.jpg",
       "PackagePath": "staticwebassets\\images\\1e6f3673-272d-4b11-9a25-1bc6a2b69968_tuoi-tho.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg",
+      "PackagePath": "staticwebassets\\images\\2de425e0-4011-4d6b-8786-ec3cc0ff9402_Việt Nam Sử Lược.jpg"
     },
     {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\31f19527-4f1f-4e59-844a-ccbb194dc89f_dam-bi-ghet-3.jpg",
@@ -115,6 +131,10 @@
     {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg",
       "PackagePath": "staticwebassets\\images\\6190506e-56ba-4a54-a998-719fd478f5c6_cogaidentuhomqua.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg",
+      "PackagePath": "staticwebassets\\images\\66f81a20-cb5f-4349-af49-85b3b3778822_Việt Nam Sử Lược.jpg"
     },
     {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\772c764b-2763-4423-9080-d5965ee272d5_chi-pheo-tb-2022.jpg",
@@ -193,6 +213,10 @@
       "PackagePath": "staticwebassets\\images\\d73188a0-77a5-4b75-aad9-51806a71a9c5_so-do.jpg"
     },
     {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg",
+      "PackagePath": "staticwebassets\\images\\ddaa594c-b60c-47a4-9189-5a2ab30dd519_tuoi-tho.jpg"
+    },
+    {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\default.jpg",
       "PackagePath": "staticwebassets\\images\\default.jpg"
     },
@@ -219,6 +243,10 @@
     {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\f49aec10-f04e-484e-b22e-038726746c0b_cha-giau.jpg",
       "PackagePath": "staticwebassets\\images\\f49aec10-f04e-484e-b22e-038726746c0b_cha-giau.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg",
+      "PackagePath": "staticwebassets\\images\\f92dc82f-ad11-4c1a-87c7-cbc775ce41e0_Việt Nam Sử Lược.jpg"
     },
     {
       "Id": "C:\\Users\\CHIEN\\Desktop\\Tot nghiep\\datn\\QuanLyCuaHangSach\\wwwroot\\images\\fd352f68-950b-42db-9e27-961628588d49_none.jpg",
